@@ -73,13 +73,24 @@
 		caption-side: top;
 		display:inline;
 	}
+	
+	table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td, .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+	    line-height: 1.4;
+		vertical-align: baseline;
+	}
+	.clickable-row:focus {
+		outline: 4px solid #F8D44C;
+	}
+	.medFit-btn.btn-sm{
+		font-size:1rem;
+	}
 
 	</style>
 	
   </head>
 <body id="site" class="Site">
 	<nav id="navBar" class="medFit-navbar navbar navbar-expand-lg navbar-dark bg-primary">
-		<a id="navbarBrand" class="medFit-navbar-brand navbar-brand" href="#">MedFit</a>
+		<a id="navbarBrand" class="medFit-navbar-brand navbar-brand" href="#"><img src="img/medfit-logo.svg" class="pr-2" width="130" height="37" alt="MedFit Logo"></a>
 		<button id="navbarToggler" class="medFit-navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span id="navbarToggler-icon" class="medFit-navbar-toggler-icon navbar-toggler-icon"></span>
 		</button>
@@ -141,7 +152,7 @@
 										</select>
 									 </div>
 								</div>
-							<table class="table table-hover">
+							<table id="intakeQueue-table" class="medFit-table table table-hover">
 							  <thead>
 								<tr>
 								  <th scope="col">Source</th>
@@ -153,69 +164,69 @@
 								</tr>
 							  </thead>
 							  <tbody>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right">
+								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0">
 								  <td>Email</td>
 								  <td>joe.smith@gmail.com</td>
 								  <td>12/31/2021</td>
 								  <td>Un-opened</td>
 								  <td>Tammy</td>
-								  <td><button type="button" class="btn-sm btn-default btn-block mt-0 mb-0">Start</button></td>
+								  <td><button type="button" class="medFit-btn btn-sm ns-btn-2nd btn-block mt-0 mb-0">Start</button></td>
 								</tr>
 							  </tbody>
 							</table>	
@@ -238,7 +249,7 @@
 									</div>
 								</div>
 								
-								<nav id="navbar-correspondence" class="navbar navbar-light bg-light mb-4 pb-0 border-bottom navbar-correspondence">
+								<nav id="navbar-correspondence" class="navbar navbar-light bg-light mb-4 pb-0 navbar-correspondence">
 									<ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
 									  <li id="navItem-attachments" class="medFit-nav-item nav-item nav-item-attachments">
 										<a data-toggle="tab" class="medFit-nav-link nav-link nav-link-attachments active" href="#tabPane-attachements">Attachments</a>
@@ -247,7 +258,7 @@
 										<a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details</a>
 									  </li>
 									  <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
-										<button id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm btn-default btn-start btn-ABCDE123456123 my-0 ml-2">Start intake</button>
+										<button id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm ns-btn-2nd btn-start btn-ABCDE123456123 my-0 ml-2 ">Start intake</button>
 									  </li>
 									</ul>
 								</nav>
