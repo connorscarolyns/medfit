@@ -3,6 +3,12 @@
 	position: relative;
 }
 
+.select select{
+	height: auto;
+    padding: 10px 10px 8px 10px;
+}
+
+
 .select:after {
 	content: '';
 	position: absolute;
