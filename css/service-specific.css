@@ -1,0 +1,245 @@
+html,body {
+  height:100vh;
+  font-size: 14px;
+}
+
+.Site{
+  overflow-x:hidden;
+}
+
+.btn-lg {
+    padding: .75rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 1rem auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-content {
+      height: 100vh;
+      overflow: hidden;
+  }
+}
+
+.medFit-navbar-main{
+  background: #0058a4;
+  padding: 0;
+  align-items: stretch;
+  z-index: 99;
+}
+.medFit-navbar-main .medFit-navbar-brand{
+  padding: .5rem 1rem;
+}
+.medFit-navbar-main .medfit-navbar-collapse{
+  align-items: stretch;
+}
+.medFit-navbar-main .medFit-nav-item{
+  display: flex;
+  align-items: stretch;
+  width:100%;
+  border-bottom: 4px solid #0058a4;
+}
+.medFit-navbar-main .medFit-nav-item.active{
+  border-bottom: 4px solid #f8d44c;
+}
+.medFit-navbar-main .medFit-nav-item.active:hover{
+  background: none;
+}
+.medFit-navbar-main .medFit-nav-item:hover{
+  border-bottom: 4px solid #f8d44c;
+  background: RGBA(255,255,255,0.24);
+  cursor: default;
+}
+.medFit-navbar-main .medFit-nav-item .nav-link:hover{
+  background: none;
+}
+.medFit-navbar-main .navbar-nav .nav-link:focus, .medFit-navbar-main .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.medFit-navbar-main .medFit-nav-item .nav-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 1;
+}
+
+.medFit-navbar-main select.medfit-select, .medFit-navbar-main option.medfit-option {
+    width: 10rem;
+}
+
+/* End main navbar style */
+
+/* start secondary nav style */
+
+.medFit-secondary-nav{
+  background: #eaeaea;
+  border-bottom: 1px solid #dee2e6;
+}
+.medFit-secondary-nav .medFit-nav-item.active{
+  border-bottom: 4px solid #f8d44c;
+}
+
+.medFit-secondary-nav .medFit-nav-item:hover{
+  border-bottom: 4px solid #f8d44c;
+  background: RGBA(255,255,255,0.24);
+  cursor: default;
+}
+.medFit-secondary-nav .medFit-nav-item .nav-link:hover{
+  background: none;
+}
+
+.medFit-secondary-nav .nav-link {
+    display: block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+}
+
+/* end secondary nav style */
+
+/* start coulmn header */
+.medfit-column-header {
+    height: 3.5rem;
+    background: white;
+    overflow: auto;
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+/* end column header */
+
+.column-scroll{
+  display: table-cell;
+  height: inherit;
+  vertical-align: top;
+}
+.sticky-wrapper {
+  transform: translate(0, 0);
+  height: inherit;
+}
+.column-content{
+  background-color: #fff;
+  border-right: 1px solid #dee2e6;
+  height: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 57px;
+}
+
+.button-close{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #444;
+  text-shadow: none;
+  opacity: 1;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  border: none;
+  background: white;
+  transition: background .2s ease;
+}
+
+.button-close:hover, .button-close:focus, .button-close:active{
+  background: #e2231a;
+  transition: background .2s ease;
+}
+.medfit-btn-inline-icon{
+  font-size: inherit;
+  padding: .25em .5em;
+  margin: .25em;
+}
+
+.column-header-nav-tabs a{
+  text-decoration: none;
+}
+
+.medFit-review-caption{
+  caption-side: top;
+  display:inline;
+}
+
+
+.ns-summary-list__row {
+    transition: all .4s ease;
+}
+
+.ns-summary-list__row:hover {
+    background: #eaeaea;
+}
+
+ .ns-summary-list__row:active, .ns-summary-list__row:focus{
+    outline: solid 0.25em #f8d44c;
+    outline-offset: 0;
+    text-decoration: none;
+}
+.ns-summary-list__row.selected{
+    background: #f8d44c;
+}
+
+.ns-summary-list__key {
+    width: 30%;
+    vertical-align: top;
+  }
+
+.medFit-btn.btn-sm{
+  font-size:1rem;
+}
+
+.navbar-nav-tools{
+align-items: center;
+}
+.medfit-navbar-collapse .navbar-nav-tools .nav-link{
+color: #fff;
+font-size: 1.2rem;
+}
+
+.medfit-navbar-collapse .navbar-nav-tools .dropdown-notification .dropdown-menu{
+min-width:400px;
+}
+
+.medfit-navbar-collapse .navbar-nav-tools .dropdown-notification .dropdown-menu .dropdown-item{
+white-space: normal;
+}
+
+.navbar-nav-tools .nav-item {
+  display: block;
+  width: 100%;
+}
+.navbar-nav-tools .nav-item i {
+padding: 0 .5rem;
+}
+
+.v-line-right {
+  width: 1px;
+  height: 30px;
+  border-right: 1px solid white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.medfit-licence-info__wrapper{
+  background: #e9ecef;
+  padding: .75em;
+  border: 1px solid #dee2e6;
+  margin-bottom: 2rem;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+    min-height: 31px;
+    max-height: 200px;
+}
+
+
+/* start comments section */
+
+.comment-wrapper .media-list {
+    padding-left: 0;
+}
+
+/* end comments section */

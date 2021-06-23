@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!-- Include in all head tags -->
 	<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include in all head tags -->
-	<link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->	
+	<link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->
 	<link rel="stylesheet" media="all" href="css/supplimentary-page-styles.css"><!-- Include only if forms are used-->
 	<link rel="stylesheet" media="all" href="css/global-form-styles.css"><!-- Include only if forms are used-->
 	<link rel="stylesheet" media="all" href="css/radio-button.css"><!-- Include only if radios are used-->
@@ -17,147 +17,10 @@
 	<link rel="stylesheet" media="all" href="css/select.css"><!-- Include only if selects are used-->
 	<link rel="stylesheet" media="all" href="css/buttons.css"><!-- Include only if buttons are used-->
 	<link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
+	<link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all head tags -->
 
-    <title>Page title - MedFit - Government of Nova Scotia</title>
-	
-	<style>
-	html,body {
-		height:100vh;
-	}
-	
-     .main-content {
-       height: calc(100vh - 57px);
-     }
-	
-	.medFit-navbar-main{
-		background: #0058a4;
-		padding: 0;
-		align-items: stretch;
-		z-index: 99;
-	}
-	.medFit-navbar-main .medFit-navbar-brand{
-		padding: .5rem 1rem;
-	}
-	.medFit-navbar-main .medfit-navbar-collapse{
-		align-items: stretch;
-	}
-	.medFit-navbar-main .medFit-nav-item{
-		display: flex;
-		align-items: stretch;
-		width:100%;
-		border-bottom: 4px solid #0058a4;
-	}	
-	.medFit-navbar-main .medFit-nav-item.active{
-		border-bottom: 4px solid #f8d44c;
-	}
-	.medFit-navbar-main .medFit-nav-item.active:hover{
-		background: none;
-	}
-	.medFit-navbar-main .medFit-nav-item:hover{
-		border-bottom: 4px solid #f8d44c;
-		background: RGBA(255,255,255,0.24);
-		cursor: default;
-	}
-	.medFit-navbar-main .medFit-nav-item .nav-link:hover{
-		background: none;
-	}
-	.medFit-navbar-main .navbar-nav .nav-link:focus, .medFit-navbar-main .navbar-nav .nav-link:hover {
-		color: #fff;
-	}
-	.medFit-navbar-main .medFit-nav-item .nav-link{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		color: #fff;
-		opacity: 1;
-	}
-	.column-scroll{
-		display: table-cell;
-		height: inherit;
-		vertical-align: top;
-	}
-	.sticky-wrapper {
-		transform: translate(0, 0);
-		height: inherit;
-	}
-	.column-content{
-		background-color: #fff;
-		border-left: 1px solid #dee2e6;
-		height: inherit;
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-	.button-close{
-		font-size: 2rem;
-		font-weight: 400;
-		line-height: 1;
-		color: #444;
-		text-shadow: none;
-		opacity: 1;
-		position: absolute;
-		right: 1rem;
-		top: 0;
-		border: none;
-		background: white;
-		transition: background .2s ease;
-	}
-	
-	.button-close:hover, .button-close:focus, .button-close:active{
-		background: #e2231a;
-		transition: background .2s ease;
-	}
-	.column-header-nav-tabs{
-		width:100%;
-	}
-	.column-header-nav-tabs a{
-		text-decoration: none;
-	}
+	<title>Intake Queue - MedFit - Government of Nova Scotia</title>
 
-	.medFit-review-caption{
-		caption-side: top;
-		display:inline;
-	}
-	
-	table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td, .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
-	    line-height: 1.4;
-		vertical-align: baseline;
-	}
-	.clickable-row:focus {
-		outline: 4px solid #F8D44C;
-	}
-	.medFit-btn.btn-sm{
-		font-size:1rem;
-	}
-
-.navbar-nav-tools{
-	align-items: center;
-}
-.medfit-navbar-collapse .navbar-nav-tools .nav-link{
-	color: #fff;
-	font-size: 1.2rem;
-}
-
-.medfit-navbar-collapse .navbar-nav-tools .dropdown-notification .dropdown-menu{
-	min-width:400px;
-}
-
-.medfit-navbar-collapse .navbar-nav-tools .dropdown-notification .dropdown-menu .dropdown-item{
-	white-space: normal;
-}
-
-.navbar-nav-tools .nav-item {
-    display: block;
-    width: 100%;
-}
-.navbar-nav-tools .nav-item i {
-	padding: 0 .5rem;
-}
-
-
-
-	</style>
-	
   </head>
 <body id="site" class="Site">
 	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
@@ -177,7 +40,7 @@
 					<a id="navbarLink-search" class="nav-link px-3" href="#">Search</a>
 				</li>
 			</ul>
-			
+
 			<ul  id="navbarNav-tools" class="navbar-nav-tools navbar-nav ml-auto mt-0">
 				<li class="nav-item dropdown dropdown-notification">
 					<a class="nav-link" href="#" id="navbarDropdown-notification" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
@@ -199,7 +62,7 @@
 					</div>
 				</li>
 			</ul>
-			
+
 		</div>
 
 	</nav>
@@ -208,9 +71,9 @@
 			<div id="mainContent" class="medFit-main-content main-content row">
 				<div class="col-sm px-0 column-scroll">
 					<div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
-						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">		
+						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">
 							<div class="px-3">
-								<h1 id="h1-intakeQueue" class="medfit-ns-h1 ns-h1 h1 h1-intake-queue">Intake queue</h1>						
+								<h1 id="h1-intakeQueue" class="medfit-ns-h1 ns-h1 h1 h1-intake-queue">Intake queue</h1>
 <!-- 								<div id="nsFormGroup-search" class="medFit-ns-form-group ns-form-group ns-form-group-search">
 									<label id="nsLabel-search" class="medFit-ns-label ns-label ns-label-search" for="nsSelect-search-list">
 										Select a search type
@@ -244,42 +107,44 @@
 										</select>
 									 </div>
 								</div> -->
-							<table id="intakeQueue-table" class="medFit-table table table-hover">
-							  <thead>
-								<tr>
-								  <th scope="col">Status</th>
-								  <th scope="col">Master Number</th>
-								  <th scope="col">Start date</th>
-								  <th scope="col">Assignee</th>
-								  <th scope="col">Notes</th>
-								  <th scope="col">Preview</th>
-								  <th scope="col">What's next?</th>
-								</tr>
-							  </thead>
-							  <tbody>
-								<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-								  <td>Priority</td>
-								  <td>ABCDE 123456 123</td>
-								  <td>12/31/2021</td>
-								  <td>Unassigned</td>
-								  <td><button aria-describedby="Edit note" class="btn-lg ns-btn-2nd my-0"><i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i></button></td>
-								  <td><button aria-describedby="Preview documents" class="btn-lg ns-btn-2nd my-0"><i class="far fa-eye ns-btn__icon-left" aria-hidden="true"></i></button></td>
-								  <td>
-									  <div class="input-group ns-fieldset mb-0">
-										  <select aria-describedby="Select what happens next" class="custom-select select fw-6" id="inputGroupSelect04">
-											<option selected>Select</option>
-											<option value="Send to Deputy Registrar for approval">Send to Deputy Registrar for approval</option>
-											<option value="Send to Assessors for review">Send to Assessors for review</option>
-											<option value="Everything's done, set to complete">Everything's done, set to complete</option>
-										  </select>
-										  <div class="input-group-append">
-											<button class="btn btn-success" type="button">OK</button>
-										  </div>
-										</div>
-								  </td>
-								</tr>
-							  </tbody>
-							</table>	
+								<div class="table-wrapper">
+									<table id="intakeQueue-table" class="medFit-table table table-hover">
+									  <thead>
+										<tr>
+										  <th scope="col">Status</th>
+										  <th scope="col">Master Number</th>
+										  <th scope="col">Start date</th>
+										  <th scope="col">Assignee</th>
+										  <th scope="col">Notes</th>
+										  <th scope="col">Preview</th>
+										  <th scope="col">What's next?</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+										  <td>Priority</td>
+										  <td>ABCDE 123456 123</td>
+										  <td>12/31/2021</td>
+										  <td>Unassigned</td>
+										  <td><button aria-describedby="Edit note" class="btn-lg ns-btn-2nd my-0"><i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i></button></td>
+										  <td><button aria-describedby="Preview documents" class="btn-lg ns-btn-2nd my-0"><i class="far fa-eye ns-btn__icon-left" aria-hidden="true"></i></button></td>
+										  <td>
+												<div class="input-group ns-fieldset mb-0">
+												  <select aria-describedby="Select what happens next" class="custom-select select fw-6" id="inputGroupSelect04">
+													<option selected>Select</option>
+													<option value="Send to Deputy Registrar for approval">Send to Deputy Registrar for approval</option>
+													<option value="Send to Assessors for review">Send to Assessors for review</option>
+													<option value="Everything's done, set to complete">Everything's done, set to complete</option>
+												  </select>
+												  <div class="input-group-append">
+													<button class="btn btn-success" type="button">OK</button>
+												  </div>
+												</div>
+										  </td>
+										</tr>
+									  </tbody>
+									</table>
+								</div>
 						</div>
 					</div>
 				</div>
@@ -298,7 +163,7 @@
 										</button>
 									</div>
 								</div>
-								
+
 								<nav id="navbar-correspondence" class="navbar navbar-light bg-light mb-4 pb-0 navbar-correspondence">
 									<ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
 									  <li id="navItem-attachments" class="medFit-nav-item nav-item nav-item-attachments">
@@ -312,9 +177,9 @@
 									  </li>
 									</ul>
 								</nav>
-											
+
 								<div id="tabContent-correspondence" class="medFit-tab-content tab-content tab-content-correspondence">
-									<div id="tabPane-attachements" class="medFit-tan-pane tab-pane tab-pane-attachements fade in active show">									
+									<div id="tabPane-attachements" class="medFit-tan-pane tab-pane tab-pane-attachements fade in active show">
 										<section class="row mx-0">
 											<article class="col-sm-12 px-3 collapse" id="exampleAttachment">
 												<div>
@@ -322,7 +187,7 @@
 														<span aria-hidden="true">&times;</span>
 													</button>
 													<img src="img/medical-report-front.jpg"  class="img-fluid mb-3" alt="Correspondence Preview">
-												</div>	
+												</div>
 											</article>
 											<article class="col-sm px-3">
 												<fieldset class="ns-fieldset">
@@ -363,7 +228,7 @@
 											</article>
 										</section>
 									</div>
-									
+
 									<div id="tabPane-details" class="medFit-tan-pane tab-pane tab-pane-adetails fade">
 										<article class="col-sm px-3">
 											<table id="reviewTable-details" class="medFit-review-table table review-table review-table-details">
@@ -390,11 +255,11 @@
 										</article>
 									</div>
 								</div>
-								
-							</header>
-								
 
-							
+							</header>
+
+
+
 						</article>
 					</div>
 				</div>
@@ -411,7 +276,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-	
+
 	<!-- For display purposes only -->
 	<script>
 		function show2(){

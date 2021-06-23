@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Investigation - MedFit - Government of Nova Scotia</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="css/supplimentary-page-styles.css"><!-- Include only if forms are used-->
+	<link rel="stylesheet" media="all" href="css/global-form-styles.css"><!-- Include only if forms are used-->
+	<link rel="stylesheet" media="all" href="css/radio-button.css"><!-- Include only if radios are used-->
+	<link rel="stylesheet" media="all" href="css/checkboxes.css"><!-- Include only if checkboxes are used-->
+	<link rel="stylesheet" media="all" href="css/input-field-group.css"><!-- Include only if inputs are used-->
+	<link rel="stylesheet" media="all" href="css/select.css"><!-- Include only if selects are used-->
+	<link rel="stylesheet" media="all" href="css/buttons.css"><!-- Include only if buttons are used-->
+	<link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
+	<link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all stylesheets -->
+
+  </head>
+  <body id="site" class="Site">
+  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+  		navbar content
+  	</nav>
+  	<main id="main" class="medFir-main pb-0">
+  		<div id="siteContent" class="medFit-site-copntent container-fluid Site-content">
+  			<div id="mainContent" class="medFit-main-content main-content row">
+
+          <!-- start left column -->
+  				<div id="columnScrollleft" class="col-sm-2 px-0 column-scroll">
+            <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
+              <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
+  							<div class="px-3">
+                  left content
+                </div>
+              </div> <!-- columnContent-left -->
+            </div> <!-- stickyWrapper-left -->
+  				</div> <!-- columnScrollleft -->
+          <!-- end left column -->
+
+          <!-- start main column -->
+  				<div id="columnScrollMain" class="col-sm px-0 column-scroll">
+  					<div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
+  						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">
+  							<div class="px-3">
+                  main content
+                </div>
+  						</div> <!-- columnContent-main -->
+  					</div> <!-- stickyWrapper-main -->
+          </div> <!-- columnScrollMain -->
+          <!-- end main column -->
+
+          <!-- start right column -->
+    			<div id="columnCollapse-right" class="col-sm px-0 column-scroll column-collapse column-collapse-right">
+    				<div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
+    					<div id="columnContent-right" class="medFit-column-content column-content column-content-right">
+                right content
+    					</div> <!-- columnContent-rightt -->
+    				</div> <!-- stickyWrapper-right -->
+    			</div> <!-- columnCollapse-right -->
+          <!-- end right column -->
+
+        </div> <!-- end #siteContent -->
+      </div>
+  <!-- 		<footer  id="footer" class="footer" role="contentinfo" height="20" style="height:20px">
+  		</footer> -->
+  	</main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js\presentational.js"></script><!-- only needed to display interaction design -->
+    <script src="https://cdn.tiny.cloud/1/1qhomb15goqfg83j5q4wuu0knhj95qxoh6saxmcix3b0vqj7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: 'textarea#notesAboutTheDriverTextArea',
+        menubar: false
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  	<!-- For display purposes only -->
+  	<script>
+  		function show2(){
+  		  document.getElementById('exampleAttachment').style.display = 'block';
+  		}
+  	</script>
+  </body>
+</html>

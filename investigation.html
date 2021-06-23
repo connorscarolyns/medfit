@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Investigation - MedFit - Government of Nova Scotia</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->
+	<link rel="stylesheet" media="all" href="css/supplimentary-page-styles.css"><!-- Include only if forms are used-->
+	<link rel="stylesheet" media="all" href="css/global-form-styles.css"><!-- Include only if forms are used-->
+	<link rel="stylesheet" media="all" href="css/radio-button.css"><!-- Include only if radios are used-->
+	<link rel="stylesheet" media="all" href="css/checkboxes.css"><!-- Include only if checkboxes are used-->
+	<link rel="stylesheet" media="all" href="css/input-field-group.css"><!-- Include only if inputs are used-->
+	<link rel="stylesheet" media="all" href="css/select.css"><!-- Include only if selects are used-->
+	<link rel="stylesheet" media="all" href="css/buttons.css"><!-- Include only if buttons are used-->
+	<link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
+	<link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all stylesheets -->
+
+  <script src="https://cdn.tiny.cloud/1/1qhomb15goqfg83j5q4wuu0knhj95qxoh6saxmcix3b0vqj7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+  </head>
+
+  <body id="site" class="Site">
+
+  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+      <!-- start brand -->
+      <a id="navbarBrand" class="medFit-navbar-brand navbar-brand" href="#"><span class="sr-only">MedFit</span><img src="img/medfit-logo.svg" aria-hidden="true" class="pr-2" width="140" height="40" alt="MedFit Logo"></a>
+      <!-- end brand -->
+
+      <!-- start mobile icon -->
+      <button id="navbarToggler" class="medFit-navbar-toggler navbar-toggler my-2 mx-3 " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  			<span id="navbarToggler-icon" class="medFit-navbar-toggler-icon navbar-toggler-icon"></span>
+  		</button>
+      <!-- end mobile icon -->
+  		<div id="navbarCollapse" class="medfit-navbar-collapse collapse navbar-collapse px-3" >
+
+        <!-- start main navigation -->
+  			<ul  id="navbarNav" class="navbar-nav mr-auto mt-0">
+  				<li id="navbarItem-intake" class="medFit-nav-item nav-item">
+  					<a id="navbarLink-intake" class="nav-link px-3" href="#">Intake</a>
+  				</li>
+  				<li id="navbarItem-assignments" class="medFit-nav-item nav-item active">
+  					<a id="navbarLink-assignments" class="nav-link px-3" href="#">Assignments <span class="sr-only">(current)</span></a>
+  				</li>
+  				<li id="navbarItem-Search" class="medFit-nav-item nav-item">
+  					<a id="navbarLink-search" class="nav-link px-3" href="#">Search</a>
+  				</li>
+  			</ul>
+        <!-- end main namvigation-->
+
+        <!-- start toolbar nav-->
+  			<ul  id="navbarNav-tools" class="navbar-nav-tools navbar-nav ml-auto mt-0">
+          <!-- start notification nav item -->
+  				<li class="nav-item dropdown dropdown-notification">
+  					<a class="nav-link" href="#" id="navbarDropdown-notification" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+  					  <i class="far fa-bell"></i>
+  					</a>
+  					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-notification">
+  					  <button class="dropdown-item" type="button"><strong>Tammy assigned Joe Smith to you:</strong> Stephanie, can you take a look at this and tell me what you think?</button>
+  					  <div class="dropdown-divider"></div>
+  					  <button class="dropdown-item" type="button"><strong>Michelle assigned Jeff MacKinnon to you for sign-off</strong></button>
+  					  <div class="dropdown-divider"></div>
+  					</div>
+  				</li>
+          <!-- end nottification nav-item -->
+
+          <!-- start profile nav-item -->
+  				<li class="nav-item dropdown dropdown-profile">
+  					<a class="nav-link" href="#" id="navbarDropdown-profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+  					  <i class="far fa-user-circle"></i>
+  					</a>
+  					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-profile">
+  					  <a class="dropdown-item" href="#">Logout</a>
+  					</div>
+  				</li>
+          <!-- end profile nav-item -->
+  			</ul>
+        <!-- end toolbar nav-->
+  		</div> <!--  end navbarCollapse -->
+  	</nav>
+
+
+    <!-- start main content -->
+  	<main id="main" class="medFit-main pb-0">
+  		<div id="siteContent" class="medFit-site-copntent container-fluid Site-content">
+  			<div id="mainContent" class="medFit-main-content main-content row">
+
+          <!-- start left column -->
+  				<div id="columnScrollleft" class="col-sm-2 px-0 column-scroll">
+            <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
+              <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
+                <!-- start left column nav -->
+                <nav class="navbar navbar-light bg-light mb-4 pb-0">
+                  <p><a href="#">Back to intake queue</a></p>
+                </nav>
+                <!-- end left column nav -->
+
+                <!-- start left column content -->
+  							<div class="px-3">
+                  left content
+                </div>
+                <!-- end left column content -->
+
+              </div> <!-- columnContent-left -->
+            </div> <!-- stickyWrapper-left -->
+  				</div> <!-- columnScrollleft -->
+          <!-- end left column -->
+
+          <!-- start main column -->
+  				<div id="columnScrollMain" class="col-sm px-0 column-scroll">
+  					<div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
+  						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">
+                <div class="px-3">
+                  <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue">Investigation</h1>
+                  <section id="notesAboutTheDriver">
+                    <form id="notesAboutTheDriverForm">
+                      <div class="ns-form-group">
+                        <h2 id="notesAboutTheDriverTitle" class="d-inline-block h3 ns-label-wrapper mb-2">
+                          <label class="ns-label" for="notesAboutTheDriverTextArea">
+                            Notes about the driver
+                          </label>
+                        </h2>
+                        <div id="notesAboutTheDriverTitleEditButtonWrapper" class="d-inline-block notesAboutTheDriverTitleEditButtonWrapper">
+                          <button id="notesAboutTheDriverTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd my-0">
+                            <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit notes about the driver</span>
+                          </button> <!-- edit saveButton -->
+                        </div> <!-- end EditButtonWrapper -->
+                        <div id="notesAboutTheDriverTitleSaveButtonWrapper" class="notesAboutTheDriverTitleSaveButtonWrapper" style="display:inline-block">
+                          <button id="notesAboutTheDriverTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd my-0"  style="display:none">
+                            <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
+                          </button> <!-- end saveButton -->
+                          <button id="notesAboutTheDriverTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd my-0 text-danger"  style="display:none">
+                            <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
+                          </button>  <!-- end cancelButton -->
+                        </div> <!-- end SaveButtonWrapper -->
+                        <textarea class="ns-input fw-20" id="notesAboutTheDriverTextArea" name="event-name" type="text"></textarea>
+                      </div> <!-- form group -->
+                    </form>
+                  </section>
+                </div>
+  						</div> <!-- columnContent-main -->
+  					</div> <!-- stickyWrapper-main -->
+          </div> <!-- columnScrollMain -->
+          <!-- end main column -->
+
+          <!-- start right column -->
+    			<div id="columnCollapse-right" class="col-sm px-0 column-scroll column-collapse column-collapse-right">
+    				<div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
+    					<div id="columnContent-right" class="medFit-column-content column-content column-content-right">
+                <article id="Document">
+
+                  <!-- start Document header -->
+                  <header id="columnHeader-Document">
+
+                    <div id="columnHeaderRow-Document" class="row mx-0">
+                      <div id="columnHeaderCol-Document" class="col-sm px-3 d-flex justify-content-between bg-light">
+                        <h2 id="h3-DocumentOverview" class="h3 medfit-ns-h3 ns-h3 h3 h3-Document-overview">Document overview</h2>
+                        <button id="closeColumnCollapse-right" type="button" class="medFit-btn-close btn-close close close-column-collapse-right" aria-label="Close" data-toggle="collapse" href="#columnCollapse-right">
+                          <span aria-hidden="true">&times;</span>
+                        </button> <!-- end Document close button -->
+                      </div> <!-- end Document header col -->
+                    </div> <!-- end Document header row -->
+
+                  </header>
+                  <!-- end Document header -->
+
+                  <!-- start Document nav -->
+                  <nav id="navbar-Document" class="navbar navbar-light bg-light mb-4 pb-0 navbar-Document">
+                    <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
+                      <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
+                        <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document active" href="#tabPane-attachements">Document</a>
+                      </li>
+                      <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details">
+                        <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details</a>
+                      </li>
+                      <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
+                        <button id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm ns-btn-2nd btn-start btn-ABCDE123456123 my-0 ml-2 ">Start intake</button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- end Document nav -->
+
+                  <!-- start Document tab content -->
+                  <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
+                    <!-- start Document tab content -->
+  									<div id="tabPane-attachements" class="medFit-tan-pane tab-pane tab-pane-attachements fade in active show">
+                      <section class="row mx-0">
+                        <!-- start document preview -->
+                        <article class="col-sm-12 px-3" id="exampleAttachment">
+                          <div>
+                            <img src="img/medical-report-front.jpg"  class="img-fluid mb-3" alt="Document Preview">
+                          </div>
+                        </article>
+                        <!-- end document preview -->
+                      </section> <!-- end Document tab row -->
+                    </div> <!-- end tabPane-attachements -->
+                    <!-- end Document tab content -->
+
+                    <!-- start details tab contents -->
+                    <div id="tabPane-details" class="medFit-tan-pane tab-pane tab-pane-details fade">
+  										<article class="col-sm px-3">
+  											<table id="reviewTable-details" class="medFit-review-table table review-table review-table-details">
+  												<caption id="reviewCaption-details" class="medFit-review-caption caption review-caption-details h4">Details <span><a href="#"><i class="fas fa-edit ml-2" aria-hidden="true"  aria-label="Edit Details"></i></a></span></caption>
+  												<tbody>
+  													<tr>
+  														<th scope="row">Contents</th>
+  														<td>Text contents pulled from emails would go here, or can be typed in manually</td>
+  													</tr>
+  													<tr>
+  														<th scope="row">Source</th>
+  														<td>Email</td>
+  													</tr>
+  													<tr>
+  														<th scope="row" >Email address</th>
+  														<td>mike.joe@gmail.com</td>
+  													</tr>
+  													<tr>
+  														<th scope="row" >Document type</th>
+  														<td>Medical report</td>
+  													</tr>
+  												</tbody>
+  											</table>
+  										</article>
+  									</div>
+                    <!-- end details tab content -->
+
+                  </div> <!-- end tabContent-Document -->
+                  <!-- end Document tab content -->
+
+                </article> <!-- end Document article -->
+    					</div> <!-- end columnContent-rightt -->
+    				</div> <!-- end stickyWrapper-right -->
+    			</div> <!-- end columnCollapse-right -->
+          <!-- end right column -->
+
+        </div> <!-- end #siteContent -->
+      </div>
+  <!-- 		<footer  id="footer" class="footer" role="contentinfo" height="20" style="height:20px">
+  		</footer> -->
+  	</main>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="js\presentational.js"></script><!-- only needed to display interaction design -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</html>
