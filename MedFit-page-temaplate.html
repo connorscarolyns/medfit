@@ -127,10 +127,8 @@
 
                     <header id="driverInfoHeader">
                       <div class="ns-form-group mb-0">
-                        <h2 id="driverInfoTitle" class="d-inline-block h3 ns-label-wrapper mb-2">
-                          <label class="ns-label" for="driverInfoTextArea">
+                        <h2 id="driverInfoTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
                             Joe Blake
-                          </label>
                         </h2>
                         <div id="driverInfoTitleEditButtonWrapper" class="d-inline-block driverInfoTitleEditButtonWrapper">
                           <button id="driverInfoTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
@@ -158,11 +156,11 @@
     									</div>
 
                       <div class="ns-form-group">
-    										<label class="ns-label" for="priorityEdit">
+    										<label class="ns-label" for="priorityEditSelect">
     										  Is this driver a priority?
     										</label>
                          <div id="priorityEdit" class="select fw-20" style="display:none;">
-    											<select id="select1" name="select1">
+    											<select id="priorityEditSelect" name="priority-edit-select">
     											  <option selected>Yes, they needs to be looked at right away</option>
     											  <option>No, they can wait their turn</option>
     											</select>
@@ -171,19 +169,19 @@
     									</div>
 
                       <div class="ns-form-group">
-    										<label class="ns-label" for="licenceInformation">
-    										  Licence Information
+    										<label class="ns-label" for="licenceInformationEdit">
+    										  License Information
     										</label>
     									  <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" type="text" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
                         <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
     									</div>
 
                       <div class="ns-form-group mb-0">
-    										<label class="ns-label" for="assigneeEdit">
+    										<label class="ns-label" for="assigneeEditSelect">
     										  Assignee
     										</label>
                          <div id="assigneeEdit" class="select fw-20" style="display:none;">
-    											<select id="select1" name="select1">
+    											<select id="assigneeEditSelect" name="select1">
     											  <option selected>connorsc</option>
     											  <option>turners</option>
     											</select>
@@ -202,11 +200,11 @@
 
                                <form>
                                   <div class="ns-form-group mb-2">
-                                    <h4 class="ns-label-wrapper">
-                  										<label class="ns-label" for="commentsEdit">
+                                    <h3 class="ns-label-wrapper h4">
+                  										<label class="ns-label" for="commentsWrite">
                   										  Comments
                   										</label>
-                                    </h4>
+                                    </h3>
 
                                     <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
                                       <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
@@ -438,69 +436,95 @@
                         </div> <!-- end SaveButtonWrapper -->
                       </header> <!-- end contactAddressHeader -->
 
-                      <fieldset id="contactAddressFieldSet" class="ns-fieldset" style="display: none;">
-    									  <legend class="ns-fieldset__legend noBorder">
-      										<h3 class="ns-fieldset__heading h4">
-      										  What is the contact's mailing address?
-      										</h3>
-    									  </legend>
+                      <dl id="contactAddressDLEdit" class="ns-summary-list" style="display: none;">
+                          <div class="ns-summary-list__row">
 
-    									  <div class="ns-form-group">
-      										<label class="ns-label" for="contactAddressLine1">
-      										  Street address
-      										</label>
-      										<input id="contactAddressLine1"  class="ns-input fw-25" name="contact-address-line-1" type="text" autocomplete="address-line1">
-      									</div>
+                            <dt class="ns-summary-list__key">
+                              <label for="contactAddressStreetAddressEdit">Street address</label>
+                            </dt>
 
-      									<div class="ns-form-group">
-      										<label class="ns-label" for="address-line-2">
-      										  Apartment / Unit
-      										</label>
-      										<input class="ns-input fw-6" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-      									</div>
+                            <dd class="ns-summary-list__value">
 
-      									<div class="ns-form-group">
-      										<label class="ns-label" for="address-town">
-      										  City / Town / Community
-      										</label>
-      										<input class="ns-input fw-15" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-      									</div>
+                                <input id="contactAddressStreetAddressEdit" class="ns-input fw-25" name="document-details-email-input" type="text" style="" value="72 Guild Street">
 
-      									<div class="ns-form-group">
-      										<label class="ns-label" for="province-territory">
-      										  Province / Territory
-      										</label>
-      										<div class="select fw-15">
-      											<input type="list" list="typeahead1List" id="province-territory" name="province-territory" autocomplete="address-level1">
-      												<datalist id="typeahead1List">
-      												  <option>Alberta - AB</option>
-      												  <option>British Columbia - BC</option>
-      												  <option>Manitoba - MB</option>
-      												  <option>New Brunswick - NB</option>
-      												  <option>Newfoundland and Labrador - NL</option>
-      												  <option>Northwest Territories - NT</option>
-      												  <option>Nova Scotia - NS</option>
-      												  <option>Nunavut - NU</option>
-      												  <option>Ontario - ON</option>
-      												  <option>Prince Edward Island - PE</option>
-      												  <option>Quebec - QC</option>
-      												  <option>Saskatchewan - SK</option>
-      												  <option>Yukon - YT</option>
-      												</datalist>
-      										 </div>
-      									  </div>
+                            </dd>
+                          </div>
+                          <!-- end message row -->
+                          <div class="ns-summary-list__row">
 
-      									  <div class="ns-form-group">
-        										<label class="ns-label" for="address-postal-code">
-        										  Postal code
-        										</label>
-        										<input class="ns-input fw-6" id="address-postal-code" name="address-postal-code" type="text" autocomplete="postal-code">
-      									  </div>
+                            <dt class="ns-summary-list__key">
+                              <label for="contactAddressAppartmentUnitEdit">Apartment / Unit</label>
+                            </dt>
 
-    									</fieldset>
+                            <dd class="ns-summary-list__value">
+
+                              <input id="contactAddressAppartmentUnitEdit" class="ns-input fw-6" name="document-details-email-input" type="text" style="">
+
+                            </dd>
+                          </div>
+                          <!-- end priority row -->
+                          <div class="ns-summary-list__row">
+
+                            <dt class="ns-summary-list__key">
+                              <label for="contactAddressCityTownCommunityEdit">City / Town / Community</label>
+                            </dt>
+
+                            <dd class="ns-summary-list__value">
+
+            										<input id="contactAddressCityTownCommunityEdit" class="ns-input fw-20" name="document-details-email-input" type="text" style="" value="Halifax">
+
+                            </dd>
+                          </div>
+                          <!-- end source row -->
+                          <div class="ns-summary-list__row">
+
+                            <dt class="ns-summary-list__key">
+                              <label for="contactAddressProvinceTerritoryEditSelect">Province / Territory</label>
+
+                            </dt>
+
+                            <dd class="ns-summary-list__value">
+
+                              <div id="contactAddressProvinceTerritoryEdit" class="select fw-20" style="">
+                                <select id="contactAddressProvinceTerritoryEditSelect" name="contact-address-province-territory-edit-select">
+                                  <option>Alberta - AB</option>
+        												  <option>British Columbia - BC</option>
+        												  <option>Manitoba - MB</option>
+        												  <option>New Brunswick - NB</option>
+        												  <option>Newfoundland and Labrador - NL</option>
+        												  <option>Northwest Territories - NT</option>
+        												  <option>Nova Scotia - NS</option>
+        												  <option>Nunavut - NU</option>
+        												  <option>Ontario - ON</option>
+        												  <option>Prince Edward Island - PE</option>
+        												  <option>Quebec - QC</option>
+        												  <option>Saskatchewan - SK</option>
+        												  <option>Yukon - YT</option>
+                                </select>
+                              </div>
+
+                            </dd>
+
+                          </div>
+                          <!-- end source details row -->
+                          <div class="ns-summary-list__row">
+                            <dt class="ns-summary-list__key">
+                              <label for="contactAddressPostalCodeEdit">Postal code</label>
+
+                            </dt>
+                            <dd class="ns-summary-list__value">
+
+          										<input id="contactAddressPostalCodeEdit" class="ns-input fw-6" name="document-details-email-input" type="text" style="" value="A1B 2C3">
+
+                            </dd>
+
+                          </div>
+                          <!-- end document notes row -->
+                        </dl>
+
                     </form>
 
-                    <dl id="contactAddressDL" class="ns-summary-list">
+                    <dl id="contactAddressDLSaved" class="ns-summary-list">
                       <div class="ns-summary-list__row">
                         <dd class="ns-summary-list__value">
                           72 Guild Street<br>Halifax<br>Nova Scotia<br>A1B 2C3

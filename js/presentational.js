@@ -8,8 +8,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#contactAddressTitleEditButton, #contactAddressSaveButton, #contactAddressCancelButton").on("click", function(){
-        $("#contactAddressTitleEditButton, #contactAddressSaveButton, #contactAddressCancelButton, #contactAddressDL, #contactAddressFieldSet").toggle("fast", function(){
-            $("#contactAddressAddressLine1").toggle("slow").focus()
+        $("#contactAddressTitleEditButton, #contactAddressSaveButton, #contactAddressCancelButton, #contactAddressDLSaved, #contactAddressDLEdit").toggle("fast", function(){
+            $("#contactAddressStreetAddressEdit").toggle("slow").focus()
         });
     });
 });
