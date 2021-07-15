@@ -235,7 +235,6 @@ textarea {
     max-height: 200px;
 }
 
-
 /* start comments section */
 
 .comment-wrapper .media-list {
@@ -243,3 +242,41 @@ textarea {
 }
 
 /* end comments section */
+
+
+/* start step list */
+
+.medfit-step-list{
+  font-weight: 400;
+}
+.medfit-step-list-step.active a{
+  font-weight: 600;
+}
+.medfit-step-list-item{
+  font-weight: 400;
+  display: flex;
+
+}
+.medfit-step-list-item.active{
+  font-weight: 600;
+}
+
+.medfit-step-list-item:before {
+    content: "";
+    border-left: 4px solid black;
+    position: relative;
+    left: -20px;
+    top: 7px;
+}
+/* end step list */
+
+/* start conditional form group */
+.medfit-form-group-conditional{
+  margin-bottom: 0rem;
+}
+.ns-checkboxes__conditional{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* end conditional formg roup */

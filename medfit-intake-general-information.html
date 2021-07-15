@@ -4,7 +4,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Intake Queue - MedFit - Government of Nova Scotia</title>
+  <title>General Information - Intake - MedFit - Government of Nova Scotia</title>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!-- Include in all head tags -->
 	<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include in all head tags -->
@@ -18,16 +18,13 @@
 	<link rel="stylesheet" media="all" href="css/buttons.css"><!-- Include only if buttons are used-->
 	<link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
 	<link rel="stylesheet" media="all" href="css/data-list.css"><!-- Include this only if needed -->
-	<link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all stylesheets -->
-
-  <link href="styles/multiselect.css" rel="stylesheet"/>
-	<script src="multiselect.min.js"></script>
+	<link rel="stylesheet" media="all" href="css\service-specific.css"><!-- Include the the end of all stylesheets -->
 
   </head>
 
   <body id="site" class="Site">
 
-  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+    <nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
       <nav class="skip-links" aria-label="Skip to main content">
   			<a href="#mainContent" class="skip-to-link">Skip to main content</a>
   		</nav>
@@ -92,13 +89,142 @@
   		<div id="siteContent" class="medFit-site-copntent container-fluid Site-content">
   			<div id="mainContent" class="medFit-main-content main-content row">
 
+          <!-- start left column -->
+  				<div id="columnScrollleft" class="col-md-2 px-0 column-scroll">
+
+            <!-- start left col header -->
+            <header id="columnHeader-left"  class="medfit-column-header d-flex align-items-center px-3">
+
+                  <a href="medfit-intake-queue.html" class="ns-back-link pr-2">Back to queue</a>
+
+            </header>
+            <!-- end left col header -->
+
+            <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
+              <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
+
+                <!-- start left column content -->
+  							<div class="px-3">
+                  <!-- Start step navigation -->
+                  <section>
+                    <nav>
+                      <ol class="step-list medfit-step-list">
+                        <li class="medfit-step-list-step active">
+                          <a href="#">Add and edit details</a>
+                          <a href="#" class="medfit-step-list-item active">General info</a>
+                          <span role="presentation" class="medfit-step-list-item disabled">Detailed info</span>
+                        </li>
+                        <li class="medfit-step-list-step">Link to a driver</li>
+                        <li class="medfit-step-list-step">Link to a demand</li>
+                        <li class="medfit-step-list-step">Complete intake</li>
+                      </ol>
+                    </nav>
+                  </section>
+                  <!-- end step navigation -->
+
+                  <!-- start assignee section -->
+                  <section class="medfit-licence-info__wrapper">
+
+                    <form id="medfitLicenceInfoForm">
+                      <div class="ns-form-group mb-0">
+    										<label class="ns-label" for="assigneeEditSelect">
+    										  Assignee
+    										</label>
+                         <div id="assigneeEdit" class="select fw-20" >
+    											<select id="assigneeEditSelect" name="select1">
+    											  <option selected>connorsc</option>
+    											  <option>turners</option>
+    											</select>
+    										 </div>
+    									</div>
+                    </form>
+
+                  </section>
+                  <!-- end licence info section -->
+                  <!-- end assignee section -->
+
+                  <section class="medfit-comments__wrapper">
+                    <div class="comment-wrapper">
+                         <div class="panel panel-info">
+                             <div class="panel-body">
+
+                               <form>
+                                  <div class="ns-form-group mb-2">
+                                    <h3 class="ns-label-wrapper h4">
+                  										<label class="ns-label" for="commentsWrite">
+                  										  Comments
+                  										</label>
+                                    </h3>
+
+                                    <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                      <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
+                                    </button>
+                                    <textarea id="commentsWrite" class="ns-input fw-20" id="commentsEdit" name="comments-edit" type="text" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
+                   								</div>
+
+                                  <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
+
+                               </form>
+
+                                 <hr>
+                                 <ul class="media-list">
+                                     <li class="media">
+                                         <div class="media-body">
+                                             <span class="text-muted pull-right">
+                                                 <small class="text-muted">31/12/2021</small>
+                                             </span>
+                                             <strong class="">@connorsc</strong>
+                                             <p>
+                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                 Lorem ipsum dolor sit amet.
+                                             </p>
+                                         </div>
+                                     </li>
+                                     <li class="media">
+                                         <div class="media-body">
+                                             <span class="text-muted pull-right">
+                                                 <small class="text-muted">31/12/2021</small>
+                                             </span>
+                                             <strong class="">@turners</strong>
+                                             <p>
+                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                 Lorem ipsum dolor adipiscing elit.
+                                             </p>
+                                         </div>
+                                     </li>
+                                     <li class="media">
+                                         <div class="media-body">
+                                             <span class="text-muted pull-right">
+                                                 <small class="text-muted">31/12/2021</small>
+                                             </span>
+                                             <strong class="">@connorsc</strong>
+                                             <p>
+                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                             </p>
+                                         </div>
+                                     </li>
+                                 </ul>
+                             </div>
+
+                     </div>
+                  </section>
+                  <!-- end comments section -->
+                </div>
+                <!-- end left column content -->
+
+              </div> <!-- columnContent-left -->
+            </div> <!-- stickyWrapper-left -->
+  				</div> <!-- columnScrollleft -->
+          <!-- end left column -->
+
           <!-- start main column -->
   				<div id="columnScrollMain" class="col-md column-scroll px-0">
 
             <!-- start main col header -->
             <header id="columnHeader-main"  class="medfit-column-header d-flex align-items-center justify-content-between px-3">
 
-                <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0 mr-3">Intake queue</h1>
+                <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0">Add and edit details</h1>
+                <button type="button" class="medFit-btn btn-sm btn-default my-0 mr-0">Save and continue</button>
 
             </header>
             <!-- end main col header -->
@@ -106,181 +232,150 @@
   					<div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
   						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">
 
-                <div class="d-flex align-items-center py-3 px-3" tabindex="0" style="border: 1px dashed #c1c1c1;background: #e8e8e8;">
-                  <input id="upload" accept="application/pdf" multiple="" type="file" autocomplete="off" tabindex="-1" style="display: none;">
-                  <button class="ns-btn-2nd ns-btn__icon medFit-btn btn-sm my-0 ml-0 mr-2" style="
-                    display: inline-flex;"><i class="ns-btn__icon-left fas fa-file-upload" aria-hidden="true"></i>Click to upload files</button>
-                  <label for="upload" class="h5 ns-label my-0">or drag 'n' drop here</label>
-                </div>
+                <div class="px-3 mt-3">
 
-                <div class="px-3">
-                  <div class="row">
-          					<div class="col">
-
-                      <h2 class="h3 mt-0 d-inline-block">Filters:&nbsp;
-                        <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Priority<i class="ml-2 fas fa-times-circle"></i></a>
-                          <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Assigned to me<i class="ml-2 fas fa-times-circle"></i></a>
-                            <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Today<i class="ml-2 fas fa-times-circle"></i></a>
-                      </h2>
-
-                        <h3 class="panel-title h4 d-inline-block">
-                          <button role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" class=" ns-btn-2nd my-0 medFit-btn btn-sm">
-                             <i class="fas fa-plus-square mr-2 ns-btn__icon-left" aria-hidden="true"> </i>Add filters
-                          </button>
-                        </h3>
-
-          						<div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
-          								<div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1" aria-expanded="true" style="">
-          									<div class="panel-body">
-          										<div class="row">
-          											<div class="col">
-                                  <div class="ns-form-group">
-                										<label id="headingOne_1" class="ns-label" for="priority">
-                										  Priority
-                										</label>
-                										<div class="select fw-20">
-                											<select id="priority" name="priority">
-                											  <option>Priority</option>
-                											  <option>Non-priority</option>
-                											</select>
-                										 </div>
-                									</div>
-          											</div>
-          											<div class="col">
-                                  <div class="ns-form-group">
-                										<label class="ns-label" for="testSelect1">
-                										  Assignee
-                										</label>
-                										<div class="select multiselect">
-                                     <select id='testSelect1' name="asignee" multiple>
-                                       <option value='1'>Assigned to me</option>
-                                       <option value='2' selected>Assigned to connorsc</option>
-                                       <option value='3' selected>Assigned to turners</option>
-                                       <option value='4'>Assigned to dangat</option>
-                                     </select>
-                										 </div>
-                									</div>
-                                  <script>
-                                  	document.multiselect('#testSelect1')
-                                  		.setCheckBoxClick("checkboxAll", function(target, args) {
-                                  			console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
-                                  		})
-                                  		.setCheckBoxClick("1", function(target, args) {
-                                  			console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
-                                  		});
-
-                                  	function enable() {
-                                  		document.multiselect('#testSelect1').setIsEnabled(true);
-                                  	}
-
-                                  	function disable() {
-                                  		document.multiselect('#testSelect1').setIsEnabled(false);
-                                  	}
-                                  </script>
-          											</div>
-          											<div class="col">
-                                  <div class="ns-form-group">
-                										<label class="ns-label" for="time-period">
-                										  Time period
-                										</label>
-                										<div class="select fw-20">
-                											<select id="time-period" name="time-period">
-                											  <option>Today</option>
-                											  <option>1 week</option>
-                											  <option>1 month</option>
-                											  <option>6 months</option>
-                											  <option>1 year</option>
-                											  <option>2 years</option>
-                											</select>
-                										 </div>
-                									</div>
-          											</div>
-                                </div> <!-- end row -->
-                                <div class="row">
-                                  <div class="ns-form-group mx-3 mb-4 d-flex">
-                                    <fieldset>
-                                      <legend class="ns-fieldset__legend noBorder label">
-                                        Date or date range
-                                      </legend>
-                                      <div class="d-flex justify-content-start">
-
-                                        <div class="pr-3"><label class="ns-label" for="day1">DD</label><input type="text" id="day1" name="day" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-                                        <div class="pr-3"><label class="ns-label" for="month1">MM</label><input type="text" id="month1" name="month" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-                                        <div class="pr-3"><label class="ns-label" for="year1">YYYY</label><input type="text" id="year1" name="year" class="fw-4" pattern="[0-9]*" inputmode="numeric"></div>
-
-                                        <div class="pr-3 align-self-end mb-2">
-                                          <span>to</span>
-                                        </div>
-
-                                        <div class="pr-3"><label class="ns-label" for="day2">DD</label><input type="text" id="day2" name="day" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-                                        <div class="pr-3"><label class="ns-label" for="month2">MM</label><input type="text" id="month2" name="month" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-                                        <div class="pr-3"><label class="ns-label" for="year2">YYYY</label><input type="text" id="year2" name="year" class="fw-4" pattern="[0-9]*" inputmode="numeric"></div>
-
-                                      </div>
-                                    </fieldset>
-                                </div>
-          										</div>
-                              <section class="row">
-                                <div class="col-auto">
-                                  <button class="medFit-btn btn-sm btn-default" type="button"  role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Apply filters</button>
-                                </div>
-                                <div class="col-auto">
-                                  <button class="medFit-btn btn-sm ns-btn-2nd" type="button"  role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Cancel</button>
-                                </div>
-                              </section>
-          									</div>
-          								</div>
-          							</div>
-          					</div>
-                  </div>
-                  <div class="table-wrapper">
-  									<table id="intakeQueue-table" class="medFit-table table table-hover">
-  									  <thead>
-  										<tr>
-  										  <th scope="col">Source</th>
-  										  <th scope="col">From</th>
-  										  <th scope="col">Start date</th>
-  										  <th scope="col">State</th>
-  										  <th scope="col">Assignee</th>
-  										  <th scope="col" class="float-right">What's next?</th>
-  										</tr>
-  									  </thead>
-  									  <tbody>
-  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
-  										  <td>Joe Smith</td>
-  										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
-  										</tr>
-  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
-  										  <td>Joe Smith</td>
-  										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
-  										</tr>
-  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
-  										  <td>Joe Smith</td>
-  										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
-  										</tr>
-  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
-  										  <td>Joe Smith</td>
-  										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
-  										</tr>
-  									  </tbody>
-  									</table>
-  								</div>
+                  <section id="GeneralInformation">
+                      <h2 id="GeneralInformationTitle" class="h3 mt-3">General information</h2>
+                  </section>
+                  <section>
+                    <form class="" action="index.html" method="post">
+                      <fieldset class="ns-fieldset" aria-describedby="contact-hint">
+                      <div class="ns-form-group medfit-form-group-conditional">
+    										<label class="ns-label" for="typeahead1">
+    										  Source
+    										</label>
+    										<div class="select fw-15">
+    											<input type="list" id="typeahead1" list="typeahead1List" name="typeahead1">
+    												<datalist id="typeahead1List">
+    												  <option>Email</option>
+    												  <option>Fax</option>
+    												  <option>Letter</option>
+    												  <option>Phone call</option>
+    												  <option>Interdepartmental</option>
+    												</datalist>
+    										 </div>
+    									</div>
+  									  <div class="ns-checkboxes__conditional" id="conditional-email">
+    										<div class="ns-form-group">
+    										  <label class="ns-label" for="contact-by-email">
+    											Email address
+    										  </label>
+    										  <input class="ns-input fw-25" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+                        </div>
+                        <div class="ns-form-group">
+                          <label class="ns-label" for="address">
+                          Email message
+                          </label>
+                          <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" autocomplete="street-address" spellcheck="false"></textarea>
+                        </div>
+  									  </div>
+  									  <div class="ns-checkboxes__conditional" id="conditional-fax">
+    										<div class="ns-form-group">
+    										  <label class="ns-label" for="contact-by-fax">
+    											Fax number
+    										  </label>
+    										  <input class="ns-input fw-15" id="contact-by-fax" name="contact-by-fax" type="email" spellcheck="false">
+                        </div>
+  									  </div>
+  									  <div class="ns-checkboxes__conditional" id="conditional-letter">
+                        <div class="ns-form-group">
+      									  <label class="ns-label" for="address">
+      										Address on letter
+      									  </label>
+      									  <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" autocomplete="street-address" spellcheck="false"></textarea>
+      									</div>
+  									  </div>
+  									  <div class="ns-checkboxes__conditional" id="conditional-phone">
+    										<div class="ns-form-group">
+    										  <label class="ns-label" for="contact-by-phone">
+    											Phone call
+    										  </label>
+    										  <input class="ns-input fw-15" id="contact-by-phone" name="contact-by-fax" type="email" spellcheck="false">
+                        </div>
+  									  </div>
+  									  <div class="ns-checkboxes__conditional" id="conditional-interdepartmental">
+    										<div class="ns-form-group">
+    										  <label class="ns-label" for="contact-by-interdepartmental">
+    											Interdepartmental
+    										  </label>
+      										<div class="select fw-15">
+      											<input type="list" id="typeaheadInterdepartmental" list="typeaheadInterdepartmentalList" name="typeaheadInterdepartmental">
+      												<datalist id="typeaheadInterdepartmentalList">
+      												  <option>Amherst</option>
+      												  <option>Antigonish</option>
+      												  <option>Bridgewater</option>
+      												  <option>Dartmouth</option>
+      												  <option>Digby</option>
+      												  <option>Halifax</option>
+      												  <option>Kentville</option>
+      												  <option>Lower Sackville</option>
+      												  <option>Port Hawkesbury</option>
+      												  <option>Stellarton</option>
+      												  <option>Sydney</option>
+      												  <option>Truro</option>
+      												  <option>Yarmouth</option>
+      												</datalist>
+      										 </div>
+      									</div>
+                      </div>
+                    </fieldset>
+                      <div class="ns-form-group">
+                        <label class="ns-label" for="contact-by-interdepartmental">
+                        What type of document is it?
+                        </label>
+                        <div class="select fw-20">
+                          <input type="list" id="typeaheadLetterType" list="typeaheadLetterTypeList" name="typeaheadLetterType">
+                            <datalist id="typeaheadLetterTypeList">
+                              <option>Doctors Letter</option>
+                              <option>Collision</option>
+                              <option>Police/RCMP</option>
+                              <option>Private/Unsolicited Complaint</option>
+                              <option>Client letter</option>
+                              <option>24 hour suspensions</option>
+                              <option>Medical Examination- Medical Report</option>
+                              <option>Vision Examination</option>
+                              <option>Re-examination (Road Test)</option>
+                              <option>Cardio (ICD) </option>
+                              <option>Sleep Study</option>
+                              <option>CPAP Compliance Report</option>
+                              <option>NSRC/DriveAble Rehab Report</option>
+                              <option>Specialist Report</option>
+                              <option>Surrender of Driver's License</option>
+                              <option>Temporary Licence   </option>
+                              <option>Certificate of Competence</option>
+                              <option>Other</option>
+                            </datalist>
+                         </div>
+                      </div>
+                      <fieldset class="ns-fieldset">
+      									<legend class="ns-fieldset__legend noBorder label">
+      										Does this document have enough information to continue?
+      									</legend>
+      									<div class="ns-radios">
+      									  <div class="ns-radios__item">
+      										<input class="ns-radios__input" id="stacked-radio" name="stacked-radio" type="radio" value="radio 1">
+      										<label class="ns-label ns-radios__label noBold" for="stacked-radio">
+      										  <span class="ns-label-span">Yes, there is enough information to continue</span>
+      										</label>
+      									  </div>
+      									  <div class="ns-radios__item">
+      										<input class="ns-radios__input" id="stacked-radio-2" name="stacked-radio" type="radio" value="radio 2">
+      										<label class="ns-label ns-radios__label noBold" for="stacked-radio-2">
+      										  <span class="ns-label-span">No, it's missing information</span>
+      										</label>
+      									  </div>
+      									</div>
+      								 </fieldset>
+                       <section id="decisionSection" class="row">
+       									<div class="col-auto">
+       										<button class="medFit-btn btn-lg btn-default" type="button">Save and continue</button>
+       									</div>
+       									<div class="col-auto">
+       										<button class="medFit-btn btn-lg ns-btn-2nd" type="button">Cancel</button>
+       									</div>
+                       </section>
+                    </form>
+                  </section>
                 </div>
   						</div> <!-- columnContent-main -->
   					</div> <!-- stickyWrapper-main -->
@@ -298,23 +393,23 @@
                     <nav id="navbar-Document" class="navbar navbar-light pb-0 navbar-Document align-self-end">
                       <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
                         <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
-                          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document disabled active" href="#tabPane-attachements"> <span class="ns-visually-hidden">Preivew the </span>Document</a>
+                          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document active" href="#tabPane-attachements"> <span class="ns-visually-hidden">Preivew the </span>Document</a>
                         </li>
                         <!-- <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details">
                           <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details <span class="ns-visually-hidden">about the document</span></a>
                         </li> -->
-                        <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
-                          <a href="medfit-intake-general-information.html" id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm btn-default btn-start my-0 ml-2 ">Start intake</a>
-                        </li>
+                        <!-- <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
+                          <button id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm ns-btn-2nd btn-start btn-ABCDE123456123 my-0 ml-2 ">Start intake</button>
+                        </li> -->
                       </ul>
                     </nav>
                     <!-- end Document nav -->
 
-                    <div class="button-wrapper d-flex align-items-center ml-auto">
+                    <!-- <div class="button-wrapper d-flex align-items-center ml-auto">
   										<button id="closeColumnCollapse-right" type="button" class="medFit-btn-close btn-close close close-column-collapse-right" aria-label="Close" data-toggle="collapse" href="#columnCollapse-right">
   											<span aria-hidden="true">&times;</span>
   										</button>
-                    </div>
+                    </div> -->
 
             </header>
             <!-- end Document header -->
@@ -334,6 +429,7 @@
                           <div class="mt-3">
                             <img src="img/medical-report-front.jpg"  class="img-fluid mb-3" alt="Document Preview">
                           </div>
+                          <button type="button" class="medFit-btn btn-sm btn-default">Open document in new tab</button>
                         </article>
                         <!-- end document preview -->
                       </section> <!-- end Document tab row -->

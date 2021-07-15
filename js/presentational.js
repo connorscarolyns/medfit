@@ -44,3 +44,51 @@ function auto_grow(element) {
     element.style.height = (element.scrollHeight)+"px";
     element.style.height = (element.scrollHeight)+"px";
 }
+
+// start conditional selections
+$("#typeahead1").change(function() {
+  if ($(this).val() == "Email") {
+    $('#conditional-email').show();
+  } else {
+    $('#conditional-email').hide();
+  }
+});
+$("#typeahead1").trigger("change");
+
+$("#typeahead1").change(function() {
+    if ($(this).val() == "Fax") {
+      $('#conditional-fax').show();
+    } else {
+      $('#conditional-fax').hide();
+    }
+});
+$("#typeahead1").trigger("change");
+
+$("#typeahead1").change(function() {
+    if ($(this).val() == "Letter") {
+      $('#conditional-letter').show();
+    } else {
+      $('#conditional-letter').hide();
+    }
+});
+$("#typeahead1").trigger("change");
+
+$("#typeahead1").change(function() {
+    if ($(this).val() == "Phone call") {
+      $('#conditional-phone').show();
+    } else {
+      $('#conditional-phone').hide();
+    }
+});
+$("#typeahead1").trigger("change");
+
+$("#typeahead1").change(function() {
+    if ($(this).val() == "Interdepartmental") {
+      $('#conditional-interdepartmental').show();
+    } else {
+      $('#conditional-interdepartmental').hide();
+    }
+});
+$("#typeahead1").trigger("change");
+
+// end conditional selections
