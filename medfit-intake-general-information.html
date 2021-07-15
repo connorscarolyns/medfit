@@ -132,8 +132,15 @@
     										</label>
                          <div id="assigneeEdit" class="select fw-20" >
     											<select id="assigneeEditSelect" name="select1">
-    											  <option selected>connorsc</option>
-    											  <option>turners</option>
+                            <optgroup label="Assign to a person">
+      											  <option selected>connorsc</option>
+      											  <option>turners</option>
+                            </optgroup>
+                            <optgroup label="Assign to a role">
+                              <option>Clerks</option>
+                              <option>Medical Assessors</option>
+                              <option>Deputy Registrar</option>
+                            </optgroup>
     											</select>
     										 </div>
     									</div>
@@ -239,7 +246,7 @@
                   </section>
                   <section>
                     <form class="" action="index.html" method="post">
-                      <fieldset class="ns-fieldset" aria-describedby="contact-hint">
+                      <div class="ns-form-group">
                       <div class="ns-form-group medfit-form-group-conditional">
     										<label class="ns-label" for="typeahead1">
     										  Source
@@ -263,10 +270,10 @@
     										  <input class="ns-input fw-25" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
                         </div>
                         <div class="ns-form-group">
-                          <label class="ns-label" for="address">
+                          <label class="ns-label" for="emailMessage">
                           Email message
                           </label>
-                          <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" autocomplete="street-address" spellcheck="false"></textarea>
+                          <textarea class="ns-textarea fw-25" id="emailMessage" name="email-message" rows="5" spellcheck="false"></textarea>
                         </div>
   									  </div>
   									  <div class="ns-checkboxes__conditional" id="conditional-fax">
@@ -282,7 +289,7 @@
       									  <label class="ns-label" for="address">
       										Address on letter
       									  </label>
-      									  <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" autocomplete="street-address" spellcheck="false"></textarea>
+      									  <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" spellcheck="false"></textarea>
       									</div>
   									  </div>
   									  <div class="ns-checkboxes__conditional" id="conditional-phone">
@@ -299,7 +306,7 @@
     											Interdepartmental
     										  </label>
       										<div class="select fw-15">
-      											<input type="list" id="typeaheadInterdepartmental" list="typeaheadInterdepartmentalList" name="typeaheadInterdepartmental">
+      											<input type="list" id="contact-by-interdepartmental" list="typeaheadInterdepartmentalList" name="typeaheadInterdepartmental">
       												<datalist id="typeaheadInterdepartmentalList">
       												  <option>Amherst</option>
       												  <option>Antigonish</option>
@@ -318,14 +325,14 @@
       										 </div>
       									</div>
                       </div>
-                    </fieldset>
+                    </div>
                       <div class="ns-form-group">
-                        <label class="ns-label" for="contact-by-interdepartmental">
+                        <label class="ns-label" for="letterType">
                         What type of document is it?
                         </label>
                         <div class="select fw-20">
-                          <input type="list" id="typeaheadLetterType" list="typeaheadLetterTypeList" name="typeaheadLetterType">
-                            <datalist id="typeaheadLetterTypeList">
+                          <input type="list" id="letterType" list="letterTypeList" name="typeahead-letterType">
+                            <datalist id="letterTypeList">
                               <option>Doctors Letter</option>
                               <option>Collision</option>
                               <option>Police/RCMP</option>
