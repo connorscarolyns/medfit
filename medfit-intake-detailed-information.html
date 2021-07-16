@@ -230,151 +230,93 @@
                   <section class="medfit-step-navigation">
                     <nav class="medfit-step-navigation--nav">
                       <ol class="step-list medfit-step-navigation--list">
-                        <li class="medfit-step-navigation--list-item active">
-                          <h2 class="h3 medfit-step-navigation--title active"><a href="#">Add and edit details</a></h2>
+                        <li class="medfit-step-navigation--list-item">
+                          <h2 class="h3 medfit-step-navigation--title"><a href="medfit-intake-general-information.html">Add and edit details</a></h2>
                           <section class="medfit-step-navigation--section">
-                            <form  method="get" action="medfit-intake-detailed-information.html">
-                              <h3 class="h4 medfit-step-navigation--title active"><a href="#" class="medfit-step-list-item active">General information</a></h3>
-                              <div class="ns-form-group">
-                                <div class="ns-form-group medfit-form-group-conditional">
-                                  <label class="ns-label" for="typeahead1">
-                                    Source
-                                  </label>
-                                  <div class="select fw-15">
-                                    <input type="list" id="typeahead1" list="typeahead1List" name="typeahead1">
-                                      <datalist id="typeahead1List">
-                                        <option>Email</option>
-                                        <option>Fax</option>
-                                        <option>Letter</option>
-                                        <option>Phone call</option>
-                                        <option>Interdepartmental</option>
-                                      </datalist>
-                                   </div>
-                                </div>
-                                <div class="ns-checkboxes__conditional" id="conditional-email">
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="contact-by-email">
-                                    Email address
-                                    </label>
-                                    <input class="ns-input fw-25" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
-                                  </div>
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="emailMessage">
-                                    Email message
-                                    </label>
-                                    <textarea class="ns-textarea fw-25" id="emailMessage" name="email-message" rows="5" spellcheck="false"></textarea>
-                                  </div>
-                                </div>
-                                <div class="ns-checkboxes__conditional" id="conditional-fax">
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="contact-by-fax">
-                                    Fax number
-                                    </label>
-                                    <input class="ns-input fw-15" id="contact-by-fax" name="contact-by-fax" type="email" spellcheck="false">
-                                  </div>
-                                </div>
-                                <div class="ns-checkboxes__conditional" id="conditional-letter">
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="address">
-                                    Address on letter
-                                    </label>
-                                    <textarea class="ns-textarea fw-25" id="address" name="address" rows="5" spellcheck="false"></textarea>
-                                  </div>
-                                </div>
-                                <div class="ns-checkboxes__conditional" id="conditional-phone">
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="contact-by-phone">
-                                    Phone call
-                                    </label>
-                                    <input class="ns-input fw-15" id="contact-by-phone" name="contact-by-fax" type="email" spellcheck="false">
-                                  </div>
-                                </div>
-                                <div class="ns-checkboxes__conditional" id="conditional-interdepartmental">
-                                  <div class="ns-form-group">
-                                    <label class="ns-label" for="contact-by-interdepartmental">
-                                    Interdepartmental
-                                    </label>
-                                    <div class="select fw-15">
-                                      <input type="list" id="contact-by-interdepartmental" list="typeaheadInterdepartmentalList" name="typeaheadInterdepartmental">
-                                        <datalist id="typeaheadInterdepartmentalList">
-                                          <option>Amherst</option>
-                                          <option>Antigonish</option>
-                                          <option>Bridgewater</option>
-                                          <option>Dartmouth</option>
-                                          <option>Digby</option>
-                                          <option>Halifax</option>
-                                          <option>Kentville</option>
-                                          <option>Lower Sackville</option>
-                                          <option>Port Hawkesbury</option>
-                                          <option>Stellarton</option>
-                                          <option>Sydney</option>
-                                          <option>Truro</option>
-                                          <option>Yarmouth</option>
-                                        </datalist>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="ns-form-group">
-                                <label class="ns-label" for="letterType">
-                                What type of document is it?
-                                </label>
-                                <div class="select fw-20">
-                                  <input type="list" id="letterType" list="letterTypeList" name="typeahead-letterType">
-                                    <datalist id="letterTypeList">
-                                      <option>Doctors Letter</option>
-                                      <option>Collision</option>
-                                      <option>Police/RCMP</option>
-                                      <option>Private/Unsolicited Complaint</option>
-                                      <option>Client letter</option>
-                                      <option>24 hour suspensions</option>
-                                      <option>Medical Examination- Medical Report</option>
-                                      <option>Vision Examination</option>
-                                      <option>Re-examination (Road Test)</option>
-                                      <option>Cardio (ICD) </option>
-                                      <option>Sleep Study</option>
-                                      <option>CPAP Compliance Report</option>
-                                      <option>NSRC/DriveAble Rehab Report</option>
-                                      <option>Specialist Report</option>
-                                      <option>Surrender of Driver's License</option>
-                                      <option>Temporary Licence   </option>
-                                      <option>Certificate of Competence</option>
-                                      <option>Other</option>
-                                    </datalist>
-                                 </div>
-                              </div>
-                              <fieldset class="ns-fieldset">
+                            <h3 class="h4 medfit-step-navigation--title"><a href="medfit-intake-general-information.html" class="medfit-step-list-item">General information</span></a>
+                          </section>
+
+                          <section class="medfit-step-navigation--section active">
+                              <h3 class="h4 medfit-step-navigation--title active"><a href="#" class="medfit-step-list-item">Detailed information</span></a></h3>
+
+                              <fieldset id="anythingToReportFieldset" class="ns-fieldset mb-3">
                                 <legend class="ns-fieldset__legend noBorder label">
-                                  Does this document have enough information to continue?
+                                  Was there anything reported?
                                 </legend>
                                 <div class="ns-radios ns-radios--small">
                                   <div class="ns-radios__item">
-                                  <input class="ns-radios__input" id="stacked-radio" name="stacked-radio" type="radio" value="radio 1">
-                                  <label class="ns-label ns-radios__label noBold" for="stacked-radio">
-                                    <span class="ns-label-span">Yes, there is enough information to continue</span>
-                                  </label>
+                                    <input class="ns-radios__input" id="stacked-radio" name="stacked-radio" type="radio" value="radio 1">
+                                    <label class="ns-label ns-radios__label noBold" for="stacked-radio">
+                                      <span class="ns-label-span">Yes, something was reported</span>
+                                    </label>
                                   </div>
                                   <div class="ns-radios__item">
-                                  <input class="ns-radios__input" id="stacked-radio-2" name="stacked-radio" type="radio" value="radio 2">
-                                  <label class="ns-label ns-radios__label noBold" for="stacked-radio-2">
-                                    <span class="ns-label-span">No, it's missing information</span>
-                                  </label>
+                                    <input class="ns-radios__input" id="stacked-radio-2" name="stacked-radio" type="radio" value="radio 2">
+                                    <label class="ns-label ns-radios__label noBold" for="stacked-radio-2">
+                                      <span class="ns-label-span">No, there was nothing to report</span>
+                                    </label>
                                   </div>
                                 </div>
                                </fieldset>
-                                <section id="decisionSection" class="row ns-form-group">
-                                 <div class="col-auto">
-                                   <button type="submit" role="button" class="medFit-btn btn-sm btn-default my-0" type="button">Save and continue</button>
-                                 </div>
-                                 <div class="col-auto">
-                                   <button role="button" class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
-                                 </div>
-                                </section>
-                            </form>
-                          </section>
 
-                          <section class="medfit-step-navigation--section disabled">
-                            <h3 class="h4 medfit-step-navigation--title disabled"><span class="medfit-step-list-item">Detailed information</span></h3>
+                               <!-- start medical condition section -->
+                               <section id="medicalConditionSection" class="ns-form-group">
+                                 <button role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" class=" ns-btn-2nd medFit-btn btn-sm my-0">
+                                    <i class="fas fa-plus-square mr-2 ns-btn__icon-left" aria-hidden="true"> </i>Add the reported medical conditions
+                                 </button>
+                               </section>
+                               <!-- end medical condition section -->
+
+                               <fieldset id="opinionAndReccomendationFieldset" class="ns-fieldset">
+             										<legend class="ns-fieldset__legend noBorder label">
+             										  <h3 class="ns-fieldset__heading ">
+             											Opinion and Reccomendation
+             										  </h3>
+             										</legend>
+             										<div class="ns-radios ns-radios--small ns-checkboxes--small">
+             										  <div class="ns-radios__item">
+             											<input class="ns-radios__input" id="issueAsAppliedFor" name="issue-as-applied-for" type="radio" value="Issue licence as applied for">
+             											<label class="ns-label ns-radios__label noBold" for="issueAsAppliedFor">
+             											  <span class="ns-label-span">Issue licence as applied for</span>
+             											</label>
+             										  </div>
+             										  <div class="ns-radios__divider">or</div>
+                                  <div class="ns-checkboxes__item">
+                                  <input class="ns-checkboxes__input" id="issueWithRestrictions" name="issue-with-restrictions" type="checkbox" value="Issue licence with restrictions">
+                                  <label class="ns-label ns-checkboxes__label noBold" for="issueWithRestrictions">
+                                    <span class="ns-label-span">Issue licence with restrictions</span>
+                                  </label>
+                                  </div>
+                                  <div class="ns-checkboxes__item">
+                                  <input class="ns-checkboxes__input" id="roadTestRequired" name="road-test-required" type="checkbox" value="Road test required">
+                                  <label class="ns-label ns-checkboxes__label noBold" for="organisation-3">
+                                    <span class="ns-label-span">Road test required</span>
+                                  </label>
+                                  </div>
+                                  <div class="ns-checkboxes__item">
+                                  <input class="ns-checkboxes__input" id="suspendPending" name="suspend-pending" type="checkbox" value="Suspend licence pending">
+                                  <label class="ns-label ns-checkboxes__label noBold" for="suspendPending">
+                                    <span class="ns-label-span">Suspend licence pending</span>
+                                  </label>
+                                  </div>
+                                  <div class="ns-checkboxes__item">
+                                  <input class="ns-checkboxes__input" id="suspendUnlikelyToImprove" name="suspend-unlikely-to-improve" type="checkbox" value="DfT">
+                                  <label class="ns-label ns-checkboxes__label noBold" for="suspendUnlikelyToImprove">
+                                    <span class="ns-label-span">Suspend - unlikely to improve</span>
+                                  </label>
+                                  </div>
+             										</div>
+
+             									 </fieldset>
+
+                               <section id="decisionSection" class="row ns-form-group">
+                                <div class="col-auto">
+                                  <button class="medFit-btn btn-sm btn-default my-0" type="button">Save and continue</button>
+                                </div>
+                                <div class="col-auto">
+                                  <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
+                                </div>
+                               </section>
                           </section>
 
                         </li>

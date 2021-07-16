@@ -7,12 +7,29 @@ html,body {
   overflow-x:hidden;
 }
 
-.btn-lg {
+/* Start button styles */
+
+.medFit-btn.btn-lg {
     padding: .75rem 1rem;
     font-size: 1.2rem;
     line-height: 1.2;
     margin: 1rem auto;
 }
+.medFit-btn.ns-btn-2nd {
+    border: 1px solid #d5ecff;
+}
+
+.medfit-btn-inline-icon{
+  font-size: inherit;
+  padding: .25em .5em;
+  margin: .25em;
+}
+
+.medFit-btn.btn-sm{
+  font-size:1rem;
+}
+
+/* end button styles */
 
 @media only screen and (min-width: 768px) {
   .main-content {
@@ -146,11 +163,6 @@ html,body {
   background: #e2231a;
   transition: background .2s ease;
 }
-.medfit-btn-inline-icon{
-  font-size: inherit;
-  padding: .25em .5em;
-  margin: .25em;
-}
 
 .column-header-nav-tabs a{
   text-decoration: none;
@@ -183,10 +195,6 @@ html,body {
     width: 30%;
     vertical-align: top;
   }
-
-.medFit-btn.btn-sm{
-  font-size:1rem;
-}
 
 .navbar-nav-tools{
 align-items: center;
@@ -246,27 +254,51 @@ textarea {
 
 /* start step list */
 
-.medfit-step-list{
-  font-weight: 400;
+.medfit-step-navigation{
+  position: relative;
 }
-.medfit-step-list-step.active a{
-  font-weight: 600;
+.medfit-step-navigation--section{
+  margin-bottom: 2rem;
 }
-.medfit-step-list-item{
-  font-weight: 400;
-  display: flex;
+.medfit-step-navigation--nav:after{
+  content: "";
+  border: 2px solid #333;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 15px;
+  z-index: 0;
+}
+.medfit-step-navigation--list{
+  padding-left: 3rem;
+}
+.medfit-step-navigation--list-item{
 
 }
-.medfit-step-list-item.active{
+.step-list li::before{
+  z-index: 5;
+  position: absolute;
+  border: 3px solid white;
+  top: -4px;
+  left: -3rem;
+  margin: 0;
+}
+.step-list li.disabled::before {
+    background: #a2a2a2;
+}
+
+.medfit-step-navigation--title.disabled{
+  color: #a2a2a2;
+}
+.medfit-step-navigation--title.active{
   font-weight: 600;
 }
 
-.medfit-step-list-item:before {
-    content: "";
-    border-left: 4px solid black;
+.step-list li {
     position: relative;
-    left: -20px;
-    top: 7px;
+}
+.medfit-step-navigation--title{
+  margin: 0 0 1.5rem 0;
 }
 /* end step list */
 
