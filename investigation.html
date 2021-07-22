@@ -25,7 +25,7 @@
 
   <body id="site" class="Site">
 
-  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+  	<nav id="navBar-main" title="main navigation" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
       <!-- start brand -->
       <a id="navbarBrand" class="medFit-navbar-brand navbar-brand" href="#"><span class="sr-only">MedFit</span><img src="img/medfit-logo.svg" aria-hidden="true" class="pr-2" width="140" height="40" alt="MedFit Logo"></a>
       <!-- end brand -->
@@ -168,7 +168,7 @@
                   <!-- end Document header -->
 
                   <!-- start Document nav -->
-                  <nav id="navbar-Document" class="navbar navbar-light bg-light mb-4 pb-0 navbar-Document">
+                  <nav id="navbar-Document" role="navigation" aria-label="Intake details" class="navbar navbar-light bg-light mb-4 pb-0 navbar-Document">
                     <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
                       <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
                         <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document active" href="#tabPane-attachements">Document</a>
@@ -186,7 +186,7 @@
                   <!-- start Document tab content -->
                   <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
                     <!-- start Document tab content -->
-  									<div id="tabPane-attachements" class="medFit-tan-pane tab-pane tab-pane-attachements fade in active show">
+  									<div id="tabPane-attachements" class="medFit-tab-pane tab-pane tab-pane-attachements fade in active show">
                       <section class="row mx-0">
                         <!-- start document preview -->
                         <article class="col-sm-12 px-3" id="exampleAttachment">
@@ -200,7 +200,7 @@
                     <!-- end Document tab content -->
 
                     <!-- start details tab contents -->
-                    <div id="tabPane-details" class="medFit-tan-pane tab-pane tab-pane-details fade">
+                    <div id="tabPane-details" class="medFit-tab-pane tab-pane tab-pane-details fade">
   										<article class="col-sm px-3">
   											<table id="reviewTable-details" class="medFit-review-table table review-table review-table-details">
   												<caption id="reviewCaption-details" class="medFit-review-caption caption review-caption-details h4">Details <span><a href="#"><i class="fas fa-edit ml-2" aria-hidden="true"  aria-label="Edit Details"></i></a></span></caption>
@@ -238,8 +238,6 @@
 
         </div> <!-- end #siteContent -->
       </div>
-  <!-- 		<footer  id="footer" class="footer" role="contentinfo" height="20" style="height:20px">
-  		</footer> -->
   	</main>
 
   </body>

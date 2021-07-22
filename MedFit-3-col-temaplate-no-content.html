@@ -24,7 +24,7 @@
 
   <body id="site" class="Site">
 
-  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+  	<nav id="navBar-main" title="main navigation" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
       <nav class="skip-links" aria-label="Skip to main content">
   			<a href="#mainContent" class="skip-to-link">Skip to main content</a>
   		</nav>
@@ -108,7 +108,41 @@
 
           <!-- start main column -->
   				<div id="columnScrollMain" class="col-md column-scroll px-0">
-            Main col content here
+
+            <div class="row align-items-center mt-3" tabindex="0" style="border: 1px dashed #c1c1c1;max-width: 400px;padding: 1rem;background: #e8e8e8;height: 8rem;">
+              <input id="upload" accept="application/pdf" multiple="" type="file" autocomplete="off" tabindex="-1" style="display: none;">
+                <div class="col"><button class="btn-lg btn-default ns-btn__icon my-0" style="
+                display: inline-flex;"><i class="ns-btn__icon-left fas fa-file-upload" aria-hidden="true"></i>Upload files</button>
+              </div>
+              <div class="col">
+                <label for="upload" class="h5 mt-0">Or drag 'n' drop files here to upload</label>
+              </div>
+            </div>
+
+            <div class="ns-form-group mt-3 d-flex">
+								<fieldset>
+									<legend class="ns-fieldset__legend noBorder label">
+										Enter a date range
+									</legend>
+                  <div class="d-flex justify-content-start">
+
+										<div class="pr-3"><label for="day1">DD</label><input type="text" id="day1" name="day" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
+										<div class="pr-3"><label for="month1">MM</label><input type="text" id="month1" name="month" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
+										<div class="pr-3"><label for="year1">YYYY</label><input type="text" id="year1" name="year" class="fw-4" pattern="[0-9]*" inputmode="numeric"></div>
+
+                    <div class="pr-3 align-self-end mb-2">
+                      <span>to</span>
+                    </div>
+
+										<div class="pr-3"><label for="day2">DD</label><input type="text" id="day2" name="day" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
+										<div class="pr-3"><label for="month2">MM</label><input type="text" id="month2" name="month" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
+										<div class="pr-3"><label for="year2">YYYY</label><input type="text" id="year2" name="year" class="fw-4" pattern="[0-9]*" inputmode="numeric"></div>
+
+                  </div>
+								</fieldset>
+                <button class="btn-sm ns-btn-2nd ml-0 mb-1 align-self-end">View date range</button>
+            </div>
+
           </div> <!-- columnScrollMain -->
           <!-- end main column -->
 
@@ -124,8 +158,6 @@
 
         </div> <!-- end #siteContent -->
       </div>
-  <!-- 		<footer  id="footer" class="footer" role="contentinfo" height="20" style="height:20px">
-  		</footer> -->
   	</main>
 
   </body>

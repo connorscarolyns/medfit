@@ -173,6 +173,7 @@ html,body {
   display:inline;
 }
 
+/* start summary list */
 
 .ns-summary-list__row {
     transition: all .4s ease;
@@ -195,6 +196,25 @@ html,body {
     width: 30%;
     vertical-align: top;
   }
+
+  .medFit-tab-pane .ns-summary-list__key, .medFit-tab-pane .ns-summary-list__value, .medFit-tab-pane  .ns-summary-list__actions,
+  .medFit-summary-list .medFit-summary-list__key, .medFit-summary-list  .medFit-summary-list__value, .medFit-summary-list .medFit-summary-list__actions  {
+      padding-top: 4px;
+      padding-bottom: 4px;
+  }
+
+  .medFit-tab-pane .ns-summary-list__key label,
+  .medFit-summary-list .ns-summary-list__key label{
+      margin-bottom: 0;
+  }
+
+  .medFit-tab-pane .medfit-btn-inline-icon,
+  .medFit-summary-list .medfit-btn-inline-icon{
+    margin: 0;
+    line-height: 1;
+  }
+
+/* end summary list */
 
 .navbar-nav-tools{
 align-items: center;
@@ -258,7 +278,7 @@ textarea {
   position: relative;
 }
 .medfit-step-navigation--section{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .medfit-step-navigation--nav:after{
   content: "";
@@ -283,12 +303,15 @@ textarea {
   left: -3rem;
   margin: 0;
 }
-.step-list li.disabled::before {
-    background: #a2a2a2;
-}
 
+.step-list li.disabled::before {
+    background: #707070;
+}
+.medfit-step-list-step.disabled {
+    margin-bottom: 1.5em;
+}
 .medfit-step-navigation--title.disabled{
-  color: #a2a2a2;
+  color: #707070;
 }
 .medfit-step-navigation--title.active{
   font-weight: 600;
@@ -298,7 +321,7 @@ textarea {
     position: relative;
 }
 .medfit-step-navigation--title{
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
 }
 /* end step list */
 
@@ -311,4 +334,19 @@ textarea {
   margin-bottom: 0;
 }
 
+.ns-radios__conditional .ns-fieldset *:last-child * {
+    margin-bottom: 0rem;
+}
+
 /* end conditional formg roup */
+
+/* start medfit radio */
+
+.medfit-radios .ns-radios__item .ns-label-span{
+  padding: 0px 9px !important;
+}
+.medfit-radios .mefit-radios__label-with-hint {
+    padding-bottom: 4px;
+}
+
+/* end medit radio */

@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#documentDetailsTitleEditButton, #documentDetailsSaveButton, #documentDetailsCancelButton").on("click", function(){
-        $("#documentDetailsTitleEditButton, #documentDetailsSaveButton, #documentDetailsCancelButton, #documentDetailsPriorityEdit, #documentDetailsPrioritySaved, #documentDetailsPrioritySaved, #documentDetailsPriorityEdit, #documentDetailsSourceEdit, #documentDetailsSourceSaved, #documentDetailsEmailSaved, #documentDetailsEmailEdit, #documentDetailsNotesSaved, #documentDetailsNotesEdit").toggle("fast");
+        $("#documentDetailsTitleEditButton, #documentDetailsSaveButton, #documentDetailsCancelButton, #documentDetailsMessageEdit, #documentDetailsMessageSaved, #documentDetailsPrioritySaved, #documentDetailsPriorityEdit, #documentDetailsSourceEdit, #documentDetailsSourceSaved, #documentDetailsEmailSaved, #documentDetailsEmailEdit, #documentDetailsNotesSaved, #documentDetailsNotesEdit").toggle("fast");
     });
 });
 
@@ -91,4 +91,11 @@ $("#typeahead1").change(function() {
 });
 $("#typeahead1").trigger("change");
 
+
+function show1(){
+  document.getElementById('conditional-not-found').style.display ='none';
+}
+function show2(){
+  document.getElementById('conditional-not-found').style.display = 'block';
+}
 // end conditional selections

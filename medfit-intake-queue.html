@@ -27,7 +27,7 @@
 
   <body id="site" class="Site">
 
-  	<nav id="navBar-main" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+  	<nav id="navBar-main" title="main navigation" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
       <nav class="skip-links" aria-label="Skip to main content">
   			<a href="#mainContent" class="skip-to-link">Skip to main content</a>
   		</nav>
@@ -43,20 +43,6 @@
 
   		<div id="navbarCollapse" class="medfit-navbar-collapse collapse navbar-collapse px-3" >
         <!-- start main navigation -->
-        <!-- <ul  id="navbarNav" class="navbar-nav mt-0">
-          <li class="nav-item medFit-nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Assigments
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Intake</a></li>
-              <li><a class="dropdown-item" href="#">Assigments</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Search</a></li>
-            </ul>
-          </li>
-  			</ul> -->
-        <!-- <div class="v-line-right mx-2 d-sm-none d-md-none d-md-block"></div> -->
   			<ul  id="navbarNav" class="navbar-nav mr-auto mt-0">
   				<li id="navbarItem-intake" class="medFit-nav-item nav-item active">
   					<a id="navbarLink-intake" class="nav-link px-3" href="#">Intake <span class="sr-only">(current)</span></a>
@@ -64,8 +50,8 @@
   				<li id="navbarItem-assignments" class="medFit-nav-item nav-item">
   					<a id="navbarLink-assignments" class="nav-link px-3" href="#">Assigments</a>
   				</li>
-  				<li id="navbarItem-assignments" class="medFit-nav-item nav-item">
-  					<a id="navbarLink-assignments" class="nav-link px-3" href="#">Search</a>
+  				<li id="navbarItem-search" class="medFit-nav-item nav-item">
+  					<a id="navbarLink-search" class="nav-link px-3" href="#">Search</a>
   				</li>
   			</ul>
         <!-- end main namvigation-->
@@ -107,7 +93,7 @@
   						<div id="columnContent-main" class="medFit-column-content column-content column-content-main">
 
                 <div class="d-flex align-items-center py-3 px-3" tabindex="0" style="border: 1px dashed #c1c1c1;background: #e8e8e8;">
-                  <input id="upload" accept="application/pdf" multiple="" type="file" autocomplete="off" tabindex="-1" style="display: none;">
+                  <input id="upload" accept="application/pdf" multiple="" type="file" tabindex="-1" style="display: none;">
                   <button class="ns-btn-2nd ns-btn__icon medFit-btn btn-sm my-0 ml-0 mr-2" style="
                     display: inline-flex;"><i class="ns-btn__icon-left fas fa-file-upload" aria-hidden="true"></i>Click to upload files</button>
                   <label for="upload" class="h5 ns-label my-0">or drag 'n' drop here</label>
@@ -124,12 +110,12 @@
                       </h2>
 
                         <h3 class="panel-title h4 d-inline-block">
-                          <button role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" class=" ns-btn-2nd my-0 medFit-btn btn-sm">
+                          <button id="addFiltersButton" data-toggle="collapse" role="tab" aria-selected="true" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" class=" ns-btn-2nd my-0 medFit-btn btn-sm">
                              <i class="fas fa-plus-square mr-2 ns-btn__icon-left" aria-hidden="true"> </i>Add filters
                           </button>
                         </h3>
 
-          						<div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
+          						<div class="panel-group" id="accordion_1" role="tablist" aria-owns="addFiltersButton" aria-multiselectable="true">
           								<div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1" aria-expanded="true" style="">
           									<div class="panel-body">
           										<div class="row">
@@ -222,10 +208,10 @@
           										</div>
                               <section class="row">
                                 <div class="col-auto">
-                                  <button class="medFit-btn btn-sm btn-default" type="button"  role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Apply filters</button>
+                                  <button class="medFit-btn btn-sm btn-default" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Apply filters</button>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="medFit-btn btn-sm ns-btn-2nd" type="button"  role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Cancel</button>
+                                  <button class="medFit-btn btn-sm ns-btn-2nd" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1" >Cancel</button>
                                 </div>
                               </section>
           									</div>
@@ -252,7 +238,7 @@
   										  <td>12/31/2021</td>
   										  <td>Ready to start</td>
   										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
   										  <td>Mail</td>
@@ -260,7 +246,7 @@
   										  <td>12/31/2021</td>
   										  <td>Ready to start</td>
   										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
   										  <td>Mail</td>
@@ -268,7 +254,7 @@
   										  <td>12/31/2021</td>
   										  <td>Ready to start</td>
   										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
   										  <td>Mail</td>
@@ -276,7 +262,7 @@
   										  <td>12/31/2021</td>
   										  <td>Ready to start</td>
   										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
   										</tr>
   									  </tbody>
   									</table>
@@ -295,7 +281,7 @@
 
                     <!-- start Document nav -->
                     <a href="#" class="ns-back-link pr-2">Back</a>
-                    <nav id="navbar-Document" class="navbar navbar-light pb-0 navbar-Document align-self-end">
+                    <nav id="navbar-Document" aria-label="Intake details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
                       <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
                         <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
                           <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document disabled active" href="#tabPane-attachements"> <span class="ns-visually-hidden">Preivew the </span>Document</a>
@@ -304,7 +290,7 @@
                           <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details <span class="ns-visually-hidden">about the document</span></a>
                         </li> -->
                         <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
-                          <a href="medfit-intake-general-information.html" id="btn-ABCDE123456123" type="button" class="medFit-btn btn-sm btn-default btn-start my-0 ml-2 ">Start intake</a>
+                          <a href="medfit-intake-general-information.html" id="btn-ABCDE123456123" role="button" class="medFit-btn btn-sm btn-default btn-start my-0 ml-2 ">Start intake</a>
                         </li>
                       </ul>
                     </nav>
@@ -327,7 +313,7 @@
                   <!-- start Document tab content -->
                   <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
                     <!-- start Document tab content -->
-  									<div id="tabPane-attachements" class="medFit-tan-pane tab-pane tab-pane-attachements fade in active show">
+  									<div id="tabPane-attachements" class="medFit-tab-pane tab-pane tab-pane-attachements fade in active show">
                       <section class="row mx-0">
                         <!-- start document preview -->
                         <article class="col-sm-12 px-3" id="exampleAttachment">
@@ -341,7 +327,7 @@
                     <!-- end Document tab content -->
 
                     <!-- start details tab contents -->
-                    <div id="tabPane-details" class="medFit-tan-pane tab-pane tab-pane-details fade">
+                    <div id="tabPane-details" class="medFit-tab-pane tab-pane tab-pane-details fade">
   										<article class="col-sm px-3">
 
                         <section id="documentDetails">
@@ -349,17 +335,17 @@
                             <header id="contactAddressHeader" >
 
                               <h2 id="documentDetailsTitle" class="h3">Unsolicited - law</h2>
-                              <h3 id="documentDetailsTitle" class="h4 d-inline-block ">Document details</h3>
+                              <h3 id="documentDetailsSubTitle" class="h4 d-inline-block ">Document details</h3>
 
-                              <button id="documentDetailsTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                              <button id="documentDetailsTitleEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
                                 <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit document details</span>
                               </button> <!-- edit saveButton -->
 
                               <div id="documentDetailsSaveButtonWrapper" style="display:inline-block">
-                                <button id="documentDetailsSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                                <button id="documentDetailsSaveButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
                                   <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
                                 </button> <!-- end saveButton -->
-                                <button id="documentDetailsCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                                <button id="documentDetailsCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
                                   <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
                                 </button>  <!-- end cancelButton -->
                               </div> <!-- end SaveButtonWrapper -->
@@ -375,14 +361,14 @@
                               <div id="documentDetailsMessage" class="ns-summary-list__row">
 
                                 <dt class="ns-summary-list__key">
-                                  <label for="documentDetailsPriorityEdit">Message</label>
+                                  <label for="documentDetailsMessageEdit">Message</label>
                                 </dt>
 
                                 <dd class="ns-summary-list__value">
 
-                                    <span id="documentDetailsPrioritySaved">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</span>
+                                    <span id="documentDetailsMessageSaved">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</span>
 
-                                    <textarea id="documentDetailsPriorityEdit" name="name" class="ns-input fw-40" style="display:none;" oninput="auto_grow(this)">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</textarea>
+                                    <textarea id="documentDetailsMessageEdit" name="name" class="ns-input fw-40" style="display:none;" oninput="auto_grow(this)">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</textarea>
 
                                 </dd>
                               </div>
@@ -479,14 +465,12 @@
 
         </div> <!-- end #siteContent -->
       </div>
-  <!-- 		<footer  id="footer" class="footer" role="contentinfo" height="20" style="height:20px">
-  		</footer> -->
   	</main>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/presentational.js"></script><!-- only needed to display interaction design-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="js\presentational.js"></script><!-- only needed to display interaction design-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 </html>

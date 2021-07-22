@@ -63,7 +63,7 @@ Multiselect.prototype = {
 		dropDownArrow = m_helper.label({
 			class : 'multiselect-dropdown-arrow',
 			attributes : {
-				for : this._getInputFieldIdentifier()
+				for : this._getInputFieldIdentifier(),
 			}
 		}),
 		result = m_helper.div({

@@ -17,7 +17,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 0.875rem; }
-  
+
 /* --------------------------------------------end set font to root ----------------------------------------------------- */
 
 /* --------------------------------------------start suplimentary typography ----------------------------------------------------- */
@@ -59,7 +59,7 @@ body {
   flex: 1 1 auto;
 }
 
-.footer {background-image: url(https://beta.novascotia.ca/themes/ignition/img/bg-footer.svg);} 
+.footer {background-image: url(https://beta.novascotia.ca/themes/ignition/img/bg-footer.svg);}
 
 /* --------------------------------------------End sticky footer ----------------------------------------------------- */
 
@@ -155,8 +155,8 @@ body {
 .ns-back-link[href]:focus {
     text-decoration: none;
 }
-.ns-back-link[href]:hover:before, 
-.ns-back-link[href]:active:before, 
+.ns-back-link[href]:hover:before,
+.ns-back-link[href]:active:before,
 .ns-back-link[href]:focus:before {
     border-color: #002f58;
 	transition: .2s ease;
