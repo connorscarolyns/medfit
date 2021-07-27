@@ -42,27 +42,6 @@ a {
 /* --------------------------------------------end suplimentary typography  ----------------------------------------------------- */
 
 
-/* --------------------------------------------start sticky footer ----------------------------------------------------- */
-body {
-    display: flex;
-    margin: 0;
-}
-
-.Site {
-  flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    min-height: 100vh;
-}
-
-.Site-content {
-  flex: 1 1 auto;
-}
-
-.footer {background-image: url(https://beta.novascotia.ca/themes/ignition/img/bg-footer.svg);}
-
-/* --------------------------------------------End sticky footer ----------------------------------------------------- */
-
 /* --------------------------------------------start visiually hidden screen reader accessible ----------------------------------------------------- */
 .ns-visually-hidden {
     position: absolute !important;
@@ -205,7 +184,6 @@ body {
 	margin-top: 0;
 }
 /* -------------------------------------------- End service header caption ----------------------------------------------------- */
-
 
 /* -------------------------------------------- Start supplimentary icon styles ----------------------------------------------------- */
 .ns-heading__icon {

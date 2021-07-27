@@ -99,3 +99,48 @@ function show2(){
   document.getElementById('conditional-not-found').style.display = 'block';
 }
 // end conditional selections
+
+// start radio button redirect
+
+
+  // No need for declaring global variables here
+  function submit(source,options){
+  // First, this segment finds the checked element in the array:
+    for (var i = 0; i < options.length; i++){
+      if (options[i].checked){
+        break;
+      }
+    }
+  // Next, the source switch determines which button element called the function:
+  switch(source.id){
+ case 'submitButton':
+  // The options switch then determines what happens when the checked option is submitted:
+    switch(options[i].id){
+      case 'newMedFitProfile':
+        // alert('New MedFit profile');
+        window.location = "medfit-intake-create-new-medfit-driver-profile.html";
+        break;
+      case 'moreInfoNeeded':
+        // alert('More information is needed');
+        window.location = "medfit-more-information-is-needed.html";
+        break;
+      case 'johnBlake':
+        // alert('More information is needed');
+        window.location = "medfit-intake-link-to-a-demand.html";
+        break;
+      case 'janeBlake':
+        // alert('More information is needed');
+        window.location = "medfit-intake-link-to-a-demand.html";
+        break;
+        //  The default option for the options switch
+      // default:
+      //   window.location = "medfit-intake-link-to-a-driver-search-results.html";
+        }
+      break;
+      // The default option for the source switch
+      default:
+     }
+  }
+
+
+// end radio button redirect
