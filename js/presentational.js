@@ -34,6 +34,22 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").on("click", function(){
+        $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton, #contactLogTextArea, #contactLogparagraph").toggle("fast", function(){
+            $("#contactLogTextArea").toggle("slow").focus()
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#contactLog2TitleEditButton, #contactLog2TitleSaveButton, #contactLog2TitleCancelButton").on("click", function(){
+        $("#contactLog2TitleEditButton, #contactLog2TitleSaveButton, #contactLog2TitleCancelButton, #contactLog2TextArea, #contactLog2paragraph").toggle("fast", function(){
+            $("#contactLog2TextArea").toggle("slow").focus()
+        });
+    });
+});
+
 $('.medfit-btn-inline-icon').click(function(e) {
     e.preventDefault();
     $('.medfit-btn-inline-icon').closest('.ns-summary-list__row').removeClass('selected');

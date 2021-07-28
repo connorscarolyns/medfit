@@ -74,6 +74,7 @@ html,body {
   color: #fff;
 }
 .medFit-navbar-main .medFit-nav-item .nav-link{
+  white-space: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,7 +250,7 @@ padding: 0 .5rem;
 }
 
 
-.medfit-licence-info__wrapper{
+.medfit-grey-box__wrapper{
   background: #e9ecef;
   padding: .75em;
   border: 1px solid #dee2e6;
