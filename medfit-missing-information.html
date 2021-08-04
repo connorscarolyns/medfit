@@ -282,48 +282,42 @@
 
             <div class="px-3 mt-3">
 
-              <section id="missingInfoNotes">
-                <div class="ns-form-group">
-								  <h3 class="ns-label-wrapper">
-									<label class="ns-label" for="missingInfoTextArea">
-									  What information is needed?
-									</label>
-								  </h3>
-								  <textarea tabindex="-1" class="ns-input fw-50" id="missingInfoTextArea" name="missingInfoNotes" oninput="auto_grow(this)">Doctor Brent failed to fill in the medical report correctly. He needs to check off all the nothing to report boxes.</textarea>
-								</div>
+              <section id="whatInfoIsNeeded">
+                <form id="whatInfoIsNeededForm">
+                  <header id="whatInfoIsNeededHeader">
+                    <div class="ns-form-group mb-0">
+                      <h2 id="whatInfoIsNeededTitle" class="d-inline-block h3 ns-label-wrapper mb-2">
+                        <label class="ns-label" for="whatInfoIsNeededTextArea">
+                          What information is needed?
+                        </label>
+                      </h2>
+                      <div id="whatInfoIsNeededTitleEditButtonWrapper" class="d-inline-block whatInfoIsNeededTitleEditButtonWrapper">
+                        <button id="whatInfoIsNeededTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit What information is needed</span>
+                        </button> <!-- edit saveButton -->
+                      </div> <!-- end EditButtonWrapper -->
+                    </div> <!-- form group -->
+                  </header>
+                  <textarea tabindex="-1" class="ns-input fw-50 mb-2" id="whatInfoIsNeededTextArea" name="whatInfoIsNeededTextArea" type="text" value="Doctor Brent failed to fill in the medical report correctly. He needs to check off all the nothing to report boxes." style="display:none" oninput="auto_grow(this)">Doctor Brent failed to fill in the medical report correctly. He needs to check off all the nothing to report boxes.</textarea>
+                  <p id="whatInfoIsNeededparagraph" style="display:block">Doctor Brent failed to fill in the medical report correctly. He needs to check off all the nothing to report boxes.</p>
 
-              </section>
 
-              <section id="contactLogEntry">
-                <form>
-                  <h3>Add a new contact log entry</h3>
-                  <div class="ns-form-group">
-  									<label class="ns-label" for="event-name2">
-  									  Describe the steps taken to get the missing information
-  									</label>
-  								  <textarea tabindex="-1" class="ns-input fw-50" id="missingInfoTextArea" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
-  								</div>
-                  <div class="ns-form-group">
-										<fieldset>
-											<legend class="ns-fieldset__legend noBorder label">
-												When was this done?
-											</legend>
-											<div class="row">
-												<div class="col-auto pr-0"><label for="day2">DD</label><input type="text" id="day2" name="day" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-												<div class="col-auto pr-0"><label for="month2">MM</label><input type="text" id="month2" name="month" class="fw-2" pattern="[0-9]*" inputmode="numeric"></div>
-												<div class="col-auto"><label for="year2">YYYY</label><input type="text" id="year2" name="year" class="fw-4" pattern="[0-9]*" inputmode="numeric"></div>
-											</div>
-										</fieldset>
-									</div>
 
                   <section id="decisionSection" class="row ns-form-group">
                    <div class="col-auto">
-                     <button  type="submit" class="medFit-btn btn-sm btn-success my-0">Add to log</button>
+                     <button id="whatInfoIsNeededTitleSaveButton"  type="button" class="btn btn-success" style="display:none;"><i class="fas fa-save ns-btn__icon-left mr-2" aria-hidden="true"></i>Save</button>
+                   </div>
+                   <div class="col-auto">
+                     <button id="whatInfoIsNeededTitleCancelButton"  role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd my-0"  style="display:none">
+                       Cancel
+                     </button>  <!-- end cancelButton -->
                    </div>
                   </section>
 
                 </form>
               </section>
+
+              <hr>
 
               <section id="whatsNext">
                 <form>
@@ -350,11 +344,11 @@
                   </div>
 
                   <div class="ns-form-group">
-                    <label class="ns-label" for="assigneeEditSelect">
+                    <label class="ns-label" for="nextAssigneeSelect">
                       Select the person or role who will be assigned next
                     </label>
-                     <div id="assigneeEdit" class="select fw-15" >
-                      <select id="assigneeEditSelect" name="select1">
+                     <div id="nextAssignee" class="select fw-15" >
+                      <select id="nextAssigneeSelect" name="select1">
                         <optgroup label="Assign to a person">
                           <option selected>connorsc</option>
                           <option>turners</option>
@@ -378,7 +372,7 @@
 
                   <section id="decisionSection" class="row ns-form-group">
                    <div class="col-auto">
-                     <button  type="submit" class="medFit-btn btn-sm btn-default my-0" data-toggle="modal" data-target="#exampleModal">Update information status</button>
+                     <button  type="submit" class="medFit-btn btn-sm btn-default my-0" data-toggle="modal" data-target="#exampleModal">Save and continue</button>
                    </div>
                    <div class="col-auto">
                      <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
@@ -469,7 +463,7 @@
                             <!-- end row -->
                           </dl>
 
-                          <h3 id="documentDetailsTitleNotesOnLicence" class="h4 d-inline-block mt-3">Notes on licence</h3>
+                          <h3 id="documentDetailsTitleNotesOnLicence" class="h4 d-inline-block mt-3">Notes on driver</h3>
 
                           <button id="documentDetailsNotesOnLicenceEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
                             <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit notes on licence</span>
@@ -495,7 +489,7 @@
                             </dt>
 
                             <dd class="ns-summary-list__value">
-                              <span id="notesOnLicenceText">Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV</span>
+                              <span id="notesOnLicenceText">Any driver notes that have been previously recorded will appear here. These notes will be background notes about the druivers history.</span>
                             </dd>
                           </div>
                           <!-- end row -->
@@ -503,7 +497,7 @@
 
                         <!-- start stage and state section -->
                         <section id="stageAndStateSection">
-                          <h2 class="h3">Where are they in the process?</h2>
+                          <h3 class="h4">Where are they in the process?</h3>
                           <dl class="ns-summary-list">
                             <!-- start row -->
                             <div class="ns-summary-list__row">
@@ -524,7 +518,7 @@
 
                         <!-- start recent activity section -->
                         <section id="recentActrivitySection">
-                          <h2 class="h3">Recent activity</h2>
+                          <h3 class="h4">Recent activity</h3>
                           <dl class="ns-summary-list">
                             <!-- start row -->
                             <div class="ns-summary-list__row">
@@ -568,7 +562,7 @@
 
                         <!-- start document list section -->
                         <section id="documentListSection">
-                          <h2 class="h3">Document list</h2>
+                          <h3 class="h4">Document list</h3>
                           <dl class="ns-summary-list">
                             <!-- start row -->
                             <div class="ns-summary-list__row">
@@ -650,52 +644,85 @@
                         <h2 id="contactLogTitle" class="h3">Contact log</h2>
                       </header> <!-- end contactAddressHeader -->
 
-                      <div class="ns-form-group mb-0">
-                        <label class="ns-label" for="contactLogTextArea"  style="display:inline-block">
-                          Log date: 31/21/2021
-                        </label>
-                        <div id="contactLogTitleEditButtonWrapper" class="d-inline-block contactLogTitleEditButtonWrapper">
-                          <button id="contactLogTitleEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                            <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit contact log notes</span>
-                          </button> <!-- edit saveButton -->
-                        </div> <!-- end EditButtonWrapper -->
-                        <div id="contactLogTitleSaveButtonWrapper" class="contactLogTitleSaveButtonWrapper" style="display:inline-block">
-                          <button id="contactLogTitleSaveButton" draggable="false" class="btn-lg btn-success medfit-btn-inline-icon"  style="display:none">
-                            <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save contact log notes</span>
-                          </button> <!-- end saveButton -->
-                          <button id="contactLogTitleCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                            <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on contact log notes</span>
-                          </button>  <!-- end cancelButton -->
-                        </div> <!-- end SaveButtonWrapper -->
+                      <form>
+                        <div class="ns-form-group mb-2">
 
-                        <textarea tabindex="-1" class="ns-input fw-50 mb-2" id="contactLogTextArea" name="contactLogTextArea" style="display:none" oninput="auto_grow(this)">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</textarea>
-                        <p id="contactLogparagraph" style="display:block">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</p>
+                          <button id="logEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                            <i class="fas fa-comments ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a contact log entry
+                          </button>
 
-                      </div> <!-- form group -->
+                            <label id="logLabel" class="ns-label" for="logWrite" style="display:none;">
+                              Add a description about what has been done to get the missing information
+                            </label>
+                          <textarea id="logWrite" class="ns-input fw-40" style="display:none;" oninput="auto_grow(this)"></textarea>
+                        </div>
+                        <button id="logPost" type="button" class="btn btn-success" style="display:none;">Post contact log entry</button>
+                      </form>
 
-                      <div class="ns-form-group mb-0">
-                        <label class="ns-label" for="contactLog2TextArea"  style="display:inline-block">
-                          Log date: 31/21/2021
-                        </label>
-                        <div id="contactLog2TitleEditButtonWrapper" class="d-inline-block contactLog2TitleEditButtonWrapper">
-                          <button id="contactLog2TitleEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                            <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit contact log notes</span>
-                          </button> <!-- edit saveButton -->
-                        </div> <!-- end EditButtonWrapper -->
-                        <div id="contactLog2TitleSaveButtonWrapper" class="contactLog2TitleSaveButtonWrapper" style="display:inline-block">
-                          <button id="contactLog2TitleSaveButton" draggable="false" class="btn-lg btn-success medfit-btn-inline-icon"  style="display:none">
-                            <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save contact log notes</span>
-                          </button> <!-- end saveButton -->
-                          <button id="contactLog2TitleCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                            <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on contact log notes</span>
-                          </button>  <!-- end cancelButton -->
-                        </div> <!-- end SaveButtonWrapper -->
+                      <hr>
+                      <div class="comment-wrapper">
+                          <div class="panel panel-info">
+                            <div class="panel-body">
+                              <ul class="media-list">
+                                <li class="media">
+                                  <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                      <small class="text-muted">31/12/2021</small>
+                                    </span>
+                                    <strong id="contactLogPoster" class="" for="contactLog2TextArea" >@connorsc
+                                      <button id="contactLog2TitleEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit contact log notes</span>
+                                      </button> <!-- edit saveButton -->
 
-                        <textarea tabindex="-1" class="ns-input fw-50 mb-2" id="contactLog2TextArea" name="contactLog2TextArea" style="display:none" oninput="auto_grow(this)">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</textarea>
-                        <p id="contactLog2paragraph" style="display:block">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</p>
 
-                      </div> <!-- form group -->
+                                      <div id="contactLog2TitleSaveButtonWrapper" class="contactLog2TitleSaveButtonWrapper" style="display:inline-block">
+                                        <button id="contactLog2TitleSaveButton" draggable="false" class="btn-lg btn-success medfit-btn-inline-icon"  style="display:none">
+                                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save contact log notes</span>
+                                        </button> <!-- end saveButton -->
+                                        <button id="contactLog2TitleCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on contact log notes</span>
+                                        </button>  <!-- end cancelButton -->
+                                      </div> <!-- end SaveButtonWrapper -->
 
+                                    </strong>
+
+                                    <textarea tabindex="-1" class="ns-input fw-50 mb-2" id="contactLog2TextArea" name="contactLog2TextArea" aria-labelledby="contactLogPoster" style="display:none" oninput="auto_grow(this)">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</textarea>
+                                    <p id="contactLog2paragraph" style="display:block">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</p>
+
+                                  </div>
+                                </li>
+
+                                <li class="media">
+                                  <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                      <small class="text-muted">31/12/2021</small>
+                                    </span>
+                                    <strong id="contactLogPoster" class="" for="contactLogTextArea" >@connorsc
+                                      <button id="contactLogTitleEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit contact log notes</span>
+                                      </button> <!-- edit saveButton -->
+
+
+                                      <div id="contactLogTitleSaveButtonWrapper" class="contactLogTitleSaveButtonWrapper" style="display:inline-block">
+                                        <button id="contactLogTitleSaveButton" draggable="false" class="btn-lg btn-success medfit-btn-inline-icon"  style="display:none">
+                                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save contact log notes</span>
+                                        </button> <!-- end saveButton -->
+                                        <button id="contactLogTitleCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on contact log notes</span>
+                                        </button>  <!-- end cancelButton -->
+                                      </div> <!-- end SaveButtonWrapper -->
+
+                                    </strong>
+
+                                    <textarea tabindex="-1" class="ns-input fw-50 mb-2" id="contactLogTextArea" name="contactLogTextArea" aria-labelledby="contactLogPoster" style="display:none" oninput="auto_grow(this)">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</textarea>
+                                    <p id="contactLogparagraph" style="display:block">Called Dr. Brent. Talked to the receptionist Judy. She said she would put a note on Joe's file and give it to the doctor to take care of.</p>
+
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                     </section>
                   </article>
                 </div>
@@ -713,59 +740,6 @@
     </div> <!-- end #siteContent -->
   </div>
 </main>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header alert alert-warning">
-        <h5 class="modal-title" id="exampleModalLabel">Your information status choice requires a review</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h2 class="h3">Your information status choice requires review</h2>
-
-          <div class="ns-form-group">
-            <label class="ns-label" for="assigneeEditSelect">
-              Choose the person or role you'd like to assign this to
-            </label>
-             <div id="assigneeEdit" class="select fw-15" >
-              <select id="assigneeEditSelect" name="select1">
-                <optgroup label="Assign to a person">
-                  <option selected>connorsc</option>
-                  <option>turners</option>
-                </optgroup>
-                <optgroup label="Assign to a role">
-                  <option>Medical Assessors</option>
-                  <option>Deputy Registrar</option>
-                </optgroup>
-              </select>
-             </div>
-          </div>
-
-          <div class="ns-form-group">
-            <label class="ns-label" for="modalComment">
-              Add a comment
-            </label>
-            <textarea tabindex="-1" class="ns-input fw-50" id="modalComment" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
-          </div>
-
-      </div>
-      <div class="modal-footer">
-        <section id="decisionSection" class="row ns-form-group">
-         <div class="col-auto">
-           <button  type="submit" class="medFit-btn btn-sm btn-default my-0" data-dismiss="modal">Continue</button>
-         </div>
-         <div class="col-auto">
-           <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button" data-dismiss="modal">Cancel</button>
-         </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="js/presentational.js"></script><!-- only needed to display interaction design-->

@@ -7,6 +7,14 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $("#whatInfoIsNeededTitleEditButton, #whatInfoIsNeededTitleSaveButton, #whatInfoIsNeededTitleCancelButton").on("click", function(){
+        $("#whatInfoIsNeededTitleEditButton, #whatInfoIsNeededTitleSaveButton, #whatInfoIsNeededTitleCancelButton, #whatInfoIsNeededTextArea, #whatInfoIsNeededparagraph").toggle("fast", function(){
+            $("#whatInfoIsNeededTextArea").toggle("slow").focus()
+        });
+    });
+});
+
+$(document).ready(function(){
     $("#contactAddressTitleEditButton, #contactAddressSaveButton, #contactAddressCancelButton").on("click", function(){
         $("#contactAddressTitleEditButton, #contactAddressSaveButton, #contactAddressCancelButton, #contactAddressDLSaved, #contactAddressDLEdit").toggle("fast", function(){
             $("#contactAddressStreetAddressEdit").toggle("slow").focus()
@@ -31,6 +39,12 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#commentsEditButton, #commentsPost").on("click", function(){
         $("#commentsEditButton, #commentsWrite, #commentsPost").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $("#logEditButton, #logPost").on("click", function(){
+        $("#logEditButton, #logLabel, #logWrite, #logPost").toggle("fast");
     });
 });
 
@@ -138,7 +152,7 @@ function show2(){
         break;
       case 'moreInfoNeeded':
         // alert('More information is needed');
-        window.location = "medfit-more-information-is-needed.html";
+        window.location = "medfit-missing-information.html";
         break;
       case 'johnBlake':
         // alert('More information is needed');
