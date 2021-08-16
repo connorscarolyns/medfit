@@ -5,6 +5,21 @@ $(document).ready(function(){
         });
     });
 });
+$(document).ready(function(){
+    $("#driverDetailsNotesOnLicenceEditButton, #notesOnLicenceSaveButton, #notesOnLicenceCancelButton").on("click", function(){
+        $("#driverDetailsNotesOnLicenceEditButton, #notesOnLicenceSaveButton, #notesOnLicenceCancelButton, #notesOnLicenceText, #notesOnLicenceTextarea").toggle("fast", function(){
+            $("#notesOnLicenceText").toggle("slow").focus()
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#driverDetailsNotesOnDriverEditButton, #notesOnDriverSaveButton, #notesOnDriverCancelButton").on("click", function(){
+        $("#driverDetailsNotesOnDriverEditButton, #notesOnDriverSaveButton, #notesOnDriverCancelButton, #notesOnDriverText, #notesOnDriverTextarea").toggle("fast", function(){
+            $("#notesOnDriverText").toggle("slow").focus()
+        });
+    });
+});
 
 $(document).ready(function(){
     $("#whatInfoIsNeededTitleEditButton, #whatInfoIsNeededTitleSaveButton, #whatInfoIsNeededTitleCancelButton").on("click", function(){
