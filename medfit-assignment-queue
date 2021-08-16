@@ -52,11 +52,11 @@
   		<div id="navbarCollapse" class="medfit-navbar-collapse collapse navbar-collapse px-3" >
         <!-- start main navigation -->
   			<ul  id="navbarNav" class="navbar-nav mr-auto mt-0">
-  				<li id="navbarItem-intake" class="medFit-nav-item nav-item active">
-  					<a id="navbarLink-intake" class="nav-link px-3" href="#">Intake <span class="sr-only">(current)</span></a>
+  				<li id="navbarItem-intake" class="medFit-nav-item nav-item">
+  					<a id="navbarLink-intake" class="nav-link px-3" href="#">Intake</a>
   				</li>
-  				<li id="navbarItem-assignments" class="medFit-nav-item nav-item">
-  					<a id="navbarLink-assignments" class="nav-link px-3" href="#">Assigments</a>
+  				<li id="navbarItem-assignments" class="medFit-nav-item nav-item active">
+  					<a id="navbarLink-assignments" class="nav-link px-3" href="#">Assigments <span class="sr-only">(current)</span></a>
   				</li>
   				<li id="navbarItem-search" class="medFit-nav-item nav-item">
   					<a id="navbarLink-search" class="nav-link px-3" href="#">Search</a>
@@ -92,7 +92,7 @@
             <!-- start main col header -->
             <header id="columnHeader-main"  class="medfit-column-header d-flex align-items-center justify-content-between px-3">
 
-                <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0 mr-3">Intake queue</h1>
+                <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0 mr-3">Assignment queue</h1>
 
             </header>
             <!-- end main col header -->
@@ -113,8 +113,9 @@
 
                       <h2 class="h3 mt-0 d-inline-block">Filters:&nbsp;
                         <!-- <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Priority<i class="ml-2 fas fa-times-circle"></i></a> -->
-                          <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Assigned to me<i class="ml-2 fas fa-times-circle"></i></a>
-                            <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">12/31/2021<i class="ml-2 fas fa-times-circle"></i></a>
+                        <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Assigned to me<i class="ml-2 fas fa-times-circle"></i></a>
+                        <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Unassigned<i class="ml-2 fas fa-times-circle"></i></a>
+                        <a href="#" class="badge badge-pill badge-secondary h6 text-white mr-1">Assigned to my role<i class="ml-2 fas fa-times-circle"></i></a>
                       </h2>
 
                         <h3 class="panel-title h4 d-inline-block">
@@ -127,7 +128,7 @@
           								<div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1" aria-expanded="true" style="">
           									<div class="panel-body">
           										<div class="row">
-          											<!-- <div class="col">
+          											<div class="col">
                                   <div class="ns-form-group">
                 										<label id="headingOne_1" class="ns-label" for="priority">
                 										  Priority
@@ -139,18 +140,51 @@
                 											</select>
                 										 </div>
                 									</div>
-          											</div> -->
+          											</div>
+                                <div class="col">
+                                    <div class="ns-form-group fw-20">
+                                      <label class="ns-label" for="testSelect3">
+                                        Assigned to role:
+                                      </label>
+                                      <div class="select multiselect">
+                                        <select id='testSelect3' name="stage" multiple>
+                                          <option value='3' selected>My role</option>
+                                          <option value='4'>Clerks</option>
+                                          <option value='5'>Medical Assessors</option>
+                                          <option value='6'>Deputy Registrar</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  <script>
+                                  	document.multiselect('#testSelect3')
+                                  		.setCheckBoxClick("checkboxAll", function(target, args) {
+                                  			console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+                                  		})
+                                  		.setCheckBoxClick("1", function(target, args) {
+                                  			console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+                                  		});
+
+                                  	function enable() {
+                                  		document.multiselect('#testSelect3').setIsEnabled(true);
+                                  	}
+
+                                  	function disable() {
+                                  		document.multiselect('#testSelect3').setIsEnabled(false);
+                                  	}
+                                  </script>
+          											</div>
           											<div class="col">
                                   <div class="ns-form-group fw-20">
                 										<label class="ns-label" for="testSelect1">
-                										  Assignee
+                										  Assigned to:
                 										</label>
                 										<div class="select multiselect">
                                      <select id='testSelect1' name="asignee" multiple>
-                                       <option value='1'>Assigned to me</option>
-                                       <option value='2' selected>Assigned to connorsc</option>
-                                       <option value='3' selected>Assigned to turners</option>
-                                       <option value='4'>Assigned to dangat</option>
+                                       <option value='1' selected>Unnassigned</option>
+                                       <option value='2' selected>Me</option>
+                                       <option value='7'>connorsc</option>
+                                       <option value='8'>turners</option>
+                                       <option value='9'>dangat</option>
                                      </select>
                 										 </div>
                 									</div>
@@ -172,6 +206,41 @@
                                   	}
                                   </script>
           											</div>
+                                <div class="col">
+                                    <div class="ns-form-group fw-20">
+                                      <label class="ns-label" for="testSelect2">
+                                        Stage of the process:
+                                      </label>
+                                      <div class="select multiselect">
+                                        <select id='testSelect2' name="stage" multiple>
+                                          <option value='1'>Investigation</option>
+                                          <option value='2'>Decision</option>
+                                          <option value='3'>Demand</option>
+                                          <option value='4'>Missing information</option>
+                                          <option value='5'>MAC review</option>
+                                          <option value='6'>Processing</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  <script>
+                                  	document.multiselect('#testSelect2')
+                                  		.setCheckBoxClick("checkboxAll", function(target, args) {
+                                  			console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+                                  		})
+                                  		.setCheckBoxClick("1", function(target, args) {
+                                  			console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+                                  		});
+
+                                  	function enable() {
+                                  		document.multiselect('#testSelect2').setIsEnabled(true);
+                                  	}
+
+                                  	function disable() {
+                                  		document.multiselect('#testSelect2').setIsEnabled(false);
+                                  	}
+                                  </script>
+          											</div>
+
           											<!-- <div class="col">
                                   <div class="ns-form-group">
                 										<label class="ns-label" for="time-period">
@@ -231,47 +300,119 @@
                   <div class="table-wrapper">
   									<table id="intakeQueue-table" class="medFit-table table table-hover">
   									  <thead>
-  										<tr>
-  										  <th scope="col">Source</th>
-  										  <th scope="col">From</th>
+  										<tr class="">
+  										  <th scope="col">Name</th>
   										  <th scope="col">Start date</th>
+  										  <th scope="col">Stage</th>
   										  <th scope="col">State</th>
   										  <th scope="col">Assignee</th>
   										  <th scope="col" class="float-right">What's next?</th>
   										</tr>
   									  </thead>
   									  <tbody>
-  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
+  										<tr class='clickable-row priority' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
   										  <td>Joe Smith</td>
   										  <td>12/31/2021</td>
+  										  <td>Investigation</td>
   										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td>Unassigned</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start</a></td>
+  										</tr>
+  										<tr class='clickable-row priority' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Investigation</td>
+  										  <td>Failed to comply</td>
+  										  <td>connors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
   										  <td>Joe Smith</td>
   										  <td>12/31/2021</td>
+  										  <td>Investigation</td>
+  										  <td>In progress</td>
+  										  <td>connors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row selected' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Decision</td>
   										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td>Unassigned</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
   										  <td>Joe Smith</td>
   										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td>Decision</td>
+  										  <td>In progress</td>
+  										  <td>cconnors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
   										</tr>
   										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-  										  <td>Mail</td>
   										  <td>Joe Smith</td>
   										  <td>12/31/2021</td>
-  										  <td>Ready to start</td>
-  										  <td>Unnassigned</td>
-  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start intake</a></td>
+  										  <td>Decision</td>
+  										  <td>Needs sign-off</td>
+  										  <td>Medical assessors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Decision</td>
+  										  <td>To be processed</td>
+  										  <td>Clerks</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Decision</td>
+  										  <td>Processing</td>
+  										  <td>cconnors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Missing information</td>
+  										  <td>Waiting for info</td>
+  										  <td>Unassigned</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Missing information</td>
+  										  <td>Past due</td>
+  										  <td>Medical assessors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Missing information</td>
+  										  <td>Can't find</td>
+  										  <td>Medical assessors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Mac Review</td>
+  										  <td>Ready for next review</td>
+  										  <td>Unassigned</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Start</a></td>
+  										</tr>
+  										<tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+  										  <td>Joe Smith</td>
+  										  <td>12/31/2021</td>
+  										  <td>Mac Review</td>
+  										  <td>Waiting for feedback</td>
+  										  <td>Medical assessors</td>
+  										  <td><a href="medfit-intake-general-information.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right">Open</a></td>
   										</tr>
   									  </tbody>
   									</table>
@@ -299,7 +440,7 @@
                           <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details <span class="ns-visually-hidden">about the document</span></a>
                         </li> -->
                         <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details d-flex align-items-center">
-                          <a href="medfit-intake-general-information.html" id="btn-ABCDE123456123" role="button" class="medFit-btn btn-sm btn-default btn-start my-0 ml-2 ">Start intake</a>
+                          <a href="medfit-intake-general-information.html" id="btn-ABCDE123456123" role="button" class="medFit-btn btn-sm btn-default btn-start my-0 ml-2 ">Start decision</a>
                         </li>
                       </ul>
                     </nav>

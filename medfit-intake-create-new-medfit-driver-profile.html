@@ -19,7 +19,15 @@
 	<link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
 	<link rel="stylesheet" media="all" href="css/data-list.css"><!-- Include this only if needed -->
 	<link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all stylesheets -->
-	<link rel="stylesheet" media="all" href="css/accordion.css"><!-- Include this only if needed -->
+	link rel="stylesheet" media="all" href="css/accordion.css"><!-- Include this only if needed -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
   </head>
 
@@ -261,7 +269,13 @@
               										<label class="ns-label" for="licenseNotes">
               										  Notes on license
               										</label>
-              									  <textarea id="licenseNotes" name="Notes on license" class="ns-input fw-40" oninput="auto_grow(this)">Enter information about status, class, expiry, age of driver, conditions, or any other RMV data that may be needed during the review process.</textarea>
+              									  <textarea id="licenseNotes" name="Notes on license" rows="4" class="ns-input fw-40" oninput="auto_grow(this)" placeholder="Enter information about the driver's license status, class, expiry, age of driver, conditions, or any other RMV license information that may be needed during the review process."></textarea>
+              									</div>
+                                <div class="ns-form-group">
+              										<label class="ns-label" for="driverNotes">
+              										  Notes on driver
+              										</label>
+              									  <textarea id="driverNotes" name="Notes on license" rows="4" class="ns-input fw-40" oninput="auto_grow(this)" placeholder="Enter information from RMV about the driver's history such as collisions, past suspensions, or any other RMV historical information that may be needed during the review process."></textarea>
               									</div>
                                 <section id="decisionSection" class="row ns-form-group">
                                  <div class="col-auto">

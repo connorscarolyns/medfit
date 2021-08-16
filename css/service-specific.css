@@ -1,10 +1,24 @@
 html,body {
-  height:100vh;
+  height: 100%;
   font-size: 14px;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  html,body {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .Site{
-  overflow-x:hidden;
+  overflow-x:auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .Site{
+    overflow-x:hidden;
+  }
 }
 
 /* Start button styles */
@@ -128,21 +142,36 @@ html,body {
 /* end column header */
 
 .column-scroll{
-  display: table-cell;
-  height: inherit;
-  vertical-align: top;
+  display: block;
+  height: 100%;
 }
+
+@media only screen and (min-width: 768px) {
+  .column-scroll{
+    display: table-cell;
+    vertical-align: top;
+    height: calc(100vh - 103px);
+  }
+}
+
 .sticky-wrapper {
   transform: translate(0, 0);
   height: inherit;
 }
 .column-content{
   background-color: #fff;
-  border-right: 1px solid #dee2e6;
   height: inherit;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding-bottom: 57px;
+  overflow-y: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .column-content{
+    background-color: #fff;
+    border-right: 1px solid #dee2e6;
+    height: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 57px;
+  }
 }
 
 .button-close{
@@ -351,3 +380,27 @@ textarea {
 }
 
 /* end medit radio */
+
+/* start table styles */
+
+.clickable-row:focus-visible{
+  outline: 4px solid #f8d44c;
+}
+
+#intakeQueue-table .priority{
+  background: #dc3545;
+}
+
+#intakeQueue-table .priority td{
+  color: #ffffff;
+}
+
+#intakeQueue-table .priority:hover{
+  background: #bd2130;
+}
+
+#intakeQueue-table .selected{
+  background: #f8d44c;
+}
+
+/* end table styles */
