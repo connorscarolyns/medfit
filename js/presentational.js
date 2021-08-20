@@ -169,6 +169,10 @@ function show2(){
         // alert('More information is needed');
         window.location = "medfit-missing-information.html";
         break;
+      case 'enoughInfo':
+        // alert('enoughInfo');
+        window.location = "medfit-intake-detailed-information.html";
+        break;
       case 'johnBlake':
         // alert('More information is needed');
         window.location = "medfit-intake-link-to-a-demand.html";
