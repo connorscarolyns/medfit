@@ -64,6 +64,25 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $("#demandAddButton, #demandPost").on("click", function(){
+        $("#demandAddButton, #demandPost, #addDemandWrapper").toggle("fast");
+    });
+});
+
+
+$(document).ready(function(){
+    $("#followUpAddButton, #followUpPost").on("click", function(){
+        $("#followUpAddButton, #followUpPost, #addfollowUpWrapper").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $("#conditionAddButton, #conditionPost").on("click", function(){
+        $("#conditionAddButton, #conditionPost, #addconditionWrapper").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
     $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").on("click", function(){
         $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton, #contactLogTextArea, #contactLogparagraph").toggle("fast", function(){
             $("#contactLogTextArea").toggle("slow").focus()
@@ -144,6 +163,23 @@ function show2(){
   document.getElementById('conditional-not-found').style.display = 'block';
 }
 // end conditional selections
+
+// start new coditional section with multiple ids
+
+function documentFilter(trigger, target) {
+    $(trigger).on('change', function () {
+        $(target).toggle();
+    });
+}
+documentFilter("#decision", "#demandType");
+documentFilter("#additionalMedical", "#otherMedicalType");
+documentFilter("#suspention", "#suspentionType");
+documentFilter("#condition", "#addConditionType");
+documentFilter("#followUp", "#followUpType");
+documentFilter("#otherDecision", "#otherDecisionType");
+
+// end new coditional section with multiple ids
+
 
 // start radio button redirect
 

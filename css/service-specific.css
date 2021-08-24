@@ -101,6 +101,10 @@ html,body {
     width: 10rem;
 }
 
+.navbar-nav .dropdown-menu {
+    min-width: max-content;
+}
+
 /* End main navbar style */
 
 /* start secondary nav style */
@@ -361,7 +365,11 @@ textarea {
 }
 .ns-checkboxes__conditional{
   margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.ns-checkboxes__conditional .ns-form-group {
+    margin-bottom: 1rem;
 }
 
 .ns-radios__conditional .ns-fieldset *:last-child * {
@@ -377,6 +385,11 @@ textarea {
 }
 .medfit-radios .mefit-radios__label-with-hint {
     padding-bottom: 4px;
+}
+
+.ns-radios__item.inline {
+    display: inline-block;
+    float: none;
 }
 
 /* end medit radio */
