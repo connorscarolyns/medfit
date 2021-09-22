@@ -231,13 +231,13 @@
                             </label>
                           </h3>
 
-                          <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
                             <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
                           </button>
                           <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
                         </div>
 
-                        <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
+                        <button id="commentsPost" role="button" class="btn btn-default" style="display:none;">Post comment</button>
 
                       </form>
 
@@ -299,7 +299,7 @@
           <header id="columnHeader-main"  class="medfit-column-header d-flex align-items-center justify-content-between px-3">
 
             <h1 id="h1-investigation" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0">Investigation</h1>
-            <button type="button" class="medFit-btn btn-sm btn-default my-0 mr-0">Make a decision</button>
+            <button type="button" class="medFit-btn btn-sm btn-success my-0 mr-0">Make a decision</button>
 
           </header>
           <!-- end main col header -->
@@ -338,6 +338,37 @@
                   </form>
                 </section>
 
+                <section id="documents">
+                  <h2 id="documentsTitle" class="d-inline-block h3">Documents</h2>
+                  <dl id="dLDocumtents" class="ns-summary-list table">
+                    <div class="ns-summary-list__row">
+                      <dd scope="row" class="ns-summary-list__value py-0">
+                        Medical report
+                      </dd>
+                      <dd class="ns-summary-list__value py-0">
+                        Recieved: 31/12/21
+                      </dd>
+                      <dd id="dLDocumtents1" class="ns-summary-list__actions py-0">
+                        <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview medical report</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="ns-summary-list__row">
+                      <dd scope="row" class="ns-summary-list__value py-0">
+                        Demand for medical report
+                      </dd>
+                      <dd class="ns-summary-list__value py-0">
+                        Sent: 31/12/20
+                      </dd>
+                      <dd id="dLDocumtents2" class="ns-summary-list__actions py-0">
+                        <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview demand for medical report</span>
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </section>
 
                 <section id="medicalCondition">
                   <h2 id="medicalConditionTitle" class="d-inline-block h3">Medical Conditions</h2>
@@ -376,7 +407,7 @@
                   <dl class="ns-summary-list table">
                     <div class="ns-summary-list__row">
                       <dd scope="row" class="ns-summary-list__value py-0">
-                        Suspend
+                        Suspend: 278C(1)(a)
                       </dd>
                       <dd class="ns-summary-list__value py-0">
                         31/12/21
@@ -389,7 +420,7 @@
                     </div>
                     <div class="ns-summary-list__row">
                       <dd scope="row" class="ns-summary-list__value py-0">
-                        Remove class
+                        Downgrade
                       </dd>
                       <dd class="ns-summary-list__value py-0">
                         31/12/20
@@ -403,47 +434,17 @@
                   </dl>
                 </section>
 
-                <section id="documents">
-                  <h2 id="documentsTitle" class="d-inline-block h3">Documents</h2>
-                  <dl id="dLDocumtents" class="ns-summary-list table">
-                    <div class="ns-summary-list__row">
-                      <dd scope="row" class="ns-summary-list__value py-0">
-                        Medical report
-                      </dd>
-                      <dd class="ns-summary-list__value py-0">
-                        31/12/21
-                      </dd>
-                      <dd id="dLDocumtents1" class="ns-summary-list__actions py-0">
-                        <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
-                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview medical report</span>
-                        </a>
-                      </dd>
-                    </div>
-                    <div class="ns-summary-list__row">
-                      <dd scope="row" class="ns-summary-list__value py-0">
-                        Demand for medical report
-                      </dd>
-                      <dd class="ns-summary-list__value py-0">
-                        31/12/20
-                      </dd>
-                      <dd id="dLDocumtents2" class="ns-summary-list__actions py-0">
-                        <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
-                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview demand for medical report</span>
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                </section>
-
                 <section id="decisionSection" class="row">
-                  <div class="col-auto">
-                    <button class="medFit-btn btn-lg btn-default" type="button">Make a decision</button>
-                  </div>
-                  <div class="col-auto">
-                    <form method="get" action="medfit-missing-information.html">
-                      <button class="medFit-btn btn-lg ns-btn-2nd" type="submit">Park this driver, I need to get some missing info</button>
-                    </form>
-                  </div>
+                    <div class="col-auto">
+                      <form method="get" action="medfit-decision-actions.html">
+                        <button class="medFit-btn btn-lg btn-success" type="submit">Make a decision</button>
+                      </form>
+                    </div>
+                    <div class="col-auto">
+                      <form method="get" action="medfit-missing-information.html">
+                        <button class="medFit-btn btn-lg ns-btn-2nd" type="submit">Park this driver, I need to get some missing info</button>
+                      </form>
+                    </div>
                 </section>
 
                 <section id="contactAddressSection">
@@ -653,7 +654,7 @@
                           <div id="documentDetailsMessage" class="ns-summary-list__row">
 
                             <dt class="ns-summary-list__key">
-                              <label for="documentDetailsPriorityEdit">Message</label>
+                              <label for="documentDetailsMessageEdit">Message</label>
                             </dt>
 
                             <dd class="ns-summary-list__value">

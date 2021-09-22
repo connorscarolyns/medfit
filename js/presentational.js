@@ -177,6 +177,7 @@ documentFilter("#suspention", "#suspentionType");
 documentFilter("#condition", "#addConditionType");
 documentFilter("#followUp", "#followUpType");
 documentFilter("#otherDecision", "#otherDecisionType");
+documentFilter("#sendLetter", "#createLetter");
 
 // end new coditional section with multiple ids
 

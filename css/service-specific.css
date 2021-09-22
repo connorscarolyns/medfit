@@ -4,6 +4,10 @@ html,body {
   overflow: auto;
 }
 
+abbr[title], abbr[data-original-title] {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 768px) {
   html,body {
     height: 100vh;
@@ -311,10 +315,10 @@ textarea {
 .medfit-step-navigation{
   position: relative;
 }
-.medfit-step-navigation--section{
+.medfit-step-navigation-section{
   margin-bottom: 1rem;
 }
-.medfit-step-navigation--nav:after{
+.medfit-step-navigation-nav:after{
   content: "";
   border: 2px solid #333;
   position: absolute;
@@ -323,10 +327,10 @@ textarea {
   left: 15px;
   z-index: 0;
 }
-.medfit-step-navigation--list{
+.medfit-step-navigation-list{
   padding-left: 3rem;
 }
-.medfit-step-navigation--list-item{
+.medfit-step-navigation-list-item{
 
 }
 .step-list li::before{
@@ -344,17 +348,17 @@ textarea {
 .medfit-step-list-step.disabled {
     margin-bottom: 1.5em;
 }
-.medfit-step-navigation--title.disabled{
+.medfit-step-navigation-title.disabled{
   color: #707070;
 }
-.medfit-step-navigation--title.active{
+.medfit-step-navigation-title.active{
   font-weight: 600;
 }
 
 .step-list li {
     position: relative;
 }
-.medfit-step-navigation--title{
+.medfit-step-navigation-title{
   margin: 0 0 1rem 0;
 }
 /* end step list */
@@ -417,3 +421,50 @@ textarea {
 }
 
 /* end table styles */
+
+/* start accordion */
+.accordion-wrapper {
+    margin-bottom: 3rem;
+}
+
+.otherways-accordion {
+    border-top: 1px solid #777777;
+    border-bottom: 0;
+    padding: .1rem 0;
+    margin: 0 0 0 0;
+}
+
+.accordion-wrapper .otherways-accordion:last-child {
+    border-bottom: 1px solid #777777;
+}
+
+.otherways-accordion .accordion__heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.otherways-accordion .accordion__heading button[aria-expanded="false"]:after{
+    content:"";
+}
+
+.otherways-accordion .accordion__heading button[aria-expanded="true"]:after{
+    content:"";
+}
+
+.otherways-accordion .accordion__heading button[aria-expanded="false"]:before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f0fe';
+    margin-right: 0.5rem
+}
+
+.otherways-accordion .accordion__heading button[aria-expanded="true"]:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f146';
+    margin-right: 0.5rem
+}
+
+/* end accordion */
+
+.card-body p:last-child {
+    margin-bottom: 0;
+}

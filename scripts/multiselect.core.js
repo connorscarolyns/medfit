@@ -93,15 +93,15 @@ Multiselect.prototype = {
 			checkBox.dataset.multiselectElement = JSON.stringify(e);
 		});
 
-		var selectAll = this._createItem('span', -1, 'Select all');
-		var result = m_helper.div({
-			id : this._getItemListIdentifier(),
-			class : 'multiselect-list'
-		});
-
-		result.appendChild(selectAll);
-		result.appendChild(m_helper.create({tag : 'hr' }));
-		result.appendChild(list);
+		// var selectAll = this._createItem('span', -1, 'Select all');
+		// var result = m_helper.div({
+		// 	id : this._getItemListIdentifier(),
+		// 	class : 'multiselect-list'
+		// });
+		//
+		// result.appendChild(selectAll);
+		// result.appendChild(m_helper.create({tag : 'hr' }));
+		// result.appendChild(list);
 
 		return result;
 	},

@@ -11,7 +11,6 @@
   <link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->
   <link rel="stylesheet" media="all" href="css/supplimentary-page-styles.css"><!-- Include only if forms are used-->
   <link rel="stylesheet" media="all" href="css/phase-banner.css"><!-- Include only if forms are used-->
-  <link rel="stylesheet" media="all" href="css/phase-banner.css"><!-- Include only if forms are used-->
   <link rel="stylesheet" media="all" href="css/global-form-styles.css"><!-- Include only if forms are used-->
   <link rel="stylesheet" media="all" href="css/radio-button.css"><!-- Include only if radios are used-->
   <link rel="stylesheet" media="all" href="css/checkboxes.css"><!-- Include only if checkboxes are used-->
@@ -309,11 +308,11 @@
 
             <div class="px-3 mt-3">
               <section class="medfit-step-navigation">
-                <nav class="medfit-step-navigation--nav">
-                  <ol class="step-list medfit-step-navigation--list">
-                    <li class="medfit-step-navigation--list-item">
-                      <form>
-                        <h2 class="h3 medfit-step-navigation--title active">What actions are needed? <span class="sr-only">(current)</span></h2>
+                <nav class="medfit-step-navigation-nav">
+                  <ol class="step-list medfit-step-navigation-list">
+                    <li class="medfit-step-navigation-list-item">
+                      <form method="get" action="medfit-decision-complete-decision-whats-next.html">
+                        <h2 class="h3 medfit-step-navigation-title active">What actions are needed? <span class="sr-only">(current)</span></h2>
                         <fieldset class="ns-fieldset">
                           <legend class="ns-visually-hidden ns-fieldset__legend noBorder label">
                             <h3 class="ns-fieldset__heading">
@@ -328,379 +327,305 @@
                               </label>
                             </div>
                             <div class="ns-checkboxes__conditional" style="display: none;" id="demandType">
-                              <!-- <div class="ns-fieldset">
-                              <div class="ns-checkboxes ns-checkboxes--small"  data-module="ns-checkboxes">
-                              <div class="ns-checkboxes__item">
-                              <input class="ns-checkboxes__input" id="MedicalReport"  type="checkbox" value="Medical report">
-                              <label class="ns-label ns-checkboxes__label" for="MedicalReport">
-                              <span class="ns-label-span">Medical report</span>
-                            </label>
+
+                              <div class="ns-form-group">
+                                <button id="demandAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                  <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a demand
+                                </button>
+                                <div id="addDemandWrapper" style="display:none;">
+                                  <div class="ns-form-group">
+                                    <label id="demandLabel" class="ns-label" for="demandWrite">
+                                      Select or type-in the required demand
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="demandWrite" list="demandWriteList" name="demand-write">
+                                      <datalist id="demandWriteList">
+                                        <option>Medical Report</option>
+                                        <option>Re-exam</option>
+                                        <option>or type-in another kind of demand</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <div class="ns-form-group">
+                                    <label id="demandDueLabel" class="ns-label" for="demandDueWrite">
+                                      Due date
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="demandDueWrite" list="demandDueWriteList" name="demand-due-write">
+                                      <datalist id="demandDueWriteList">
+                                        <option>15 days</option>
+                                        <option>30 days</option>
+                                        <option>90 days</option>
+                                        <option>6 months</option>
+                                        <option>1 year</option>
+                                        <option>2 years</option>
+                                        <option>2.5 years</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <button id="demandPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add demand</button>
+                                </div>
+                              </div>
+
+                              <h3 class="h4">List of demands</h3>
+                              <div class="table-wrapper">
+                                <table id="demandList-table" class="medFit-table table table-hover">
+                                  <thead>
+                                    <tr class="">
+                                      <th scope="col">Demand</th>
+                                      <th scope="col">Due date</th>
+                                      <th scope="col"><span class="ns-visually-hidden">Action</span></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>Medical report</td>
+                                      <td>12/31/2021</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
+                                    </tr>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>Re-exam</td>
+                                      <td>12/31/2021</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input  class="ns-checkboxes__input" id="suspention" name="actions" type="checkbox" value="suspention" data-aria-controls="suspentionType">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="suspention">
+                                Suspensions
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" style="display: none;" id="suspentionType">
+                              <div class="ns-form-group">
+                                <label class="ns-label" for="suspentionTypeInput">
+                                  Suspend & unlicense
+                                </label>
+                                <div class="select fw-20">
+                                  <input type="text" id="suspentionTypeInput" list="suspentionTypeList" name="suspentionType">
+                                  <datalist id="suspentionTypeList">
+                                    <option>278C(1)(a)</option>
+                                    <option>278C(1)(b)</option>
+                                    <option>280(4)</option>
+                                    <option>Tab 09 & Set Unlicensed </option>
+                                  </datalist>
+                                </div>
+                              </div>
+                              <div class="ns-form-group">
+                                <label class="ns-label" for="restoreInput">
+                                  Restore & recind
+                                </label>
+                                <div class="select fw-20">
+                                  <input type="text" id="restoreInput" list="restoreList" name="restore">
+                                  <datalist id="restoreList">
+                                    <option>Recind: 278C(1)(a)</option>
+                                    <option>Recind: 278C(1)(b)</option>
+                                    <option>Restore: 280(4)</option>
+                                  </datalist>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input  class="ns-checkboxes__input" id="condition" name="actions" type="checkbox" value="condition" data-aria-controls="addConditionType">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="condition">
+                                Conditions
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" style="display: none;" id="addConditionType">
+                              <div class="ns-form-group">
+                                <button id="conditionAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                  <i class="fas fa-hand-pointer ns-btn__icon-left mr-2" aria-hidden="true"></i>Select conditions
+                                </button>
+                                <div id="addconditionWrapper" style="display:none;">
+                                  <div class="ns-form-group">
+                                    <label id="conditionLabel" class="ns-label" for="conditionWrite">
+                                      Select a condition
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="conditionWrite" list="conditionWriteList" name="condition-write">
+                                      <datalist id="conditionWriteList">
+                                        <option>01</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>10</option>
+                                        <option>Code W</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <div class="ns-form-group">
+                                    <fieldset class="ns-fieldset">
+                                      <legend class="ns-fieldset__legend noBorder label">
+                                        <h3 class="ns-fieldset__heading">
+                                          Add or remove this condition?
+                                        </h3>
+                                      </legend>
+                                      <div class="ns-radios ns-radios--small">
+                                        <div class="ns-radios__item inline">
+                                          <input class="ns-radios__input" id="inline-radios" name="inline-radios" type="radio" value="inline radio 1" checked="">
+                                          <label class="ns-label ns-radios__label" for="inline-radios">
+                                            <span class="ns-label-span">Add</span>
+                                          </label>
+                                        </div>
+                                        <div class="ns-radios__item inline">
+                                          <input class="ns-radios__input" id="inline-radios-2" name="inline-radios" type="radio" value="inline radio 2">
+                                          <label class="ns-label ns-radios__label" for="inline-radios-2">
+                                            <span class="ns-label-span">Remove</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+                                  <button id="conditionPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add to list</button>
+                                </div>
+                              </div>
+                              <h3 class="h4">List of conditions</h3>
+                              <div class="table-wrapper">
+                                <table id="conditionList-table" class="medFit-table table table-hover">
+                                  <thead>
+                                    <tr class="">
+                                      <th scope="col">Condition</th>
+                                      <th scope="col">Add or remove</th>
+                                      <th scope="col"><span class="ns-visually-hidden">Action</span></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>01</td>
+                                      <td>Add</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
+                                    </tr>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>Code W</td>
+                                      <td>Remove</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input class="ns-checkboxes__input" id="followUp" name="actions" type="checkbox" value="follow-up">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="followUp">
+                                Follow-up
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" id="followUpType" style="display: none;">
+                              <div class="ns-form-group">
+                                <button id="followUpAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                  <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a follow-up
+                                </button>
+                                <div id="addfollowUpWrapper" style="display:none;">
+                                  <div class="ns-form-group">
+                                    <label id="followUpLabel" class="ns-label" for="followUpWrite">
+                                      Select or type-in the required follow-up
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="followUpWrite" list="followUpWriteList" name="followUp-write">
+                                      <datalist id="followUpWriteList">
+                                        <option>Medical Report</option>
+                                        <option>Re-exam</option>
+                                        <option>or type-in another kind of follow-up</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <div class="ns-form-group">
+                                    <label id="followUpDueLabel" class="ns-label" for="followUpDueWrite">
+                                      Due date
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="followUpDueWrite" list="followUpDueWriteList" name="followUp-due-write">
+                                      <datalist id="followUpDueWriteList">
+                                        <option>15 days</option>
+                                        <option>30 days</option>
+                                        <option>90 days</option>
+                                        <option>6 months</option>
+                                        <option>1 year</option>
+                                        <option>2 years</option>
+                                        <option>2.5 years</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <button id="followUpPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add follow-up</button>
+                                </div>
+                              </div>
+                              <h3 class="h4">List of follow-ups</h3>
+                              <div class="table-wrapper">
+                                <table id="followUpList-table" class="medFit-table table table-hover">
+                                  <thead>
+                                    <tr class="">
+                                      <th scope="col">Follow-up</th>
+                                      <th scope="col">Due-date</th>
+                                      <th scope="col"><span class="ns-visually-hidden">Action</span></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>Medical report</td>
+                                      <td>12/21/2021</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input class="ns-checkboxes__input" id="macReviewInput" name="actions" type="checkbox" value="Mac Review">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="macReviewInput">
+                                Mac Review
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input  class="ns-checkboxes__input" id="otherDecision" name="actions" type="checkbox" value="Other Decision" data-aria-controls="otherDecisionTypeInput">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="otherDecision">
+                                Other decision
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" style="display: none;" id="otherDecisionType">
+                              <div class="ns-form-group">
+                                <label class="ns-label" for="otherDecisionTypeInput">
+                                  Add a description of your decision
+                                </label>
+                                <div class="fw-40">
+                                  <textarea class="ns-input fw-40" id="otherDecisionTypeInput" name="licence-information" rows="4" oninput="auto_grow(this)"></textarea>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="ns-checkboxes__item">
-                          <input class="ns-checkboxes__input" id="Re-exam"  type="checkbox" value="Re-exam">
-                          <label class="ns-label ns-checkboxes__label" for="Re-exam">
-                          <span class="ns-label-span">Re-exam</span>
-                        </label>
-                      </div>
-                      <div class="ns-checkboxes__item">
-                      <input class="ns-checkboxes__input" id="additionalMedical"  type="checkbox" value="Additional Medical">
-                      <label class="ns-label ns-checkboxes__label" for="additionalMedical">
-                      <span class="ns-label-span">Additional medical documents</span>
-                    </label>
-                  </div>
-                  <div class="ns-checkboxes__conditional" style="display: none;" id="otherMedicalType">
-                  <div class="ns-form-group">
-                  <label class="ns-label" for="otherType">
-                  Type of medical document
-                </label>
-                <input class="ns-input fw-20" id="otherType"  type="text">
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <form>
-          <div class="ns-form-group">
-            <button id="demandAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
-              <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a demand
-            </button>
-            <div id="addDemandWrapper" style="display:none;">
-              <div class="ns-form-group">
-                <label id="demandLabel" class="ns-label" for="demandWrite">
-                  Select or type-in the required demand
-                </label>
-                <div class="select fw-20">
-                  <input type="text" id="demandWrite" list="demandWriteList" name="demand-write">
-                  <datalist id="demandWriteList">
-                    <option>Medical Report</option>
-                    <option>Re-exam</option>
-                    <option>or type-in another kind of demand</option>
-                  </datalist>
-                </div>
-              </div>
-              <div class="ns-form-group">
-                <label id="demandLabel" class="ns-label" for="demandWrite">
-                  Due date
-                </label>
-                <div class="select fw-20">
-                  <input type="text" id="demandDueWrite" list="demandDueWriteList" name="demand-due-write">
-                  <datalist id="demandDueWriteList">
-                    <option>10 days</option>
-                    <option>2 weeks</option>
-                    <option>1 month</option>
-                    <option>3 months</option>
-                    <option>6 months</option>
-                    <option>1 year</option>
-                    <option>2 years</option>
-                  </datalist>
-                </div>
-              </div>
-              <button id="demandPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add demand</button>
-            </div>
-          </div>
-        </form>
-        <h3 class="h4">List of demands</h3>
-        <div class="table-wrapper">
-          <table id="demandList-table" class="medFit-table table table-hover">
-            <thead>
-              <tr class="">
-                <th scope="col">Demand</th>
-                <th scope="col">Due date</th>
-                <th scope="col"><span class="ns-visually-hidden">Action</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-                <td>Medical report</td>
-                <td>12/31/2021</td>
-                <td><a href="medfit-investigation.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
-              </tr>
-              <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-                <td>Re-exam</td>
-                <td>12/31/2021</td>
-                <td><a href="medfit-investigation.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="ns-checkboxes__item">
-        <input  class="ns-checkboxes__input" id="suspention" name="actions" type="checkbox" value="suspention" data-aria-controls="suspentionType">
-        <label class="ns-label ns-checkboxes__label h4 noBold" for="suspention">
-          Suspensions
-        </label>
-      </div>
-      <div class="ns-checkboxes__conditional" style="display: none;" id="suspentionType">
-        <div class="ns-form-group">
-          <label class="ns-label" for="suspentionTypeInput">
-            Suspend & unlicense
-          </label>
-          <div class="select fw-20">
-            <input type="text" id="suspentionTypeInput" list="suspentionTypeList" name="suspentionType">
-            <datalist id="suspentionTypeList">
-              <option>278C(1)(a)</option>
-              <option>278C(1)(b)</option>
-              <option>280(4)</option>
-              <option>Tab 09 & Set Unlicensed </option>
-            </datalist>
-          </div>
-        </div>
-        <div class="ns-form-group">
-          <label class="ns-label" for="restoreInput">
-            Restore & recind
-          </label>
-          <div class="select fw-20">
-            <input type="text" id="restoreInput" list="restoreList" name="restore">
-            <datalist id="restoreList">
-              <option>Restore: 278C(1)(a)</option>
-              <option>Restore: 278C(1)(b)</option>
-              <option>Recind: 280(4)</option>
-            </datalist>
-          </div>
-        </div>
-      </div>
-      <div class="ns-checkboxes__item">
-        <input  class="ns-checkboxes__input" id="condition" name="actions" type="checkbox" value="condition" data-aria-controls="addConditionType">
-        <label class="ns-label ns-checkboxes__label h4 noBold" for="condition">
-          Condition
-        </label>
-      </div>
-      <div class="ns-checkboxes__conditional" style="display: none;" id="addConditionType">
-        <!-- <div class="ns-form-group">
-        <label class="ns-label" for="addConditionTypeInput">
-        Add
-      </label>
-      <div class="select fw-20">
-      <input type="text" id="addConditionTypeInput" list="addConditionTypeList" name="addConditionType">
-      <datalist id="addConditionTypeList">
-      <option>01</option>
-      <option>07</option>
-      <option>08</option>
-      <option>10</option>
-      <option>Code W</option>
-    </datalist>
+                        </fieldset>
+                        <section id="decisionSection" class="row ns-form-group">
+                          <div class="col-auto">
+                            <button type="submit" class="medFit-btn btn-sm btn-default my-0">Save and continue</button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
+                          </div>
+                        </section>
+                      </form>
+                    </li>
+                    <!-- <li class="medfit-step-list-step disabled">
+                    <h2 class="h3 medfit-step-navigation-title disabled">Create communication</h2>
+                  </li>
+                  <li class="medfit-step-list-step disabled">
+                  <h2 class="h3 medfit-step-navigation-title disabled">Attachements</h2>
+                </li> -->
+                <li class="medfit-step-list-step disabled">
+                  <h2 class="h3 medfit-step-navigation-title disabled">Complete Decision</h2>
+                  <!-- <section class="medfit-step-navigation-section">
+                  <h3 id="whatsNext" class="h4 medfit-step-navigation-title disabled">What's next</h3>
+                </section>
+                <section class="medfit-step-navigation-section">
+                <h3 id="reviewAndConfirm" class="h4 medfit-step-navigation-title disabled">Review and confirm</h3>
+              </section> -->
+            </li>
+            <!-- <li class="medfit-step-list-step disabled">
+            <h2 class="h3 medfit-step-navigation-title disabled">Sign-off</h2>
+          </li> -->
+        </ol>
+      </nav>
+    </section>
   </div>
-</div>
-<div class="ns-form-group">
-<label class="ns-label" for="removeConditionInput">
-Remove
-</label>
-<div class="select fw-20">
-<input type="text" id="removeConditionInput" list="removeConditionList" name="removeCondition">
-<datalist id="removeConditionList">
-<option>01</option>
-<option>07</option>
-<option>08</option>
-<option>10</option>
-<option>Code W</option>
-</datalist>
-</div>
-</div> -->
-<form>
-  <div class="ns-form-group">
-    <button id="conditionAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
-      <i class="fas fa-hand-pointer ns-btn__icon-left mr-2" aria-hidden="true"></i>Select conditions
-    </button>
-    <div id="addconditionWrapper" style="display:none;">
-      <div class="ns-form-group">
-        <label id="conditionLabel" class="ns-label" for="conditionWrite">
-          Select a condition
-        </label>
-        <div class="select fw-20">
-          <input type="text" id="conditionWrite" list="conditionWriteList" name="condition-write">
-          <datalist id="conditionWriteList">
-            <option>01</option>
-            <option>07</option>
-            <option>08</option>
-            <option>10</option>
-            <option>Code W</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="ns-form-group">
-        <fieldset class="ns-fieldset">
-          <legend class="ns-fieldset__legend noBorder label">
-            <h3 class="ns-fieldset__heading">
-              Add or remove this condition?
-            </h3>
-          </legend>
-          <div class="ns-radios ns-radios--small">
-            <div class="ns-radios__item inline">
-              <input class="ns-radios__input" id="inline-radios" name="inline-radios" type="radio" value="inline radio 1" checked="">
-              <label class="ns-label ns-radios__label" for="inline-radios">
-                <span class="ns-label-span">Add</span>
-              </label>
-            </div>
-            <div class="ns-radios__item inline">
-              <input class="ns-radios__input" id="inline-radios-2" name="inline-radios" type="radio" value="inline radio 2">
-              <label class="ns-label ns-radios__label" for="inline-radios-2">
-                <span class="ns-label-span">Remove</span>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-      <button id="conditionPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add to list</button>
-    </div>
-  </div>
-</form>
-<h3 class="h4">List of conditions</h3>
-<div class="table-wrapper">
-  <table id="conditionList-table" class="medFit-table table table-hover">
-    <thead>
-      <tr class="">
-        <th scope="col">Condition</th>
-        <th scope="col">Add or remove</th>
-        <th scope="col"><span class="ns-visually-hidden">Action</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-        <td>01</td>
-        <td>Add</td>
-        <td><a href="medfit-investigation.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
-      </tr>
-      <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-        <td>Code W</td>
-        <td>Remove</td>
-        <td><a href="medfit-investigation.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-<div class="ns-checkboxes__item">
-  <input class="ns-checkboxes__input" id="followUp" name="actions" type="checkbox" value="follow-up">
-  <label class="ns-label ns-checkboxes__label h4 noBold" for="followUp">
-    Follow-up
-  </label>
-</div>
-<div class="ns-checkboxes__conditional" id="followUpType" style="display: none;">
-  <!-- <div class="ns-form-group">
-  <label class="ns-label" for="followUpTypeInput">
-  Type of follow-up
-</label>
-<div class="select fw-20">
-<input type="text" id="followUpTypeInput" list="followUpTypeList" name="followUpType">
-<datalist id="followUpTypeList">
-<option>Are there preset options to go here?</option>
-</datalist>
-</div>
-</div>
-<div class="ns-form-group">
-<label class="ns-label" for="followUpTypeInput">
-Add the details of the follow-up
-</label>
-<div class="fw-40">
-<textarea class="ns-input fw-40" id="followUpTypeInput" name="licence-information" rows="4" oninput="auto_grow(this)"></textarea>
-</div>
-</div> -->
-<form>
-  <div class="ns-form-group">
-    <button id="followUpAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
-      <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a follow-up
-    </button>
-    <div id="addfollowUpWrapper" style="display:none;">
-      <div class="ns-form-group">
-        <label id="followUpLabel" class="ns-label" for="followUpWrite">
-          Select or type-in the required follow-up
-        </label>
-        <div class="select fw-20">
-          <input type="text" id="followUpWrite" list="followUpWriteList" name="followUp-write">
-          <datalist id="followUpWriteList">
-            <option>Medical Report</option>
-            <option>Re-exam</option>
-            <option>or type-in another kind of follow-up</option>
-          </datalist>
-        </div>
-      </div>
-      <div class="ns-form-group">
-        <label id="followUpLabel" class="ns-label" for="followUpWrite">
-          Due date
-        </label>
-        <div class="select fw-20">
-          <input type="text" id="followUpDueWrite" list="followUpDueWriteList" name="followUp-due-write">
-          <datalist id="followUpDueWriteList">
-            <option>10 days</option>
-            <option>2 weeks</option>
-            <option>1 month</option>
-            <option>3 months</option>
-            <option>6 months</option>
-            <option>1 year</option>
-            <option>2 years</option>
-            <option>Annually</option>
-            <option>Bi-annually</option>
-          </datalist>
-        </div>
-      </div>
-      <button id="followUpPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add follow-up</button>
-    </div>
-  </div>
-</form>
-
-<h3 class="h4">List of follow-ups</h3>
-<div class="table-wrapper">
-  <table id="followUpList-table" class="medFit-table table table-hover">
-    <thead>
-      <tr class="">
-        <th scope="col">Follow-up</th>
-        <th scope="col">Due-date</th>
-        <th scope="col"><span class="ns-visually-hidden">Action</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
-        <td>Medical report</td>
-        <td>12/21/2021</td>
-        <td><a href="medfit-investigation.html" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-<div class="ns-checkboxes__item">
-  <input class="ns-checkboxes__input" id="macReviewInput" name="actions" type="checkbox" value="Mac Review">
-  <label class="ns-label ns-checkboxes__label h4 noBold" for="macReviewInput">
-    Mac Review
-  </label>
-</div>
-<div class="ns-checkboxes__item">
-  <input  class="ns-checkboxes__input" id="otherDecision" name="actions" type="checkbox" value="Other Decision" data-aria-controls="otherDecisionTypeInput">
-  <label class="ns-label ns-checkboxes__label h4 noBold" for="otherDecision">
-    Other decision
-  </label>
-</div>
-<div class="ns-checkboxes__conditional" style="display: none;" id="otherDecisionType">
-  <div class="ns-form-group">
-    <label class="ns-label" for="otherDecisionTypeInput">
-      Add a description of your decision
-    </label>
-    <div class="fw-40">
-      <textarea class="ns-input fw-40" id="otherDecisionTypeInput" name="licence-information" rows="4" oninput="auto_grow(this)"></textarea>
-    </div>
-  </div>
-</div>
-</div>
-</fieldset>
-
-<button type="button" class="medFit-btn btn-sm btn-default my-0 mr-0">Save and continue</button>
-</form>
-</li>
-<li class="medfit-step-list-step disabled">
-  <h2 class="h3 medfit-step-navigation--title disabled">Create communication</h2>
-</li>
-<li class="medfit-step-list-step disabled">
-  <h2 class="h3 medfit-step-navigation--title disabled">Attachements</h2>
-</li>
-<li class="medfit-step-list-step disabled">
-  <h2 class="h3 medfit-step-navigation--title disabled">Review decision</h2>
-</li>
-<li class="medfit-step-list-step disabled">
-  <h2 class="h3 medfit-step-navigation--title disabled">Sign-off</h2>
-</li>
-</ol>
-</nav>
-</section>
-</div>
 </div> <!-- columnContent-main -->
 </div> <!-- stickyWrapper-main -->
 </div> <!-- columnScrollMain -->
@@ -714,13 +639,10 @@ Add the details of the follow-up
 
     <!-- start Document nav -->
     <a href="#" class="ns-back-link pr-2">Back</a>
-    <nav id="navbar-Document" aria-label="Intake details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
-      <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
-        <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
-          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document active" href="#tabPane-attachements"> <span class="ns-visually-hidden">Preivew the </span>Document</a>
-        </li>
-        <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details">
-          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-details">Details <span class="ns-visually-hidden">about the document</span></a>
+    <nav id="navbar-Document" aria-label="Assignment details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
+      <ul id="columnHeader-navTabs" role="tablist" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
+        <li id="navItem-driver" class="medFit-nav-item nav-item nav-item-details">
+          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details active" role="tab" href="#tabPane-driver" aria-controls="tabPane-driver" aria-selected="true"><span class="ns-visually-hidden">Information about the</span> Driver</a>
         </li>
       </ul>
     </nav>
@@ -738,158 +660,186 @@ Add the details of the follow-up
   <div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
     <div id="columnContent-right" class="medFit-column-content column-content column-content-right">
 
-
       <article id="Document">
         <!-- start Document tab content -->
         <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
-          <!-- start Document tab content -->
-          <div id="tabPane-attachements" class="medFit-tab-pane tab-pane tab-pane-attachements fade in active show">
-            <section class="row mx-0">
-              <!-- start document preview -->
-              <article class="col-sm-12 px-3" id="exampleAttachment">
-                <h2 id="documentPreviewTitle" class="h3">Unsolicited - law</h2>
-                <div class="mt-3">
-                  <img src="img/medical-report-front.jpg"  class="img-fluid mb-3" alt="Document Preview">
-                </div>
-              </article>
-              <!-- end document preview -->
-            </section> <!-- end Document tab row -->
-          </div> <!-- end tabPane-attachements -->
-          <!-- end Document tab content -->
 
-          <!-- start details tab contents -->
-          <div id="tabPane-details" class="medFit-tab-pane tab-pane tab-pane-details fade">
+          <!-- start driver info tab -->
+
+          <div id="tabPane-driver" aria-labelledby="navItem-driver" role="tabpanel" class="medFit-tab-pane tab-pane tab-pane-driver fade show active">
             <article class="col-sm px-3">
 
-              <section id="documentDetails">
+              <section id="driverDetails">
 
-                <header id="contactAddressHeader" >
+                <h3 id="driverDetailsTitleNotesOnDriver" class="h4 d-inline-block mt-3">Notes on driver</h3>
 
-                  <h2 id="documentDetailsTitle" class="h3">Unsolicited - law</h2>
-                  <h3 id="documentDetailsSubTitle" class="h4 d-inline-block ">Document details</h3>
+                <button id="driverDetailsNotesOnDriverEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                  <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit Notes on driver</span>
+                </button> <!-- edit saveButton -->
 
-                  <button id="documentDetailsTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                    <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit document details</span>
-                  </button> <!-- edit saveButton -->
-
-                  <div id="documentDetailsSaveButtonWrapper" style="display:inline-block">
-                    <button id="documentDetailsSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
-                      <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
-                    </button> <!-- end saveButton -->
-                    <button id="documentDetailsCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                      <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
-                    </button>  <!-- end cancelButton -->
-                  </div> <!-- end SaveButtonWrapper -->
-
-                </header> <!-- end contactAddressHeader -->
+                <div id="notesOnDriverSaveButtonWrapper" style="display:inline-block">
+                  <button id="notesOnDriverSaveButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                    <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes on license</span>
+                  </button> <!-- end saveButton -->
+                  <button id="notesOnDriverCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                    <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes on license</span>
+                  </button>  <!-- end cancelButton -->
+                </div> <!-- end SaveButtonWrapper -->
 
 
-                <div id="documentDetailsTitleEditButtonWrapper" class="d-inline-block notesAboutTheDriverTitleEditButtonWrapper">
+                <div class="ns-summary-list">
+                  <!-- start row -->
+                  <div id="notesOnDriverRow" class="ns-summary-list__row">
 
-                </div> <!-- end EditButtonWrapper -->
-
-                <dl class="ns-summary-list">
-                  <div id="documentDetailsMessage" class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      <label for="documentDetailsMessageEdit">Message</label>
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-
-                      <span id="documentDetailsMessageSaved">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</span>
-
-                      <textarea id="documentDetailsMessageEdit" name="name" class="ns-input fw-40" style="display:none;" oninput="auto_grow(this)">Driver XXXXX was acting erratically at a check-point, I think they may have a mental issue, can you conduct a review?</textarea>
-
-                    </dd>
+                    <div class="ns-summary-list__value">
+                      <span id="notesOnDriverText">Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV</span>
+                      <textarea aria-labelledby="driverDetailsTitleNotesOnDriver" id="notesOnDriverTextarea" name="name" class="ns-input" style="display:none;" oninput="auto_grow(this)" placeholder="Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV"></textarea>
+                    </div>
                   </div>
-                  <!-- end message row -->
-                  <div class="ns-summary-list__row">
+                  <!-- end row -->
+                </div>
 
-                    <dt class="ns-summary-list__key">
-                      <label for="documentDetailsPrioritySelect">Priority</label>
-                    </dt>
+                <!-- start document list section -->
+                <section id="documentListSection">
+                  <h2 class="h3">Document list</h2>
+                  <dl class="ns-summary-list">
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                    <dd id="documentDetailsPriority" class="ns-summary-list__value">
+                      <dt class="ns-summary-list__key">
+                        Medical report
+                      </dt>
 
-                      <span id="documentDetailsPrioritySaved">Priority</span>
+                      <dd class="ns-summary-list__value">
+                        Recieved: 02/02/2021
+                      </dd>
 
-                      <div id="documentDetailsPriorityEdit"  class="select fw-20" style="display:none;">
-                        <select id="documentDetailsPrioritySelect" name="document-details-priority-edit">
-                          <option value="priority">Priority</option>
-                          <option value="non-priority">Non-priority</option>
-                        </select>
-                      </div>
+                      <dd class="ns-summary-list__actions">
+                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                        </button>
+                      </dd>
 
-                    </dd>
-                  </div>
-                  <!-- end priority row -->
-                  <div class="ns-summary-list__row">
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                    <dt class="ns-summary-list__key">
-                      <label for="documentDetailsSourceSelect">Source</label>
-                    </dt>
+                      <dt class="ns-summary-list__key">
+                        Assessment package
+                      </dt>
 
-                    <dd class="ns-summary-list__value">
+                      <dd class="ns-summary-list__value">
+                        Sent: 02/02/2021
+                      </dd>
 
-                      <span id="documentDetailsSourceSaved">Email</span>
+                      <dd class="ns-summary-list__actions">
+                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                        </button>
+                      </dd>
 
-                      <div id="documentDetailsSourceEdit"  class="select fw-20" style="display:none;">
-                        <select id="documentDetailsSourceSelect" name="document-details-priority-edit">
-                          <option value="priority">Email</option>
-                          <option value="mail">Mail</option>
-                          <option value="fax">Fax</option>
-                          <option value="interdepartmental">Interdepartmental</option>
-                        </select>
-                      </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                    </dd>
-                  </div>
-                  <!-- end source row -->
-                  <div class="ns-summary-list__row">
+                      <dt class="ns-summary-list__key">
+                        Unsolisited law
+                      </dt>
 
-                    <dt class="ns-summary-list__key">
-                      <label for="documentDetailsEmailEdit">Email address</label>
+                      <dd class="ns-summary-list__value">
+                        Received: 02/02/2021
+                      </dd>
 
-                    </dt>
+                      <dd class="ns-summary-list__actions">
+                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                        </button>
+                      </dd>
 
-                    <dd class="ns-summary-list__value">
+                    </div>
+                    <!-- end row -->
 
-                      <span id="documentDetailsEmailSaved">email@email.com</span>
+                  </dl>
+                </section>
+                <!-- end  document list section -->
+                <!-- start stage and state section -->
+                <section id="stageAndStateSection">
+                  <h2 class="h3">Where are they in the process?</h2>
+                  <dl class="ns-summary-list">
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                      <input id="documentDetailsEmailEdit" class="ns-input fw-20" name="document-details-email-input" type="text" style="display:none;" value="email@email.com">
+                      <dt class="ns-summary-list__key">
+                        Decision
+                      </dt>
 
-                    </dd>
+                      <dd class="ns-summary-list__value">
+                        <span>In progress</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
 
-                  </div>
-                  <!-- end source details row -->
-                  <div class="ns-summary-list__row">
-                    <dt class="ns-summary-list__key">
-                      <label for="documentDetailsNotesEdit">Notes</label>
+                  </dl>
+                </section>
+                <!-- end stage and state section -->
 
-                    </dt>
-                    <dd class="ns-summary-list__value">
+                <!-- start recent activity section -->
+                <section id="recentActrivitySection">
+                  <h2 class="h3">Recent activity</h2>
+                  <dl class="ns-summary-list">
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+                      <dt class="ns-summary-list__key">
+                        Assessment package sent
+                      </dt>
 
-                      <span id="documentDetailsNotesSaved">Any notes on about the letter that were added during intake, or any time after, can be edited and saved in this note.</span>
+                      <dd class="ns-summary-list__value">
+                        <span>02/02/2021</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                      <textarea id="documentDetailsNotesEdit" name="name" class="ns-input fw-40" style="display:none;" oninput="auto_grow(this)">Any notes on about the letter that were added during intake, or any time after, can be edited and saved in this note.</textarea>
+                      <dt class="ns-summary-list__key">
+                        Investigation: Complete
+                      </dt>
 
-                    </dd>
+                      <dd class="ns-summary-list__value">
+                        <span>02/02/2021</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
 
-                  </div>
-                  <!-- end document notes row -->
-                </dl>
+                      <dt class="ns-summary-list__key">
+                        Intake: Complete
+                      </dt>
+
+                      <dd class="ns-summary-list__value">
+                        <span>02/02/2021</span>
+                      </dd>
+
+                    </div>
+                    <!-- end row -->
+                  </dl>
+                </section>
+                <!-- end recent activity section -->
 
               </section>
             </article>
           </div>
-          <!-- end details tab content -->
+
+          <!-- end driver indo tab -->
 
         </div> <!-- end tabContent-Document -->
         <!-- end Document tab content -->
+      </article>
 
-      </article> <!-- end Document article -->
-    </div> <!-- end columnContent-rightt -->
+    </div> <!-- end columnContent-right -->
   </div> <!-- end stickyWrapper-right -->
 </div> <!-- end columnCollapse-right -->
 <!-- end right column -->
