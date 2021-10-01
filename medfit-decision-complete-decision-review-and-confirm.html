@@ -124,172 +124,233 @@
   <div id="siteContent" class="medFit-site-copntent container-fluid Site-content">
     <div id="mainContent" class="medFit-main-content main-content row">
 
-      <!-- start left column -->
-      <div id="columnScrollleft" class="col-md-2 px-0 column-scroll">
+            <!-- start left column -->
+            <div id="columnScrollleft" class="col-md-2 px-0 column-scroll">
 
-        <!-- start left col header -->
-        <header id="columnHeader-left"  class="medfit-column-header d-flex align-items-center px-3">
+              <!-- start left col header -->
+              <header id="columnHeader-left"  class="medfit-column-header d-flex align-items-center px-3">
 
-          <a href="#" class="ns-back-link pr-2">Back to queue</a>
+                <a href="#" class="ns-back-link pr-2">Back to queue</a>
 
-        </header>
-        <!-- end left col header -->
+              </header>
+              <!-- end left col header -->
 
-        <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
-          <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
+              <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
+                <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
 
-            <!-- start left column content -->
-            <div class="px-3">
-              <section class="medfit-prioity__wrapper bg-danger d-flex py-1 mb-3 row">
-                <div class="d-flex align-items-baseline text-white col" role="alert">
-                  <i class="fa fa-exclamation-circle mr-2" aria-hidden="true"></i><span class="ns-visually-hidden">Priority alert, this driver assessment is a</span>
-                  <span>Priority</span>
-                </div>
-              </section>
-              <!-- end priority section -->
-              <section class="medfit-grey-box__wrapper">
+                  <!-- start left column content -->
+                  <div class="px-3">
+                    <section class="medfit-prioity__wrapper bg-danger d-flex py-1 mb-3 row">
+                      <div class="d-flex align-items-baseline text-white col" role="alert">
+                        <i class="fa fa-exclamation-circle mr-2" aria-hidden="true"></i><span class="ns-visually-hidden">Priority alert, this driver assessment is a</span>
+                        <span>Priority</span>
+                      </div>
+                    </section>
+                    <!-- end priority section -->
+                    <section class="medfit-grey-box__wrapper">
 
-                <header id="driverInfoHeader">
-                  <div class="ns-form-group mb-0">
-                    <h2 id="driverInfoTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
-                      Joe Blake
-                    </h2>
-                    <div id="driverInfoTitleEditButtonWrapper" class="d-inline-block driverInfoTitleEditButtonWrapper">
-                      <button id="driverInfoTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit notes about the driver</span>
-                      </button> <!-- edit saveButton -->
-                    </div> <!-- end EditButtonWrapper -->
-                    <div id="driverInfoTitleSaveButtonWrapper" class="driverInfoTitleSaveButtonWrapper" style="display:inline-block">
-                      <button id="driverInfoTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
-                        <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
-                      </button> <!-- end saveButton -->
-                      <button id="driverInfoTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                        <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
-                      </button>  <!-- end cancelButton -->
-                    </div> <!-- end SaveButtonWrapper -->
-                  </div> <!-- form group -->
-                </header>
+                      <header id="driverInfoHeader">
+                        <div class="ns-form-group mb-0">
+                          <h2 id="driverInfoTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                            Joe Blake
+                          </h2>
+                          <div id="driverInfoTitleEditButtonWrapper" class="d-inline-block driverInfoTitleEditButtonWrapper">
+                            <button id="driverInfoTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                              <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit notes about the driver</span>
+                            </button> <!-- edit saveButton -->
+                          </div> <!-- end EditButtonWrapper -->
+                          <div id="driverInfoTitleSaveButtonWrapper" class="driverInfoTitleSaveButtonWrapper" style="display:inline-block">
+                            <button id="driverInfoTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                              <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
+                            </button> <!-- end saveButton -->
+                            <button id="driverInfoTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                              <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
+                            </button>  <!-- end cancelButton -->
+                          </div> <!-- end SaveButtonWrapper -->
+                        </div> <!-- form group -->
+                      </header>
 
-                <form id="medfitLicenceInfoForm">
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="masterNumberEdit">
-                      Master Number
-                    </label>
-                    <input class="ns-input fw-20" id="masterNumberEdit" name="master-number" type="text" value="ABCDE 123456 123" style="display:none;">
-                    <span id="masterNumberSaved">ABCDE 123456 123</span>
-                  </div>
-
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="priorityEditSelect">
-                      Is this driver a priority?
-                    </label>
-                    <div id="priorityEdit" class="select fw-20" style="display:none;">
-                      <select id="priorityEditSelect" name="priority-edit-select">
-                        <option selected>Yes, they needs to be looked at right away</option>
-                        <option>No, they can wait their turn</option>
-                      </select>
-                    </div>
-                    <span id="prioritySaved">Yes, they needs to be looked at right away</span>
-                  </div>
-
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="licenceInformationEdit">
-                      License Information
-                    </label>
-                    <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
-                    <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
-                  </div>
-
-                  <div class="ns-form-group mb-0">
-                    <label class="ns-label" for="assigneeEditSelect">
-                      Assignee
-                    </label>
-                    <div id="assigneeEdit" class="select fw-20" style="display:none;">
-                      <select id="assigneeEditSelect" name="select1">
-                        <option selected>connorsc</option>
-                        <option>turners</option>
-                      </select>
-                    </div>
-                    <span id="assigneeSaved">connorsc</span>
-                  </div>
-
-                </form>
-
-              </section>
-              <!-- end licence info section -->
-              <section class="medfit-comments__wrapper">
-                <div class="comment-wrapper">
-                  <div class="panel panel-info">
-                    <div class="panel-body">
-
-                      <form>
-                        <div class="ns-form-group mb-2">
-                          <h3 class="ns-label-wrapper h4">
-                            <label class="ns-label" for="commentsWrite">
-                              Comments
-                            </label>
-                          </h3>
-
-                          <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                            <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
-                          </button>
-                          <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
+                      <form id="medfitLicenceInfoForm">
+                        <div class="ns-form-group mb-3">
+                          <label class="ns-label" for="masterNumberEdit">
+                            Master Number
+                          </label>
+                          <input class="ns-input fw-20" id="masterNumberEdit" name="master-number" type="text" value="ABCDE 123456 123" style="display:none;">
+                          <span id="masterNumberSaved">ABCDE 123456 123</span>
                         </div>
 
-                        <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
+                        <div class="ns-form-group mb-2">
+                          <label class="ns-label" for="licenceInformationEdit">
+                            License Information
+                          </label>
+                          <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
+                          <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
+                        </div>
 
                       </form>
 
-                      <hr>
-                      <ul class="media-list">
-                        <li class="media">
-                          <div class="media-body">
-                            <span class="text-muted pull-right">
-                              <small class="text-muted">31/12/2021</small>
-                            </span>
-                            <strong class="">@connorsc</strong>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              Lorem ipsum dolor sit amet.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <div class="media-body">
-                            <span class="text-muted pull-right">
-                              <small class="text-muted">31/12/2021</small>
-                            </span>
-                            <strong class="">@turners</strong>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              Lorem ipsum dolor adipiscing elit.
-                            </p>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <div class="media-body">
-                            <span class="text-muted pull-right">
-                              <small class="text-muted">31/12/2021</small>
-                            </span>
-                            <strong class="">@connorsc</strong>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- end comments section -->
-            </div>
-            <!-- end left column content -->
+                    </section>
+                    <!-- end licence info section -->
+                    <section class="medfit-grey-box__wrapper">
 
-          </div> <!-- columnContent-left -->
-        </div> <!-- stickyWrapper-left -->
-      </div> <!-- columnScrollleft -->
-      <!-- end left column -->
+                      <header id="workflowHeader">
+                        <div class="ns-form-group mb-0">
+                          <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                            Workflow
+                          </h2>
+                          <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                            <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                              <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                            </button> <!-- edit saveButton -->
+                          </div> <!-- end EditButtonWrapper -->
+                          <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                            <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                              <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                            </button> <!-- end saveButton -->
+                            <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                              <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                            </button>  <!-- end cancelButton -->
+                          </div> <!-- end SaveButtonWrapper -->
+                        </div> <!-- form group -->
+                      </header>
+
+                      <form id="WorkflowForm">
+
+                        <div class="ns-form-group mb-3">
+                          <label class="ns-label" for="assigneeEditSelect">
+                            Assignee
+                          </label>
+                          <div style="display:none;" id="assigneeEdit" class="select fw-20">
+                            <select id="assigneeEditSelect" name="select1">
+                              <option selected>connorsc</option>
+                              <option>turners</option>
+                            </select>
+                          </div>
+                          <span id="assigneeSaved">connorsc</span>
+                        </div>
+
+                        <div class="ns-form-group mb-3">
+                          <label class="ns-label" for="stageEditSelect">
+                            Stage
+                          </label>
+                          <div style="display:none;" id="stageEdit" class="select fw-20">
+                            <select id="stageEditSelect" name="select1">
+                              <option>Intake</option>
+                              <option selected>Investigate</option>
+                              <option>Decision</option>
+                              <option>Processing</option>
+                              <option>MAC Review</option>
+                              <option>Complete</option>
+                            </select>
+                          </div>
+                          <span id="stageSaved">Investigate</span>
+                        </div>
+
+                        <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                          <label class="ns-label" for="stateEditSelect">
+                            State
+                          </label>
+                          <div style="display:none;" id="stateEdit" class="select fw-20">
+                            <select id="stateEditSelect" name="select1">
+                              <option>Ready to Investigate </option>
+                              <option selected>Investigating</option>
+                              <option>Missing Information</option>
+                              <option>Failed to Comply</option>
+                            </select>
+                          </div>
+                          <span id="stateSaved">Investigating</span>
+                        </div>
+
+                        <div class="ns-form-group mb-2">
+                          <label class="ns-label" for="priorityEditSelect">
+                            Status
+                          </label>
+                          <div style="display:none;" id="priorityEdit" class="select fw-20">
+                            <select id="priorityEditSelect" name="priority-edit-select">
+                              <option selected>Priority</option>
+                              <option>Regular</option>
+                            </select>
+                          </div>
+                          <span id="prioritySaved">Priority</span>
+                        </div>
+
+                      </form>
+
+                    </section>
+                    <!-- end workflow section -->
+                    <section class="medfit-comments__wrapper">
+                      <div class="comment-wrapper">
+                        <div class="panel panel-info">
+                          <div class="panel-body">
+
+                            <form>
+                              <div class="ns-form-group mb-2">
+                                <h3 class="ns-label-wrapper h4">
+                                  <label class="ns-label" for="commentsWrite">
+                                    Comments
+                                  </label>
+                                </h3>
+
+                                <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
+                                  <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
+                                </button>
+                                <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
+                              </div>
+
+                              <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
+
+                            </form>
+
+                            <hr>
+                            <ul class="media-list">
+                              <li class="media">
+                                <div class="media-body">
+                                  <span class="text-muted pull-right">
+                                    <small class="text-muted">31/12/2021</small>
+                                  </span>
+                                  <strong class="">@connorsc</strong>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet.
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media">
+                                <div class="media-body">
+                                  <span class="text-muted pull-right">
+                                    <small class="text-muted">31/12/2021</small>
+                                  </span>
+                                  <strong class="">@turners</strong>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Lorem ipsum dolor adipiscing elit.
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media">
+                                <div class="media-body">
+                                  <span class="text-muted pull-right">
+                                    <small class="text-muted">31/12/2021</small>
+                                  </span>
+                                  <strong class="">@connorsc</strong>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- end comments section -->
+                  </div>
+                  <!-- end left column content -->
+
+                </div> <!-- columnContent-left -->
+              </div> <!-- stickyWrapper-left -->
+            </div> <!-- columnScrollleft -->
+            <!-- end left column -->
 
       <!-- start main column -->
       <div id="columnScrollMain" class="col-md column-scroll px-0">
@@ -398,10 +459,20 @@
                                   <!-- start row -->
                                   <div class="ns-summary-list__row">
                                     <dt class="ns-summary-list__key">
-                                      Ready to be processed?
+                                      Next stage
                                     </dt>
                                     <dd class="ns-summary-list__value">
-                                      Yes
+                                      Processing
+                                    </dd>
+                                  </div>
+                                  <!-- end row -->
+                                  <!-- start row -->
+                                  <div class="ns-summary-list__row">
+                                    <dt class="ns-summary-list__key">
+                                      Next state
+                                    </dt>
+                                    <dd class="ns-summary-list__value">
+                                      Ready to process
                                     </dd>
                                   </div>
                                   <!-- end row -->
@@ -411,7 +482,7 @@
                                       Next assignee
                                     </dt>
                                     <dd class="ns-summary-list__value">
-                                      Clerks
+                                      cconnors
                                     </dd>
                                   </div>
                                   <!-- end row -->
@@ -431,7 +502,7 @@
                                       Next?
                                     </dt>
                                     <dd class="ns-summary-list__value">
-                                      Go back to the assignment queue
+                                      Go back to the queue
                                     </dd>
                                   </div>
                                   <!-- end row -->
@@ -595,27 +666,27 @@
                         <!-- end row -->
 
                       </dl>
-                    </section>
+                    <!-- </section> -->
                     <!-- end  document list section -->
                     <!-- start stage and state section -->
-                    <section id="stageAndStateSection">
+                    <!-- <section id="stageAndStateSection">
                       <h2 class="h3">Where are they in the process?</h2>
-                      <dl class="ns-summary-list">
+                      <dl class="ns-summary-list"> -->
                         <!-- start row -->
-                        <div class="ns-summary-list__row">
+                        <!-- <div class="ns-summary-list__row"> -->
 
-                          <dt class="ns-summary-list__key">
+                          <!-- <dt class="ns-summary-list__key">
                             Decision
                           </dt>
 
                           <dd class="ns-summary-list__value">
                             <span>In progress</span>
                           </dd>
-                        </div>
+                        </div> -->
                         <!-- end row -->
 
-                      </dl>
-                    </section>
+                      <!-- </dl> -->
+                    <!-- </section> -->
                     <!-- end stage and state section -->
 
                     <!-- start recent activity section -->

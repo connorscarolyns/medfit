@@ -50,6 +50,11 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#workflowTitleEditButton, #workflowTitleSaveButton, #workflowTitleCancelButton").on("click", function(){
+        $("#workflowTitleEditButton, #workflowTitleSaveButton, #workflowTitleCancelButton, #stageEdit, #stageSaved, #priorityEdit, #prioritySaved, #stateEdit, #stateSaved, #assigneeEdit, #assigneeSaved").toggle("fast");
+    });
+});
 
 $(document).ready(function(){
     $("#commentsEditButton, #commentsPost").on("click", function(){
@@ -81,6 +86,13 @@ $(document).ready(function(){
         $("#conditionAddButton, #conditionPost, #addconditionWrapper").toggle("fast");
     });
 });
+
+$(document).ready(function(){
+    $("#downUpgradeAddButton, #downUpgradePost").on("click", function(){
+        $("#downUpgradeAddButton, #downUpgradePost, #downUpgradeWrapper").toggle("fast");
+    });
+});
+
 
 $(document).ready(function(){
     $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").on("click", function(){
@@ -175,6 +187,7 @@ documentFilter("#decision", "#demandType");
 documentFilter("#additionalMedical", "#otherMedicalType");
 documentFilter("#suspention", "#suspentionType");
 documentFilter("#condition", "#addConditionType");
+documentFilter("#downUpgrade", "#downUpgradeType");
 documentFilter("#followUp", "#followUpType");
 documentFilter("#otherDecision", "#otherDecisionType");
 documentFilter("#sendLetter", "#createLetter");

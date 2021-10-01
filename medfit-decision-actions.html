@@ -171,7 +171,7 @@
                 </header>
 
                 <form id="medfitLicenceInfoForm">
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-3">
                     <label class="ns-label" for="masterNumberEdit">
                       Master Number
                     </label>
@@ -179,20 +179,7 @@
                     <span id="masterNumberSaved">ABCDE 123456 123</span>
                   </div>
 
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="priorityEditSelect">
-                      Is this driver a priority?
-                    </label>
-                    <div id="priorityEdit" class="select fw-20" style="display:none;">
-                      <select id="priorityEditSelect" name="priority-edit-select">
-                        <option selected>Yes, they needs to be looked at right away</option>
-                        <option>No, they can wait their turn</option>
-                      </select>
-                    </div>
-                    <span id="prioritySaved">Yes, they needs to be looked at right away</span>
-                  </div>
-
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-2">
                     <label class="ns-label" for="licenceInformationEdit">
                       License Information
                     </label>
@@ -200,23 +187,97 @@
                     <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
                   </div>
 
+                </form>
+
+              </section>
+              <!-- end licence info section -->
+              <section class="medfit-grey-box__wrapper">
+
+                <header id="workflowHeader">
                   <div class="ns-form-group mb-0">
+                    <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                      Workflow
+                    </h2>
+                    <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                      <button  style="display:none" id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                      </button> <!-- edit saveButton -->
+                    </div> <!-- end EditButtonWrapper -->
+                    <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                      <button id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                      </button> <!-- end saveButton -->
+                      <button id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                        <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                      </button>  <!-- end cancelButton -->
+                    </div> <!-- end SaveButtonWrapper -->
+                  </div> <!-- form group -->
+                </header>
+
+                <form id="WorkflowForm">
+
+                  <div class="ns-form-group mb-3">
                     <label class="ns-label" for="assigneeEditSelect">
                       Assignee
                     </label>
-                    <div id="assigneeEdit" class="select fw-20" style="display:none;">
+                    <div id="assigneeEdit" class="select fw-20">
                       <select id="assigneeEditSelect" name="select1">
                         <option selected>connorsc</option>
                         <option>turners</option>
                       </select>
                     </div>
-                    <span id="assigneeSaved">connorsc</span>
+                    <span style="display:none;" id="assigneeSaved">connorsc</span>
+                  </div>
+
+                  <div class="ns-form-group mb-3">
+                    <label class="ns-label" for="stageEditSelect">
+                      Stage
+                    </label>
+                    <div id="stageEdit" class="select fw-20">
+                      <select id="stageEditSelect" name="select1">
+                        <option>Intake</option>
+                        <option selected>Investigate</option>
+                        <option>Decision</option>
+                        <option>Processing</option>
+                        <option>MAC Review</option>
+                        <option>Complete</option>
+                      </select>
+                    </div>
+                    <span style="display:none;" id="stageSaved">Investigate</span>
+                  </div>
+
+                  <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                    <label class="ns-label" for="stateEditSelect">
+                      State
+                    </label>
+                    <div id="stateEdit" class="select fw-20">
+                      <select id="stateEditSelect" name="select1">
+                        <option>Ready to Investigate </option>
+                        <option selected>Investigating</option>
+                        <option>Missing Information</option>
+                        <option>Failed to Comply</option>
+                      </select>
+                    </div>
+                    <span style="display:none;" id="stateSaved">Investigating</span>
+                  </div>
+
+                  <div class="ns-form-group mb-2">
+                    <label class="ns-label" for="priorityEditSelect">
+                      Status
+                    </label>
+                    <div id="priorityEdit" class="select fw-20">
+                      <select id="priorityEditSelect" name="priority-edit-select">
+                        <option selected>Priority</option>
+                        <option>Regular</option>
+                      </select>
+                    </div>
+                    <span style="display:none;" id="prioritySaved">Priority</span>
                   </div>
 
                 </form>
 
               </section>
-              <!-- end licence info section -->
+              <!-- end workflow section -->
               <section class="medfit-comments__wrapper">
                 <div class="comment-wrapper">
                   <div class="panel panel-info">
@@ -230,7 +291,7 @@
                             </label>
                           </h3>
 
-                          <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
                             <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
                           </button>
                           <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
@@ -329,10 +390,10 @@
                             <div class="ns-checkboxes__conditional" style="display: none;" id="demandType">
 
                               <div class="ns-form-group">
-                                <button id="demandAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                <button style="display:none;" id="demandAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
                                   <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a demand
                                 </button>
-                                <div id="addDemandWrapper" style="display:none;">
+                                <div id="addDemandWrapper">
                                   <div class="ns-form-group">
                                     <label id="demandLabel" class="ns-label" for="demandWrite">
                                       Select or type-in the required demand
@@ -341,29 +402,37 @@
                                       <input type="text" id="demandWrite" list="demandWriteList" name="demand-write">
                                       <datalist id="demandWriteList">
                                         <option>Medical Report</option>
-                                        <option>Re-exam</option>
-                                        <option>or type-in another kind of demand</option>
+                                        <option>Eye Examination Report</option>
+                                        <option>Driver Re-exam</option>
+                                        <option>Cancel demand, downgrade to class 5</option>
+                                        <option>Resend demand, still needed for class 5</option>
+                                        <option value=" ">or type-in another kind of follow-up</option>
+                                      </datalist>
                                       </datalist>
                                     </div>
                                   </div>
                                   <div class="ns-form-group">
-                                    <label id="demandDueLabel" class="ns-label" for="demandDueWrite">
-                                      Due date
-                                    </label>
-                                    <div class="select fw-20">
-                                      <input type="text" id="demandDueWrite" list="demandDueWriteList" name="demand-due-write">
-                                      <datalist id="demandDueWriteList">
-                                        <option>15 days</option>
-                                        <option>30 days</option>
-                                        <option>90 days</option>
-                                        <option>6 months</option>
-                                        <option>1 year</option>
-                                        <option>2 years</option>
-                                        <option>2.5 years</option>
-                                      </datalist>
-                                    </div>
+                                    <fieldset class="ns-form-group" aria-describedby="fieldset-hint">
+                                      <legend class="ns-fieldset__legend noBorder label">
+                                        Add a due date
+                                      </legend>
+                                      <div id="fieldset-hint" class="ns-hint">
+                                        Enter a number in the number of field, then select if the number is days or months.
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-auto pr-0"><label class="ns-label" for="demandNumberOf">Number of</label><input type="text" id="demandNumberOf" name="number-of" class="ns-input fw-6" pattern="[0-9]*" inputmode="numeric"></div>
+                                        <div class="col-auto pr-0"><label class="ns-label" for="DemanDaysOrMonths">Days or months</label>
+                                          <div class="select fw-10">
+                                            <select id="DemanDaysOrMonths" name="days-or-months">
+                                              <option>Days</option>
+                                              <option>Months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </fieldset>
                                   </div>
-                                  <button id="demandPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add demand</button>
+                                  <button id="demandPost" type="button" class="medFit-btn btn-sm btn-success">Add demand</button>
                                 </div>
                               </div>
 
@@ -380,12 +449,12 @@
                                   <tbody>
                                     <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
                                       <td>Medical report</td>
-                                      <td>12/31/2021</td>
+                                      <td>30 Days</td>
                                       <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
                                     </tr>
                                     <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
                                       <td>Re-exam</td>
-                                      <td>12/31/2021</td>
+                                      <td>60 Days</td>
                                       <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove demand from list</span></a></td>
                                     </tr>
                                   </tbody>
@@ -409,7 +478,8 @@
                                     <option>278C(1)(a)</option>
                                     <option>278C(1)(b)</option>
                                     <option>280(4)</option>
-                                    <option>Tab 09 & Set Unlicensed </option>
+                                    <option>Add Tab 09 & set as unlicensed</option>
+                                    <option>Add Tab 09 until favourable medical report</option>
                                   </datalist>
                                 </div>
                               </div>
@@ -423,6 +493,7 @@
                                     <option>Recind: 278C(1)(a)</option>
                                     <option>Recind: 278C(1)(b)</option>
                                     <option>Restore: 280(4)</option>
+                                    <option>Remove Tab 09 & set as licensed</option>
                                   </datalist>
                                 </div>
                               </div>
@@ -435,10 +506,10 @@
                             </div>
                             <div class="ns-checkboxes__conditional" style="display: none;" id="addConditionType">
                               <div class="ns-form-group">
-                                <button id="conditionAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                <button style="display:none;" id="conditionAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
                                   <i class="fas fa-hand-pointer ns-btn__icon-left mr-2" aria-hidden="true"></i>Select conditions
                                 </button>
-                                <div id="addconditionWrapper" style="display:none;">
+                                <div id="addconditionWrapper">
                                   <div class="ns-form-group">
                                     <label id="conditionLabel" class="ns-label" for="conditionWrite">
                                       Select a condition
@@ -477,7 +548,7 @@
                                       </div>
                                     </fieldset>
                                   </div>
-                                  <button id="conditionPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add to list</button>
+                                  <button id="conditionPost" type="button" class="medFit-btn btn-sm btn-success">Add to list</button>
                                 </div>
                               </div>
                               <h3 class="h4">List of conditions</h3>
@@ -505,6 +576,78 @@
                                 </table>
                               </div>
                             </div>
+
+                            <div class="ns-checkboxes__item">
+                              <input  class="ns-checkboxes__input" id="downUpgrade" name="actions" type="checkbox" value="condition" data-aria-controls="downUpgradeType">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="downUpgrade">
+                                Down & upgrade
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" style="display: none;" id="downUpgradeType">
+                              <div class="ns-form-group">
+                                <div id="downUpgradeWrapper">
+                                  <div class="ns-form-group">
+                                    <label id="classLabel" class="ns-label" for="classSelect">
+                                      Select the new license class for the driver
+                                    </label>
+                                    <div class="select fw-20">
+                                      <input type="text" id="classSelect" list="classSelectList" name="class-select-list">
+                                      <datalist id="classSelectList">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                      </datalist>
+                                    </div>
+                                  </div>
+                                  <div class="ns-form-group">
+                                    <fieldset class="ns-fieldset">
+                                      <legend class="ns-fieldset__legend noBorder label">
+                                        <h3 class="ns-fieldset__heading">
+                                          Is this a downgrade or an upgrade?
+                                        </h3>
+                                      </legend>
+                                      <div class="ns-radios ns-radios--small">
+                                        <div class="ns-radios__item">
+                                          <input class="ns-radios__input" id="downUpgrade-inline-radios" name="downUpgrade-radios" type="radio" value="inline radio 1" checked="">
+                                          <label class="ns-label ns-radios__label" for="downUpgrade-inline-radios">
+                                            <span class="ns-label-span">Downgrade</span>
+                                          </label>
+                                        </div>
+                                        <div class="ns-checkboxes__conditional ns-checkboxes--small" id="conditional-contact">
+                      										<div class="ns-fieldset">
+                                            <fieldset class="ns-fieldset">
+                            									<legend class="ns-fieldset__legend noBorder label sr-only">
+                            										Upgrade status
+                            									</legend>
+                            									<div class="ns-checkboxes ns-checkboxes--small">
+                            									  <div class="ns-checkboxes__item">
+                            										<input class="ns-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                            										<label class="ns-label ns-checkboxes__label" for="organisation">
+                            										  <span class="ns-label-span">Ok to upgrade with valid medical</span>
+                            										</label>
+                            									  </div>
+                            									</div>
+
+                            								  </fieldset>
+                                          </div>
+                      									</div>
+                                        <div class="ns-radios__item">
+                                          <input class="ns-radios__input" id="downUpgrade-inline-radios-2" name="downUpgrade-radios" type="radio" value="inline radio 2">
+                                          <label class="ns-label ns-radios__label" for="downUpgrade-inline-radios-2">
+                                            <span class="ns-label-span">Upgrade</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
                             <div class="ns-checkboxes__item">
                               <input class="ns-checkboxes__input" id="followUp" name="actions" type="checkbox" value="follow-up">
                               <label class="ns-label ns-checkboxes__label h4 noBold" for="followUp">
@@ -513,10 +656,10 @@
                             </div>
                             <div class="ns-checkboxes__conditional" id="followUpType" style="display: none;">
                               <div class="ns-form-group">
-                                <button id="followUpAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                <button style="display:none;" id="followUpAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
                                   <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a follow-up
                                 </button>
-                                <div id="addfollowUpWrapper" style="display:none;">
+                                <div id="addfollowUpWrapper" >
                                   <div class="ns-form-group">
                                     <label id="followUpLabel" class="ns-label" for="followUpWrite">
                                       Select or type-in the required follow-up
@@ -525,29 +668,52 @@
                                       <input type="text" id="followUpWrite" list="followUpWriteList" name="followUp-write">
                                       <datalist id="followUpWriteList">
                                         <option>Medical Report</option>
-                                        <option>Re-exam</option>
-                                        <option>or type-in another kind of follow-up</option>
+                                        <option>Eye Examination Report</option>
+                                        <option>Driver Re-exam</option>
+                                        <option value=" ">or type-in another kind of follow-up</option>
                                       </datalist>
                                     </div>
                                   </div>
                                   <div class="ns-form-group">
-                                    <label id="followUpDueLabel" class="ns-label" for="followUpDueWrite">
-                                      Due date
-                                    </label>
-                                    <div class="select fw-20">
-                                      <input type="text" id="followUpDueWrite" list="followUpDueWriteList" name="followUp-due-write">
-                                      <datalist id="followUpDueWriteList">
-                                        <option>15 days</option>
-                                        <option>30 days</option>
-                                        <option>90 days</option>
-                                        <option>6 months</option>
-                                        <option>1 year</option>
-                                        <option>2 years</option>
-                                        <option>2.5 years</option>
-                                      </datalist>
-                                    </div>
+                                    <fieldset class="ns-form-group" aria-describedby="fieldset-hint">
+                                      <legend class="ns-fieldset__legend noBorder label">
+                                        Add a due date
+                                      </legend>
+                                      <div id="fieldset-hint" class="ns-hint">
+                                        Enter a number in the number of field, then select if the number is days or months.
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-auto pr-0"><label class="ns-label" for="numberOf">Number of</label><input type="text" id="numberOf" name="number-of" class="ns-input fw-6" pattern="[0-9]*" inputmode="numeric"></div>
+                                        <div class="col-auto pr-0"><label class="ns-label" for="daysOrMonths">Days or months</label>
+                                          <div class="select fw-10">
+                                            <select id="daysOrMonths" name="days-or-months">
+                                              <option>Days</option>
+                                              <option>Months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="col-auto pr-0">
+                                          or
+                                        </div>
+                                        <div class="col-auto pr-0">
+                                          <fieldset class="ns-fieldset">
+                          									<legend  class="ns-fieldset__legend noBorder label">
+                          										When driver renews
+                          									</legend>
+                          									<div class="ns-checkboxes">
+                          									  <div class="ns-checkboxes__item">
+                            										<input id="atRenewal" class="ns-checkboxes__input" name="at-renewal" type="checkbox" value="hmrc">
+                            										<label class="ns-label ns-checkboxes__label" for="atRenewal">
+                            										  <span class="ns-label-span">By renewal date</span>
+                            										</label>
+                          									  </div>
+                          									</div>
+                        								  </fieldset>
+                                        </div>
+                                      </div>
+                                    </fieldset>
                                   </div>
-                                  <button id="followUpPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Add follow-up</button>
+                                  <button id="followUpPost" type="button" class="medFit-btn btn-sm btn-success">Add follow-up</button>
                                 </div>
                               </div>
                               <h3 class="h4">List of follow-ups</h3>
@@ -557,13 +723,13 @@
                                     <tr class="">
                                       <th scope="col">Follow-up</th>
                                       <th scope="col">Due-date</th>
-                                      <th scope="col"><span class="ns-visually-hidden">Action</span></th>
+                                      <th scope="col"><span class="ns-visually-hidden">Actions</span></th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
                                       <td>Medical report</td>
-                                      <td>12/21/2021</td>
+                                      <td>By renewal date</td>
                                       <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
                                     </tr>
                                   </tbody>
@@ -571,9 +737,15 @@
                               </div>
                             </div>
                             <div class="ns-checkboxes__item">
-                              <input class="ns-checkboxes__input" id="macReviewInput" name="actions" type="checkbox" value="Mac Review">
+                              <input class="ns-checkboxes__input" id="macReviewInput" name="actions" type="checkbox" value="MAC Review">
                               <label class="ns-label ns-checkboxes__label h4 noBold" for="macReviewInput">
-                                Mac Review
+                                <abbr title="Medical Advisory Committee">MAC</abbr>&nbsp;review
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__item">
+                              <input class="ns-checkboxes__input" id="noFurtherAction" name="actions" type="checkbox" value="No further action">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="noFurtherAction">
+                                No further action
                               </label>
                             </div>
                             <div class="ns-checkboxes__item">
@@ -594,6 +766,16 @@
                             </div>
                           </div>
                         </fieldset>
+
+                        <div class="ns-form-group">
+                          <label class="ns-label" for="additionalInstructionsTypeInput">
+                            Add addition instructions for this decision
+                          </label>
+                          <div class="fw-40">
+                            <textarea class="ns-input fw-40" id="additionalInstructionsTypeInput" name="licence-information" rows="4" oninput="auto_grow(this)"></textarea>
+                          </div>
+                        </div>
+
                         <section id="decisionSection" class="row ns-form-group">
                           <div class="col-auto">
                             <button type="submit" class="medFit-btn btn-sm btn-default my-0">Save and continue</button>

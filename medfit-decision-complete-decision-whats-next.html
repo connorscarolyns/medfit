@@ -171,7 +171,7 @@
                 </header>
 
                 <form id="medfitLicenceInfoForm">
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-3">
                     <label class="ns-label" for="masterNumberEdit">
                       Master Number
                     </label>
@@ -179,20 +179,7 @@
                     <span id="masterNumberSaved">ABCDE 123456 123</span>
                   </div>
 
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="priorityEditSelect">
-                      Is this driver a priority?
-                    </label>
-                    <div id="priorityEdit" class="select fw-20" style="display:none;">
-                      <select id="priorityEditSelect" name="priority-edit-select">
-                        <option selected>Yes, they needs to be looked at right away</option>
-                        <option>No, they can wait their turn</option>
-                      </select>
-                    </div>
-                    <span id="prioritySaved">Yes, they needs to be looked at right away</span>
-                  </div>
-
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-2">
                     <label class="ns-label" for="licenceInformationEdit">
                       License Information
                     </label>
@@ -200,12 +187,41 @@
                     <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
                   </div>
 
+                </form>
+
+              </section>
+              <!-- end licence info section -->
+              <section class="medfit-grey-box__wrapper">
+
+                <header id="workflowHeader">
                   <div class="ns-form-group mb-0">
-                    <label class="ns-label" for="assigneeEditSelectDecision">
+                    <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                      Workflow
+                    </h2>
+                    <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                      <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                      </button> <!-- edit saveButton -->
+                    </div> <!-- end EditButtonWrapper -->
+                    <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                      <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                      </button> <!-- end saveButton -->
+                      <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                        <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                      </button>  <!-- end cancelButton -->
+                    </div> <!-- end SaveButtonWrapper -->
+                  </div> <!-- form group -->
+                </header>
+
+                <form id="WorkflowForm">
+
+                  <div class="ns-form-group mb-3">
+                    <label class="ns-label" for="assigneeEditSelect">
                       Assignee
                     </label>
-                    <div id="assigneeEdit" class="select fw-20" style="display:none;">
-                      <select id="assigneeEditSelectDecision" name="select1">
+                    <div style="display:none;" id="assigneeEdit" class="select fw-20">
+                      <select id="assigneeEditSelect" name="select1">
                         <option selected>connorsc</option>
                         <option>turners</option>
                       </select>
@@ -213,10 +229,55 @@
                     <span id="assigneeSaved">connorsc</span>
                   </div>
 
+                  <div class="ns-form-group mb-3">
+                    <label class="ns-label" for="stageEditSelect">
+                      Stage
+                    </label>
+                    <div style="display:none;" id="stageEdit" class="select fw-20">
+                      <select id="stageEditSelect" name="select1">
+                        <option>Intake</option>
+                        <option selected>Investigate</option>
+                        <option>Decision</option>
+                        <option>Processing</option>
+                        <option>MAC Review</option>
+                        <option>Complete</option>
+                      </select>
+                    </div>
+                    <span id="stageSaved">Investigate</span>
+                  </div>
+
+                  <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                    <label class="ns-label" for="stateEditSelect">
+                      State
+                    </label>
+                    <div style="display:none;" id="stateEdit" class="select fw-20">
+                      <select id="stateEditSelect" name="select1">
+                        <option>Ready to Investigate </option>
+                        <option selected>Investigating</option>
+                        <option>Missing Information</option>
+                        <option>Failed to Comply</option>
+                      </select>
+                    </div>
+                    <span id="stateSaved">Investigating</span>
+                  </div>
+
+                  <div class="ns-form-group mb-2">
+                    <label class="ns-label" for="priorityEditSelect">
+                      Status
+                    </label>
+                    <div style="display:none;" id="priorityEdit" class="select fw-20">
+                      <select id="priorityEditSelect" name="priority-edit-select">
+                        <option selected>Priority</option>
+                        <option>Regular</option>
+                      </select>
+                    </div>
+                    <span id="prioritySaved">Priority</span>
+                  </div>
+
                 </form>
 
               </section>
-              <!-- end licence info section -->
+              <!-- end workflow section -->
               <section class="medfit-comments__wrapper">
                 <div class="comment-wrapper">
                   <div class="panel panel-info">
@@ -230,7 +291,7 @@
                             </label>
                           </h3>
 
-                          <button id="commentsEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
                             <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
                           </button>
                           <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
@@ -328,45 +389,51 @@
                             <section class="medfit-step-navigation-section">
                               <h3 id="whatsNext" class="h4 medfit-step-navigation-title active"><a href="medfit-decision-complete-decision-whats-next.html" class="medfit-step-list-item">What's next <span class="sr-only">(current)</span></a></a></h3>
 
-                                <div class="ns-radios">
-                                  <fieldset class="ns-fieldset">
-                                    <legend class="ns-fieldset__legend label noBorder">
-                                      <h3 class="ns-fieldset__heading ">
-                                      Is this decision ready to be processed?
-                                      </h3>
-                                    </legend>
-                                    <div class="ns-radios ns-radios--small">
-                                      <div class="ns-radios__item">
-                                      <input class="ns-radios__input" id="yes-ready" name="changed-name" type="radio" value="month">
-                                        <label class="ns-label ns-radios__label" for="yes-ready">
-                                          <span class="ns-label-span">Yes, it's ready to go</span>
-                                        </label>
-                                      </div>
-                                      <div class="ns-radios__item">
-                                      <input class="ns-radios__input" id="no-not-ready" name="changed-name" type="radio" value="year">
-                                        <label class="ns-label ns-radios__label" for="no-not-ready">
-                                          <span class="ns-label-span">Not yet, it needs another review or sign-off</span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </fieldset>
+                              <div class="ns-form-group">
+                                <label class="ns-label" for="nextStageEditSelect">
+                                  What stage should this driver move to next?
+                                </label>
+                                <div id="nextStageEdit" class="select fw-15">
+                                  <select id="nextStageEditSelect" name="select1">
+                                    <option>Intake</option>
+                                    <option>Investigate</option>
+                                    <option>Decision</option>
+                                    <option selected>Processing</option>
+                                    <option>MAC Review</option>
+                                    <option>Complete</option>
+                                  </select>
                                 </div>
 
-                                <div class="ns-form-group">
-                                  <label class="ns-label" for="assigneeEditSelect">
-                                    Select the person or role who will be assigned next
+                                <div class="ns-form-group ns-checkboxes__conditional pl-3 ml-0">
+                                  <label class="ns-label" for="stateEditSelect">
+                                    State
                                   </label>
-                                   <div id="assigneeEdit" class="select fw-20" >
-                                    <select id="assigneeEditSelect" name="select1">
-                                      <optgroup label="Assign to a person">
+                                  <div id="nextStateEdit" class="select fw-15">
+                                    <select id="nextStateSelect" name="select1">
+                                      <option selected>Ready to process</option>
+                                      <option>Processing</option>
+                                      <option>Reminder letter</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                                <div class="ns-form-group">
+                                  <label class="ns-label" for="nextAssigneeEditSelect">
+                                    Who should be assigned next?
+                                  </label>
+                                   <div id="nextAssigneeEdit" class="select fw-15" >
+                                    <select id="nextAssigneeEditSelect" name="select1">
+                                      <!-- <optgroup label="Assign to a person"> -->
                                         <option selected>connorsc</option>
                                         <option>turners</option>
-                                      </optgroup>
-                                      <optgroup label="Assign to a role">
+                                      <!-- </optgroup> -->
+                                      <!-- <optgroup label="Assign to a role">
                                         <option>Clerks</option>
                                         <option>Medical Assessors</option>
                                         <option>Deputy Registrar</option>
-                                      </optgroup>
+                                      </optgroup> -->
                                     </select>
                                    </div>
                                 </div>
@@ -375,7 +442,7 @@
                                   <label class="ns-label" for="modalComment">
                                     Add a comment
                                   </label>
-                                  <textarea tabindex="-1" class="ns-input fw-50" id="modalComment" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
+                                  <textarea tabindex="-1" class="ns-input fw-40" id="modalComment" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
                                 </div>
 
                                 <div class="ns-radios">
@@ -389,13 +456,13 @@
                                       <div class="ns-radios__item">
                                       <input class="ns-radios__input" id="continue" name="changed-name" type="radio" value="month">
                                       <label class="ns-label ns-radios__label" for="continue">
-                                        <span class="ns-label-span">Continue processing this decision</span>
+                                        <span class="ns-label-span">Continue with this driver</span>
                                       </label>
                                       </div>
                                       <div class="ns-radios__item">
                                       <input class="ns-radios__input" id="goBack" name="changed-name" type="radio" value="year">
                                       <label class="ns-label ns-radios__label" for="goBack">
-                                        <span class="ns-label-span">Go back to the assignment queue</span>
+                                        <span class="ns-label-span">Go back to the queue</span>
                                       </label>
                                       </div>
                                     </div>
