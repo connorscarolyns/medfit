@@ -377,340 +377,340 @@
                       </form>
                     </li>
                     <!-- <li class="medfit-step-list-step disabled">
-                      <h2 class="h3 medfit-step-navigation-title disabled">Create communication</h2>
-                    </li>
-                    <li class="medfit-step-list-step disabled">
-                      <h2 class="h3 medfit-step-navigation-title disabled">Attachements</h2>
-                    </li> -->
-                    <li class="medfit-step-list-step active">
-                      <h2 class="h3 medfit-step-navigation-title active">Complete Decision</h2>
+                    <h2 class="h3 medfit-step-navigation-title disabled">Create communication</h2>
+                  </li>
+                  <li class="medfit-step-list-step disabled">
+                  <h2 class="h3 medfit-step-navigation-title disabled">Attachements</h2>
+                </li> -->
+                <li class="medfit-step-list-step active">
+                  <h2 class="h3 medfit-step-navigation-title active">Complete Decision</h2>
+                  <section class="medfit-step-navigation-section">
+                    <form method="get" action="medfit-decision-complete-decision-review-and-confirm.html">
                       <section class="medfit-step-navigation-section">
-                        <form method="get" action="medfit-decision-complete-decision-review-and-confirm.html">
-                            <section class="medfit-step-navigation-section">
-                              <h3 id="whatsNext" class="h4 medfit-step-navigation-title active"><a href="medfit-decision-complete-decision-whats-next.html" class="medfit-step-list-item">What's next <span class="sr-only">(current)</span></a></a></h3>
+                        <h3 id="whatsNext" class="h4 medfit-step-navigation-title active"><a href="medfit-decision-complete-decision-whats-next.html" class="medfit-step-list-item">What's next <span class="sr-only">(current)</span></a></a></h3>
 
-                              <div class="ns-form-group">
-                                <label class="ns-label" for="nextStageEditSelect">
-                                  What stage should this driver move to next?
-                                </label>
-                                <div id="nextStageEdit" class="select fw-15">
-                                  <select id="nextStageEditSelect" name="select1">
-                                    <option>Intake</option>
-                                    <option>Investigate</option>
-                                    <option>Decision</option>
-                                    <option selected>Processing</option>
-                                    <option>MAC Review</option>
-                                    <option>Complete</option>
-                                  </select>
-                                </div>
+                        <div class="ns-form-group">
+                          <label class="ns-label" for="nextStageEditSelect">
+                            What stage should this driver move to next?
+                          </label>
+                          <div id="nextStageEdit" class="select fw-15">
+                            <select id="nextStageEditSelect" name="select1">
+                              <option>Intake</option>
+                              <option>Investigate</option>
+                              <option>Decision</option>
+                              <option selected>Processing</option>
+                              <option>MAC Review</option>
+                              <option>Complete</option>
+                            </select>
+                          </div>
 
-                                <div class="ns-form-group ns-checkboxes__conditional pl-3 ml-0">
-                                  <label class="ns-label" for="stateEditSelect">
-                                    State
-                                  </label>
-                                  <div id="nextStateEdit" class="select fw-15">
-                                    <select id="nextStateSelect" name="select1">
-                                      <option selected>Ready to process</option>
-                                      <option>Processing</option>
-                                      <option>Reminder letter</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
+                          <div class="ns-form-group ns-checkboxes__conditional pl-3 ml-0">
+                            <label class="ns-label" for="nextStateSelect">
+                              State
+                            </label>
+                            <div id="nextStateEdit" class="select fw-15">
+                              <select id="nextStateSelect" name="select1">
+                                <option selected>Ready to process</option>
+                                <option>Wait for currier</option>
+                                <option>Processing</option>
+                                <option>Reminder letter</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
 
-
-                                <div class="ns-form-group">
-                                  <label class="ns-label" for="nextAssigneeEditSelect">
-                                    Who should be assigned next?
-                                  </label>
-                                   <div id="nextAssigneeEdit" class="select fw-15" >
-                                    <select id="nextAssigneeEditSelect" name="select1">
-                                      <!-- <optgroup label="Assign to a person"> -->
-                                        <option selected>connorsc</option>
-                                        <option>turners</option>
-                                      <!-- </optgroup> -->
-                                      <!-- <optgroup label="Assign to a role">
-                                        <option>Clerks</option>
-                                        <option>Medical Assessors</option>
-                                        <option>Deputy Registrar</option>
-                                      </optgroup> -->
-                                    </select>
-                                   </div>
-                                </div>
-
-                                <div class="ns-form-group">
-                                  <label class="ns-label" for="modalComment">
-                                    Add a comment
-                                  </label>
-                                  <textarea tabindex="-1" class="ns-input fw-40" id="modalComment" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
-                                </div>
-
-                                <div class="ns-radios">
-                                  <fieldset class="ns-fieldset">
-                                    <legend class="ns-fieldset__legend label noBorder">
-                                      <h3 class="ns-fieldset__heading ">
-                                      What would you like to do next?
-                                      </h3>
-                                    </legend>
-                                    <div class="ns-radios ns-radios--small">
-                                      <div class="ns-radios__item">
-                                      <input class="ns-radios__input" id="continue" name="changed-name" type="radio" value="month">
-                                      <label class="ns-label ns-radios__label" for="continue">
-                                        <span class="ns-label-span">Continue with this driver</span>
-                                      </label>
-                                      </div>
-                                      <div class="ns-radios__item">
-                                      <input class="ns-radios__input" id="goBack" name="changed-name" type="radio" value="year">
-                                      <label class="ns-label ns-radios__label" for="goBack">
-                                        <span class="ns-label-span">Go back to the queue</span>
-                                      </label>
-                                      </div>
-                                    </div>
-                                  </fieldset>
-                                </div>
-                              </section>
-                          <section id="decisionSection" class="row ns-form-group">
-                           <div class="col-auto">
-                             <button type="submit" class="medFit-btn btn-sm btn-default my-0">Save and continue</button>
-                           </div>
-                           <div class="col-auto">
-                             <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
-                           </div>
-                          </section>
-                        </form>
-
-                      </section>
-                      <section class="medfit-step-navigation-section">
-                          <h3 id="reviewAndConfirm" class="h4 medfit-step-navigation-title disabled">Review and confirm</h3>
-                      </section>
-                    </li>
-                    <!-- <li class="medfit-step-list-step disabled">
-                      <h2 class="h3 medfit-step-navigation-title disabled">Sign-off</h2>
-                    </li> -->
-                  </ol>
-                </nav>
-              </section>
-            </div>
-          </div> <!-- columnContent-main -->
-        </div> <!-- stickyWrapper-main -->
-      </div> <!-- columnScrollMain -->
-      <!-- end main column -->
-
-      <!-- start right column -->
-      <div id="columnCollapse-right" class="col-md px-0 column-scroll column-collapse column-collapse-right">
-
-        <!-- start Document header -->
-        <header id="columnHeader-Document" class="medfit-column-header d-flex align-items-stretch px-3">
-
-          <!-- start Document nav -->
-          <a href="#" class="ns-back-link pr-2">Back</a>
-          <nav id="navbar-Document" aria-label="Assignment details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
-            <ul id="columnHeader-navTabs" role="tablist" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
-              <li id="navItem-driver" class="medFit-nav-item nav-item nav-item-details">
-                <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details active" role="tab" href="#tabPane-driver" aria-controls="tabPane-driver" aria-selected="true"><span class="ns-visually-hidden">Information about the</span> Driver</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- end Document nav -->
-
-          <div class="button-wrapper d-flex align-items-center ml-auto">
-            <button id="closeColumnCollapse-right" type="button" class="medFit-btn-close btn-close close close-column-collapse-right" aria-label="Close" data-toggle="collapse" href="#columnCollapse-right">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-        </header>
-        <!-- end Document header -->
-
-        <div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
-          <div id="columnContent-right" class="medFit-column-content column-content column-content-right">
-
-            <article id="Document">
-              <!-- start Document tab content -->
-              <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
-
-                <!-- start driver info tab -->
-
-                <div id="tabPane-driver" aria-labelledby="navItem-driver" role="tabpanel" class="medFit-tab-pane tab-pane tab-pane-driver fade show active">
-                  <article class="col-sm px-3">
-
-                    <section id="driverDetails">
-
-                      <h3 id="driverDetailsTitleNotesOnDriver" class="h4 d-inline-block mt-3">Notes on driver</h3>
-
-                      <button id="driverDetailsNotesOnDriverEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit Notes on driver</span>
-                      </button> <!-- edit saveButton -->
-
-                      <div id="notesOnDriverSaveButtonWrapper" style="display:inline-block">
-                        <button id="notesOnDriverSaveButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
-                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes on license</span>
-                        </button> <!-- end saveButton -->
-                        <button id="notesOnDriverCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes on license</span>
-                        </button>  <!-- end cancelButton -->
-                      </div> <!-- end SaveButtonWrapper -->
-
-                    </header> <!-- end contactAddressHeader -->
-
-                    <div class="ns-summary-list">
-                      <!-- start row -->
-                      <div id="notesOnDriverRow" class="ns-summary-list__row">
-
-                        <div class="ns-summary-list__value">
-                          <span id="notesOnDriverText">Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV</span>
-                          <textarea aria-labelledby="driverDetailsTitleNotesOnDriver" id="notesOnDriverTextarea" name="name" class="ns-input" style="display:none;" oninput="auto_grow(this)" placeholder="Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV"></textarea>
+                        <div class="ns-form-group">
+                          <label class="ns-label" for="nextAssigneeEditSelect">
+                            Who should be assigned next?
+                          </label>
+                          <div id="nextAssigneeEdit" class="select fw-15" >
+                            <select id="nextAssigneeEditSelect" name="select1">
+                              <!-- <optgroup label="Assign to a person"> -->
+                              <option selected>connorsc</option>
+                              <option>turners</option>
+                              <!-- </optgroup> -->
+                              <!-- <optgroup label="Assign to a role">
+                              <option>Clerks</option>
+                              <option>Medical Assessors</option>
+                              <option>Deputy Registrar</option>
+                            </optgroup> -->
+                          </select>
                         </div>
                       </div>
-                      <!-- end row -->
-                    </div>
 
-                    <!-- start document list section -->
-                    <section id="documentListSection">
-                      <h2 class="h3">Document list</h2>
-                      <dl class="ns-summary-list">
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
+                      <div class="ns-form-group">
+                        <label class="ns-label" for="modalComment">
+                          Add a comment
+                        </label>
+                        <textarea tabindex="-1" class="ns-input fw-40" id="modalComment" name="missingInfoNotes" oninput="auto_grow(this)"></textarea>
+                      </div>
 
-                          <dt class="ns-summary-list__key">
-                            Medical report
-                          </dt>
-
-                          <dd class="ns-summary-list__value">
-                            Recieved: 02/02/2021
-                          </dd>
-
-                          <dd class="ns-summary-list__actions">
-                            <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                              <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                            </button>
-                          </dd>
-
-                        </div>
-                        <!-- end row -->
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
-
-                          <dt class="ns-summary-list__key">
-                            Assessment package
-                          </dt>
-
-                          <dd class="ns-summary-list__value">
-                            Sent: 02/02/2021
-                          </dd>
-
-                          <dd class="ns-summary-list__actions">
-                            <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                              <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                            </button>
-                          </dd>
-
-                        </div>
-                        <!-- end row -->
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
-
-                          <dt class="ns-summary-list__key">
-                            Unsolisited law
-                          </dt>
-
-                          <dd class="ns-summary-list__value">
-                            Received: 02/02/2021
-                          </dd>
-
-                          <dd class="ns-summary-list__actions">
-                            <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                              <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                            </button>
-                          </dd>
-
-                        </div>
-                        <!-- end row -->
-
-                      </dl>
+                      <div class="ns-radios">
+                        <fieldset class="ns-fieldset">
+                          <legend class="ns-fieldset__legend label noBorder">
+                            <h3 class="ns-fieldset__heading ">
+                              What would you like to do next?
+                            </h3>
+                          </legend>
+                          <div class="ns-radios ns-radios--small">
+                            <div class="ns-radios__item">
+                              <input class="ns-radios__input" id="continue" name="changed-name" type="radio" value="month">
+                              <label class="ns-label ns-radios__label" for="continue">
+                                <span class="ns-label-span">Continue with this driver</span>
+                              </label>
+                            </div>
+                            <div class="ns-radios__item">
+                              <input class="ns-radios__input" id="goBack" name="changed-name" type="radio" value="year">
+                              <label class="ns-label ns-radios__label" for="goBack">
+                                <span class="ns-label-span">Go back to the queue</span>
+                              </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
                     </section>
-                    <!-- end  document list section -->
-                    <!-- start stage and state section -->
-                    <section id="stageAndStateSection">
-                      <h2 class="h3">Where are they in the process?</h2>
-                      <dl class="ns-summary-list">
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
-
-                          <dt class="ns-summary-list__key">
-                            Decision
-                          </dt>
-
-                          <dd class="ns-summary-list__value">
-                            <span>In progress</span>
-                          </dd>
-                        </div>
-                        <!-- end row -->
-
-                      </dl>
+                    <section id="decisionSection" class="row ns-form-group">
+                      <div class="col-auto">
+                        <button type="submit" class="medFit-btn btn-sm btn-default my-0">Save and continue</button>
+                      </div>
+                      <div class="col-auto">
+                        <button class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
+                      </div>
                     </section>
-                    <!-- end stage and state section -->
+                  </form>
 
-                    <!-- start recent activity section -->
-                    <section id="recentActrivitySection">
-                      <h2 class="h3">Recent activity</h2>
-                      <dl class="ns-summary-list">
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
-                          <dt class="ns-summary-list__key">
-                            Assessment package sent
-                          </dt>
+                </section>
+                <section class="medfit-step-navigation-section">
+                  <h3 id="reviewAndConfirm" class="h4 medfit-step-navigation-title disabled">Review and confirm</h3>
+                </section>
+              </li>
+              <!-- <li class="medfit-step-list-step disabled">
+              <h2 class="h3 medfit-step-navigation-title disabled">Sign-off</h2>
+            </li> -->
+          </ol>
+        </nav>
+      </section>
+    </div>
+  </div> <!-- columnContent-main -->
+</div> <!-- stickyWrapper-main -->
+</div> <!-- columnScrollMain -->
+<!-- end main column -->
 
-                          <dd class="ns-summary-list__value">
-                            <span>02/02/2021</span>
-                          </dd>
-                        </div>
-                        <!-- end row -->
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
+<!-- start right column -->
+<div id="columnCollapse-right" class="col-md px-0 column-scroll column-collapse column-collapse-right">
 
-                          <dt class="ns-summary-list__key">
-                            Investigation: Complete
-                          </dt>
+  <!-- start Document header -->
+  <header id="columnHeader-Document" class="medfit-column-header d-flex align-items-stretch px-3">
 
-                          <dd class="ns-summary-list__value">
-                            <span>02/02/2021</span>
-                          </dd>
-                        </div>
-                        <!-- end row -->
-                        <!-- start row -->
-                        <div class="ns-summary-list__row">
+    <!-- start Document nav -->
+    <a href="#" class="ns-back-link pr-2">Back</a>
+    <nav id="navbar-Document" aria-label="Assignment details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
+      <ul id="columnHeader-navTabs" role="tablist" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
+        <li id="navItem-driver" class="medFit-nav-item nav-item nav-item-details">
+          <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details active" role="tab" href="#tabPane-driver" aria-controls="tabPane-driver" aria-selected="true"><span class="ns-visually-hidden">Information about the</span> Driver</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- end Document nav -->
 
-                          <dt class="ns-summary-list__key">
-                            Intake: Complete
-                          </dt>
+    <div class="button-wrapper d-flex align-items-center ml-auto">
+      <button id="closeColumnCollapse-right" type="button" class="medFit-btn-close btn-close close close-column-collapse-right" aria-label="Close" data-toggle="collapse" href="#columnCollapse-right">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
 
-                          <dd class="ns-summary-list__value">
-                            <span>02/02/2021</span>
-                          </dd>
+  </header>
+  <!-- end Document header -->
 
-                        </div>
-                        <!-- end row -->
-                      </dl>
-                    </section>
-                    <!-- end recent activity section -->
+  <div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
+    <div id="columnContent-right" class="medFit-column-content column-content column-content-right">
 
-                  </section>
-                </article>
+      <article id="Document">
+        <!-- start Document tab content -->
+        <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
+
+          <!-- start driver info tab -->
+
+          <div id="tabPane-driver" aria-labelledby="navItem-driver" role="tabpanel" class="medFit-tab-pane tab-pane tab-pane-driver fade show active">
+            <article class="col-sm px-3">
+
+              <section id="driverDetails">
+
+                <h3 id="driverDetailsTitleNotesOnDriver" class="h4 d-inline-block mt-3">Notes on driver</h3>
+
+                <button id="driverDetailsNotesOnDriverEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                  <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit Notes on driver</span>
+                </button> <!-- edit saveButton -->
+
+                <div id="notesOnDriverSaveButtonWrapper" style="display:inline-block">
+                  <button id="notesOnDriverSaveButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                    <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes on license</span>
+                  </button> <!-- end saveButton -->
+                  <button id="notesOnDriverCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                    <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes on license</span>
+                  </button>  <!-- end cancelButton -->
+                </div> <!-- end SaveButtonWrapper -->
+
+              </header> <!-- end contactAddressHeader -->
+
+              <div class="ns-summary-list">
+                <!-- start row -->
+                <div id="notesOnDriverRow" class="ns-summary-list__row">
+
+                  <div class="ns-summary-list__value">
+                    <span id="notesOnDriverText">Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV</span>
+                    <textarea aria-labelledby="driverDetailsTitleNotesOnDriver" id="notesOnDriverTextarea" name="name" class="ns-input" style="display:none;" oninput="auto_grow(this)" placeholder="Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV"></textarea>
+                  </div>
+                </div>
+                <!-- end row -->
               </div>
 
-              <!-- end driver indo tab -->
+              <!-- start document list section -->
+              <section id="documentListSection">
+                <h2 class="h3">Document list</h2>
+                <dl class="ns-summary-list">
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
 
-            </div> <!-- end tabContent-Document -->
-            <!-- end Document tab content -->
+                    <dt class="ns-summary-list__key">
+                      Medical report
+                    </dt>
 
-          </div> <!-- end columnContent-rightt -->
-        </div> <!-- end stickyWrapper-right -->
-      </div> <!-- end columnCollapse-right -->
-      <!-- end right column -->
+                    <dd class="ns-summary-list__value">
+                      Recieved: 02/02/2021
+                    </dd>
 
-    </div> <!-- end #siteContent -->
-  </div>
+                    <dd class="ns-summary-list__actions">
+                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                      </button>
+                    </dd>
+
+                  </div>
+                  <!-- end row -->
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+
+                    <dt class="ns-summary-list__key">
+                      Assessment package
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      Sent: 02/02/2021
+                    </dd>
+
+                    <dd class="ns-summary-list__actions">
+                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                      </button>
+                    </dd>
+
+                  </div>
+                  <!-- end row -->
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+
+                    <dt class="ns-summary-list__key">
+                      Unsolisited law
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      Received: 02/02/2021
+                    </dd>
+
+                    <dd class="ns-summary-list__actions">
+                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                      </button>
+                    </dd>
+
+                  </div>
+                  <!-- end row -->
+
+                </dl>
+              </section>
+              <!-- end  document list section -->
+              <!-- start stage and state section -->
+              <section id="stageAndStateSection">
+                <h2 class="h3">Where are they in the process?</h2>
+                <dl class="ns-summary-list">
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+
+                    <dt class="ns-summary-list__key">
+                      Decision
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      <span>In progress</span>
+                    </dd>
+                  </div>
+                  <!-- end row -->
+
+                </dl>
+              </section>
+              <!-- end stage and state section -->
+
+              <!-- start recent activity section -->
+              <section id="recentActrivitySection">
+                <h2 class="h3">Recent activity</h2>
+                <dl class="ns-summary-list">
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+                    <dt class="ns-summary-list__key">
+                      Assessment package sent
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      <span>02/02/2021</span>
+                    </dd>
+                  </div>
+                  <!-- end row -->
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+
+                    <dt class="ns-summary-list__key">
+                      Investigation: Complete
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      <span>02/02/2021</span>
+                    </dd>
+                  </div>
+                  <!-- end row -->
+                  <!-- start row -->
+                  <div class="ns-summary-list__row">
+
+                    <dt class="ns-summary-list__key">
+                      Intake: Complete
+                    </dt>
+
+                    <dd class="ns-summary-list__value">
+                      <span>02/02/2021</span>
+                    </dd>
+
+                  </div>
+                  <!-- end row -->
+                </dl>
+              </section>
+              <!-- end recent activity section -->
+
+            </section>
+          </article>
+        </div>
+
+        <!-- end driver indo tab -->
+
+      </div> <!-- end tabContent-Document -->
+      <!-- end Document tab content -->
+
+    </div> <!-- end columnContent-rightt -->
+  </div> <!-- end stickyWrapper-right -->
+</div> <!-- end columnCollapse-right -->
+<!-- end right column -->
+
+</div> <!-- end #siteContent -->
+</div>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
