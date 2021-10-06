@@ -116,38 +116,93 @@
 
               <!-- start left column content -->
               <div class="px-3">
-                <!-- Start step navigation -->
 
-                <!-- end step navigation -->
-
-                <!-- start assignee section -->
                 <section class="medfit-grey-box__wrapper mt-3">
 
-                  <form id="medfitLicenceInfoForm">
+                  <header id="workflowHeader">
                     <div class="ns-form-group mb-0">
+                      <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                        Workflow
+                      </h2>
+                      <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                        <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                        </button> <!-- edit saveButton -->
+                      </div> <!-- end EditButtonWrapper -->
+                      <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                        <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                        </button> <!-- end saveButton -->
+                        <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                        </button>  <!-- end cancelButton -->
+                      </div> <!-- end SaveButtonWrapper -->
+                    </div> <!-- form group -->
+                  </header>
+
+                  <form id="WorkflowForm">
+
+                    <div class="ns-form-group mb-3">
                       <label class="ns-label" for="assigneeEditSelect">
                         Assignee
                       </label>
-                      <div id="assigneeEdit" class="select fw-20" >
+                      <div style="display:none;" id="assigneeEdit" class="select fw-20">
                         <select id="assigneeEditSelect" name="select1">
-                          <optgroup label="Assign to a person">
-                            <option selected>connorsc</option>
-                            <option>turners</option>
-                          </optgroup>
-                          <optgroup label="Assign to a role">
-                            <option>Clerks</option>
-                            <option>Medical Assessors</option>
-                            <option>Deputy Registrar</option>
-                          </optgroup>
+                          <option selected>connorsc</option>
+                          <option>turners</option>
                         </select>
                       </div>
+                      <span id="assigneeSaved">connorsc</span>
                     </div>
+
+                    <div class="ns-form-group mb-3">
+                      <label class="ns-label" for="stageEditSelect">
+                        Stage
+                      </label>
+                      <div style="display:none;" id="stageEdit" class="select fw-20">
+                        <select id="stageEditSelect" name="select1">
+                          <option selected>Intake</option>
+                          <option>Investigate</option>
+                          <option>Decision</option>
+                          <option>Processing</option>
+                          <option>MAC Review</option>
+                          <option>Complete</option>
+                        </select>
+                      </div>
+                      <span id="stageSaved">Intake</span>
+                    </div>
+
+                    <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                      <label class="ns-label" for="stateEditSelect">
+                        State
+                      </label>
+                      <div style="display:none;" id="stateEdit" class="select fw-20">
+                        <select id="stateEditSelect" name="select1">
+                          <option>Ready to Intake</option>
+                          <option selected>Intaking</option>
+                          <option>Missing Information</option>
+                        </select>
+                      </div>
+                      <span id="stateSaved">Intaking</span>
+                    </div>
+
+                    <div class="ns-form-group mb-2">
+                      <label class="ns-label" for="priorityEditSelect">
+                        Status
+                      </label>
+                      <div style="display:none;" id="priorityEdit" class="select fw-20">
+                        <select id="priorityEditSelect" name="priority-edit-select">
+                          <option>Priority</option>
+                          <option selected>Regular</option>
+                        </select>
+                      </div>
+                      <span id="prioritySaved">Regular</span>
+                    </div>
+
                   </form>
 
                 </section>
-                <!-- end licence info section -->
-                <!-- end assignee section -->
-
+                <!-- end workflow section -->
                 <section class="medfit-comments__wrapper">
                   <div class="comment-wrapper">
                     <div class="panel panel-info">
@@ -161,13 +216,13 @@
                               </label>
                             </h3>
 
-                            <button id="commentsEditButton" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
+                            <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
                               <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
                             </button>
                             <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
                           </div>
 
-                          <button id="commentsPost" type="button" class="medFit-btn btn-sm btn-success" style="display:none;">Post comment</button>
+                          <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
 
                         </form>
 
