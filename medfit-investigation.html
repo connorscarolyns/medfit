@@ -148,7 +148,8 @@
                 </div>
               </section>
               <!-- end priority section -->
-              <section class="medfit-grey-box__wrapper">
+
+              <section class="medfit-grey-box__wrapper mt-3">
 
                 <header id="driverInfoHeader">
                   <div class="ns-form-group mb-0">
@@ -172,7 +173,7 @@
                 </header>
 
                 <form id="medfitLicenceInfoForm">
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-3">
                     <label class="ns-label" for="masterNumberEdit">
                       Master Number
                     </label>
@@ -180,32 +181,48 @@
                     <span id="masterNumberSaved">ABCDE 123456 123</span>
                   </div>
 
-                  <div class="ns-form-group">
-                    <label class="ns-label" for="priorityEditSelect">
-                      Is this driver a priority?
-                    </label>
-                    <div id="priorityEdit" class="select fw-20" style="display:none;">
-                      <select id="priorityEditSelect" name="priority-edit-select">
-                        <option selected>Yes, they needs to be looked at right away</option>
-                        <option>No, they can wait their turn</option>
-                      </select>
-                    </div>
-                    <span id="prioritySaved">Yes, they needs to be looked at right away</span>
-                  </div>
-
-                  <div class="ns-form-group">
+                  <div class="ns-form-group mb-2">
                     <label class="ns-label" for="licenceInformationEdit">
                       License Information
                     </label>
-                    <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" type="text" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
+                    <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
                     <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
                   </div>
 
+                </form>
+
+              </section>
+              <!-- end licence info section -->
+              <section class="medfit-grey-box__wrapper">
+
+                <header id="workflowHeader">
                   <div class="ns-form-group mb-0">
+                    <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                      Workflow
+                    </h2>
+                    <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                      <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                      </button> <!-- edit saveButton -->
+                    </div> <!-- end EditButtonWrapper -->
+                    <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                      <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                        <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                      </button> <!-- end saveButton -->
+                      <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                        <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                      </button>  <!-- end cancelButton -->
+                    </div> <!-- end SaveButtonWrapper -->
+                  </div> <!-- form group -->
+                </header>
+
+                <form id="WorkflowForm">
+
+                  <div class="ns-form-group mb-3">
                     <label class="ns-label" for="assigneeEditSelect">
                       Assignee
                     </label>
-                    <div id="assigneeEdit" class="select fw-20" style="display:none;">
+                    <div style="display:none;" id="assigneeEdit" class="select fw-20">
                       <select id="assigneeEditSelect" name="select1">
                         <option selected>connorsc</option>
                         <option>turners</option>
@@ -214,10 +231,54 @@
                     <span id="assigneeSaved">connorsc</span>
                   </div>
 
+                  <div class="ns-form-group mb-3">
+                    <label class="ns-label" for="stageEditSelect">
+                      Stage
+                    </label>
+                    <div style="display:none;" id="stageEdit" class="select fw-20">
+                      <select id="stageEditSelect" name="select1">
+                        <option selected>Intake</option>
+                        <option>Investigate</option>
+                        <option>Decision</option>
+                        <option>Processing</option>
+                        <option>MAC Review</option>
+                        <option>Complete</option>
+                      </select>
+                    </div>
+                    <span id="stageSaved">Intake</span>
+                  </div>
+
+                  <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                    <label class="ns-label" for="stateEditSelect">
+                      State
+                    </label>
+                    <div style="display:none;" id="stateEdit" class="select fw-20">
+                      <select id="stateEditSelect" name="select1">
+                        <option>Ready to Intake</option>
+                        <option selected>Intaking</option>
+                        <option>Missing Information</option>
+                      </select>
+                    </div>
+                    <span id="stateSaved">Intaking</span>
+                  </div>
+
+                  <div class="ns-form-group mb-2">
+                    <label class="ns-label" for="priorityEditSelect">
+                      Status
+                    </label>
+                    <div style="display:none;" id="priorityEdit" class="select fw-20">
+                      <select id="priorityEditSelect" name="priority-edit-select">
+                        <option>Priority</option>
+                        <option selected>Regular</option>
+                      </select>
+                    </div>
+                    <span id="prioritySaved">Regular</span>
+                  </div>
+
                 </form>
 
               </section>
-              <!-- end licence info section -->
+              <!-- end workflow section -->
               <section class="medfit-comments__wrapper">
                 <div class="comment-wrapper">
                   <div class="panel panel-info">
@@ -237,7 +298,7 @@
                           <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
                         </div>
 
-                        <button id="commentsPost" role="button" class="btn btn-default" style="display:none;">Post comment</button>
+                        <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
 
                       </form>
 
@@ -280,17 +341,17 @@
                         </li>
                       </ul>
                     </div>
-
                   </div>
-                </section>
-                <!-- end comments section -->
-              </div>
-              <!-- end left column content -->
+                </div>
+              </section>
+              <!-- end comments section -->
+            </div>
+            <!-- end left column content -->
 
-            </div> <!-- columnContent-left -->
-          </div> <!-- stickyWrapper-left -->
-        </div> <!-- columnScrollleft -->
-        <!-- end left column -->
+          </div> <!-- columnContent-left -->
+        </div> <!-- stickyWrapper-left -->
+      </div> <!-- columnScrollleft -->
+      <!-- end left column -->
 
         <!-- start main column -->
         <div id="columnScrollMain" class="col-md column-scroll px-0">
@@ -370,7 +431,7 @@
                   </dl>
                 </section>
 
-                <section id="medicalCondition">
+                <!-- <section id="medicalCondition">
                   <h2 id="medicalConditionTitle" class="d-inline-block h3">Medical Conditions</h2>
                   <dl class="ns-summary-list table">
                     <div class="ns-summary-list__row">
@@ -400,7 +461,7 @@
                       </dd>
                     </div>
                   </dl>
-                </section>
+                </section> -->
 
                 <section id="decisions">
                   <h2 id="decisionsTitle" class="d-inline-block h3">Decisions</h2>
@@ -434,6 +495,113 @@
                   </dl>
                 </section>
 
+
+                <!-- start recent activity section -->
+                <section id="recentActrivitySection">
+                    <h2 class="d-inline-block h3">Recent activity</h2>
+                    <div class="table-wrapper">
+                      <dl class="ns-summary-list">
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+                        <dt class="ns-summary-list__value">
+                          Decision: Needs approval
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: sturner</span>
+                        </dd>
+                      </div>
+                      <!-- end row -->
+                        <!-- start row -->
+                        <div class="ns-summary-list__row">
+                          <dt class="ns-summary-list__value">
+                            Decision: In progress
+                          </dt>
+
+                          <dd class="ns-summary-list__value">
+                              <span>02/02/2021</span>
+                          </dd>
+
+                          <dd class="ns-summary-list__value">
+                              <span>Assigned to: bbbbbbb</span>
+                          </dd>
+                        </div>
+                        <!-- end row -->
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+
+                        <dt class="ns-summary-list__value">
+                          Investigation: In progress
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: bbbbbbb</span>
+                        </dd>
+                      </div>
+                      <!-- end row -->
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+
+                        <dt class="ns-summary-list__value">
+                          Investigation: Ready to start
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: unassigned</span>
+                        </dd>
+                      </div>
+                      <!-- end row -->
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+
+                        <dt class="ns-summary-list__value">
+                          Intake: In prgress
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: aaaaaaaaa</span>
+                        </dd>
+
+                      </div>
+                      <!-- end row -->
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+
+                        <dt class="ns-summary-list__value">
+                          Intake: Ready to start
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: unassigned</span>
+                        </dd>
+
+                      </div>
+                      <!-- end row -->
+                    </dl>
+                    </div>
+                </section>
+                <!-- end recent activity section -->
+
                 <section id="decisionSection" class="row">
                     <div class="col-auto">
                       <form method="get" action="medfit-decision-actions.html">
@@ -447,120 +615,7 @@
                     </div>
                 </section>
 
-                <section id="contactAddressSection">
-                  <form id="contactAddressForm">
-                    <header id="contactAddressHeader" >
-                      <h2 id="contactAddressTitle" class="d-inline-block h3">Contact address</h2>
-                      <button id="contactAddressTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit contact address</span>
-                      </button> <!-- edit editButton -->
-                      <div id="contactAddressSaveButtonWrapper" class="contactAddressSaveButtonWrapper" style="display:inline-block">
-                        <button id="contactAddressSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
-                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
-                        </button> <!-- end saveButton -->
-                        <button id="contactAddressCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
-                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
-                        </button>  <!-- end cancelButton -->
-                      </div> <!-- end SaveButtonWrapper -->
-                    </header> <!-- end contactAddressHeader -->
-
-                    <dl id="contactAddressDLEdit" class="ns-summary-list" style="display: none;">
-                      <div class="ns-summary-list__row">
-
-                        <dt class="ns-summary-list__key">
-                          <label for="contactAddressStreetAddressEdit">Street address</label>
-                        </dt>
-
-                        <dd class="ns-summary-list__value">
-
-                          <input id="contactAddressStreetAddressEdit" class="ns-input fw-25" name="document-details-email-input" type="text" style="" value="72 Guild Street">
-
-                        </dd>
-                      </div>
-                      <!-- end message row -->
-                      <div class="ns-summary-list__row">
-
-                        <dt class="ns-summary-list__key">
-                          <label for="contactAddressAppartmentUnitEdit">Apartment / Unit</label>
-                        </dt>
-
-                        <dd class="ns-summary-list__value">
-
-                          <input id="contactAddressAppartmentUnitEdit" class="ns-input fw-6" name="document-details-email-input" type="text" style="">
-
-                        </dd>
-                      </div>
-                      <!-- end priority row -->
-                      <div class="ns-summary-list__row">
-
-                        <dt class="ns-summary-list__key">
-                          <label for="contactAddressCityTownCommunityEdit">City / Town / Community</label>
-                        </dt>
-
-                        <dd class="ns-summary-list__value">
-
-                          <input id="contactAddressCityTownCommunityEdit" class="ns-input fw-20" name="document-details-email-input" type="text" style="" value="Halifax">
-
-                        </dd>
-                      </div>
-                      <!-- end source row -->
-                      <div class="ns-summary-list__row">
-
-                        <dt class="ns-summary-list__key">
-                          <label for="contactAddressProvinceTerritoryEditSelect">Province / Territory</label>
-
-                        </dt>
-
-                        <dd class="ns-summary-list__value">
-
-                          <div id="contactAddressProvinceTerritoryEdit" class="select fw-20" style="">
-                            <select id="contactAddressProvinceTerritoryEditSelect" name="contact-address-province-territory-edit-select">
-                              <option>Alberta - AB</option>
-                              <option>British Columbia - BC</option>
-                              <option>Manitoba - MB</option>
-                              <option>New Brunswick - NB</option>
-                              <option>Newfoundland and Labrador - NL</option>
-                              <option>Northwest Territories - NT</option>
-                              <option>Nova Scotia - NS</option>
-                              <option>Nunavut - NU</option>
-                              <option>Ontario - ON</option>
-                              <option>Prince Edward Island - PE</option>
-                              <option>Quebec - QC</option>
-                              <option>Saskatchewan - SK</option>
-                              <option>Yukon - YT</option>
-                            </select>
-                          </div>
-
-                        </dd>
-
-                      </div>
-                      <!-- end source details row -->
-                      <div class="ns-summary-list__row">
-                        <dt class="ns-summary-list__key">
-                          <label for="contactAddressPostalCodeEdit">Postal code</label>
-
-                        </dt>
-                        <dd class="ns-summary-list__value">
-
-                          <input id="contactAddressPostalCodeEdit" class="ns-input fw-6" name="document-details-email-input" type="text" style="" value="A1B 2C3">
-
-                        </dd>
-
-                      </div>
-                      <!-- end document notes row -->
-                    </dl>
-
-                  </form>
-
-                  <dl id="contactAddressDLSaved" class="ns-summary-list">
-                    <div class="ns-summary-list__row">
-                      <dd class="ns-summary-list__value">
-                        72 Guild Street<br>Halifax<br>Nova Scotia<br>A1B 2C3
-                      </dd>
-                    </div>
-                  </dl>
-
-                </section>
+                <!-- DELETED CONTACT ADDRESS SECTION HERE -->
 
               </div>
             </div> <!-- columnContent-main -->

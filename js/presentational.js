@@ -93,6 +93,11 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#downUpgrade-inline-radios, #downUpgrade-inline-radios-2").on("click", function(){
+        $("#conditional-downUpgrade").toggle("fast");
+    });
+});
 
 $(document).ready(function(){
     $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").on("click", function(){
@@ -165,7 +170,17 @@ $("#typeahead1").change(function() {
       $('#conditional-interdepartmental').hide();
     }
 });
+
 $("#typeahead1").trigger("change");
+
+$("#suspentionTypeInput").change(function() {
+  if ($(this).val() == "") {
+    $('#conditional-suspention').hide();
+  } else {
+    $('#conditional-suspention').show();
+  }
+});
+$("#suspentionTypeInput").trigger("change");
 
 
 function show1(){
@@ -174,6 +189,8 @@ function show1(){
 function show2(){
   document.getElementById('conditional-not-found').style.display = 'block';
 }
+
+
 // end conditional selections
 
 // start new coditional section with multiple ids

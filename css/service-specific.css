@@ -420,6 +420,13 @@ textarea {
   background: #f8d44c;
 }
 
+.table-wrapper{
+  max-height: 16rem;
+  overflow: auto;
+  border-bottom: 1px solid grey;
+  margin-bottom: 2rem;
+}
+
 /* end table styles */
 
 /* start accordion */

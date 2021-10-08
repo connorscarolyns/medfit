@@ -199,15 +199,15 @@
                       Workflow
                     </h2>
                     <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
-                      <button  style="display:none" id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                      <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
                         <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
                       </button> <!-- edit saveButton -->
                     </div> <!-- end EditButtonWrapper -->
                     <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
-                      <button id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                      <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
                         <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
                       </button> <!-- end saveButton -->
-                      <button id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                      <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
                         <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
                       </button>  <!-- end cancelButton -->
                     </div> <!-- end SaveButtonWrapper -->
@@ -220,20 +220,20 @@
                     <label class="ns-label" for="assigneeEditSelect">
                       Assignee
                     </label>
-                    <div id="assigneeEdit" class="select fw-20">
+                    <div style="display:none;" id="assigneeEdit" class="select fw-20">
                       <select id="assigneeEditSelect" name="select1">
                         <option selected>connorsc</option>
                         <option>turners</option>
                       </select>
                     </div>
-                    <span style="display:none;" id="assigneeSaved">connorsc</span>
+                    <span id="assigneeSaved">connorsc</span>
                   </div>
 
                   <div class="ns-form-group mb-3">
                     <label class="ns-label" for="stageEditSelect">
                       Stage
                     </label>
-                    <div id="stageEdit" class="select fw-20">
+                    <div style="display:none;" id="stageEdit" class="select fw-20">
                       <select id="stageEditSelect" name="select1">
                         <option>Intake</option>
                         <option selected>Investigate</option>
@@ -243,14 +243,14 @@
                         <option>Complete</option>
                       </select>
                     </div>
-                    <span style="display:none;" id="stageSaved">Investigate</span>
+                    <span id="stageSaved">Investigate</span>
                   </div>
 
                   <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
                     <label class="ns-label" for="stateEditSelect">
                       State
                     </label>
-                    <div id="stateEdit" class="select fw-20">
+                    <div style="display:none;" id="stateEdit" class="select fw-20">
                       <select id="stateEditSelect" name="select1">
                         <option>Ready to Investigate </option>
                         <option selected>Investigating</option>
@@ -258,20 +258,20 @@
                         <option>Failed to Comply</option>
                       </select>
                     </div>
-                    <span style="display:none;" id="stateSaved">Investigating</span>
+                    <span id="stateSaved">Investigating</span>
                   </div>
 
                   <div class="ns-form-group mb-2">
                     <label class="ns-label" for="priorityEditSelect">
                       Status
                     </label>
-                    <div id="priorityEdit" class="select fw-20">
+                    <div style="display:none;" id="priorityEdit" class="select fw-20">
                       <select id="priorityEditSelect" name="priority-edit-select">
                         <option selected>Priority</option>
                         <option>Regular</option>
                       </select>
                     </div>
-                    <span style="display:none;" id="prioritySaved">Priority</span>
+                    <span id="prioritySaved">Priority</span>
                   </div>
 
                 </form>
@@ -408,7 +408,6 @@
                                         <option>Resend demand, still needed for class 5</option>
                                         <option value=" ">or type-in another kind of follow-up</option>
                                       </datalist>
-                                      </datalist>
                                     </div>
                                   </div>
                                   <div class="ns-form-group">
@@ -479,10 +478,29 @@
                                     <option>278C(1)(b)</option>
                                     <option>280(4)</option>
                                     <option>Add Tab 09 & set as unlicensed</option>
-                                    <option>Add Tab 09 until favourable medical report</option>
                                   </datalist>
                                 </div>
                               </div>
+
+                              <div class="ns-checkboxes__conditional ns-checkboxes--small" id="conditional-suspention">
+                                <div class="ns-form-group">
+                                  <label class="ns-label" for="event-name">
+                                    Pending
+                                  </label>
+                                  <div class="select fw-20">
+                                    <input type="list" class="fw-20" id="pendingTypeInput" list="pendingTypeList" name="pendingType">
+                                    <datalist id="pendingTypeList">
+                                      <option>Medical Report</option>
+                                      <option>Eye Examination Report</option>
+                                      <option>Driver Re-exam</option>
+                                      <option>Cancel demand, downgrade to class 5</option>
+                                      <option>Resend demand, still needed for class 5</option>
+                                      <option value=" ">or type-in another kind of report</option>
+                                    </datalist>
+                                  </div>
+                                </div>
+                              </div>
+
                               <div class="ns-form-group">
                                 <label class="ns-label" for="restoreInput">
                                   Restore & rescind
@@ -612,28 +630,28 @@
                                       </legend>
                                       <div class="ns-radios ns-radios--small">
                                         <div class="ns-radios__item">
-                                          <input class="ns-radios__input" id="downUpgrade-inline-radios" name="downUpgrade-radios" type="radio" value="inline radio 1" checked="">
+                                          <input class="ns-radios__input" id="downUpgrade-inline-radios" name="downUpgrade-radios" type="radio" value="inline radio 1">
                                           <label class="ns-label ns-radios__label" for="downUpgrade-inline-radios">
                                             <span class="ns-label-span">Downgrade</span>
                                           </label>
                                         </div>
-                                        <div class="ns-checkboxes__conditional ns-checkboxes--small" id="conditional-contact">
-                      										<div class="ns-fieldset">
+                                        <div style="display:none;" class="ns-checkboxes__conditional ns-checkboxes--small" id="conditional-downUpgrade">
+                                          <div class="ns-fieldset">
                                             <fieldset class="ns-fieldset">
-                            									<legend class="ns-fieldset__legend noBorder label sr-only">
-                            										Upgrade status
-                            									</legend>
-                            									<div class="ns-checkboxes ns-checkboxes--small">
-                            									  <div class="ns-checkboxes__item">
-                            										<input class="ns-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                            										<label class="ns-label ns-checkboxes__label" for="organisation">
-                            										  <span class="ns-label-span">Ok to upgrade with valid medical</span>
-                            										</label>
-                            									  </div>
-                            									</div>
-                            								</fieldset>
+                                              <legend class="ns-fieldset__legend noBorder label sr-only">
+                                                Upgrade status
+                                              </legend>
+                                              <div class="ns-checkboxes ns-checkboxes--small">
+                                                <div class="ns-checkboxes__item">
+                                                  <input class="ns-checkboxes__input" id="okUpgradeMedical" name="organisation" type="checkbox" value="hmrc">
+                                                  <label class="ns-label ns-checkboxes__label" for="organisation">
+                                                    <span class="ns-label-span">Ok to upgrade with valid medical</span>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </fieldset>
                                           </div>
-                      									</div>
+                                        </div>
                                         <div class="ns-radios__item">
                                           <input class="ns-radios__input" id="downUpgrade-inline-radios-2" name="downUpgrade-radios" type="radio" value="inline radio 2">
                                           <label class="ns-label ns-radios__label" for="downUpgrade-inline-radios-2">
@@ -696,18 +714,18 @@
                                         </div>
                                         <div class="col-auto pr-0">
                                           <fieldset class="ns-fieldset">
-                          									<legend  class="ns-fieldset__legend noBorder label">
-                          										When driver renews
-                          									</legend>
-                          									<div class="ns-checkboxes">
-                          									  <div class="ns-checkboxes__item">
-                            										<input id="atRenewal" class="ns-checkboxes__input" name="at-renewal" type="checkbox" value="hmrc">
-                            										<label class="ns-label ns-checkboxes__label" for="atRenewal">
-                            										  <span class="ns-label-span">By renewal date</span>
-                            										</label>
-                          									  </div>
-                          									</div>
-                        								  </fieldset>
+                                            <legend  class="ns-fieldset__legend noBorder label">
+                                              When driver renews
+                                            </legend>
+                                            <div class="ns-checkboxes">
+                                              <div class="ns-checkboxes__item">
+                                                <input id="atRenewal" class="ns-checkboxes__input" name="at-renewal" type="checkbox" value="hmrc">
+                                                <label class="ns-label ns-checkboxes__label" for="atRenewal">
+                                                  <span class="ns-label-span">By renewal date</span>
+                                                </label>
+                                              </div>
+                                            </div>
+                                          </fieldset>
                                         </div>
                                       </div>
                                     </fieldset>
