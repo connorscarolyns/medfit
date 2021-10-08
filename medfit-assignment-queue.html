@@ -117,13 +117,6 @@
           <div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
             <div id="columnContent-main" class="medFit-column-content column-content column-content-main">
 
-              <div class="d-flex align-items-center py-3 px-3" tabindex="0" style="border: 1px dashed #c1c1c1;background: #e8e8e8;">
-                <input id="upload" accept="application/pdf" multiple="" type="file" tabindex="-1" style="display: none;">
-                <button class="ns-btn-2nd ns-btn__icon medFit-btn btn-sm my-0 ml-0 mr-2" style="
-                display: inline-flex;"><i class="ns-btn__icon-left fas fa-file-upload" aria-hidden="true"></i>Click to upload files</button>
-                <label for="upload" class="h5 ns-label my-0">or drag 'n' drop here</label>
-              </div>
-
               <div class="px-3">
                 <div class="row">
                   <div class="col">
@@ -314,7 +307,7 @@
         </div>
       </div>
 
-      <div class="table-wrapper">
+      <div class="">
         <table id="intakeQueue-table" class="medFit-table table table-hover">
           <thead>
             <tr class="">
@@ -506,18 +499,6 @@
                       </dd>
                     </div>
                     <!-- end row -->
-                    <!-- start row -->
-                    <div id="driverInfoMedFitNumberRow" class="ns-summary-list__row">
-
-                      <dt class="ns-summary-list__key">
-                        MedFit Number
-                      </dt>
-
-                      <dd class="ns-summary-list__value">
-                        <span id="driverInfoMedFitNumber">123456789</span>
-                      </dd>
-                    </div>
-                    <!-- end row -->
                   </dl>
 
                 </header> <!-- end contactAddressHeader -->
@@ -579,136 +560,208 @@
                 <!-- end row -->
               </div>
 
-              <!-- start stage and state section -->
-              <section id="stageAndStateSection">
-                <h2 class="h3">Where are they in the process?</h2>
-                <dl class="ns-summary-list">
-                  <!-- start row -->
+              <section id="documents">
+                <h2 id="documentsTitle" class="d-inline-block h3">Documents</h2>
+                <dl id="dLDocumtents" class="ns-summary-list table">
                   <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Decision
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      <span>Ready to start</span>
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Medical report
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      Recieved: 31/12/21
+                    </dd>
+                    <dd id="dLDocumtents1" class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview medical report</span>
+                      </a>
                     </dd>
                   </div>
-                  <!-- end row -->
-
+                  <div class="ns-summary-list__row">
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Demand for medical report
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      Sent: 31/12/20
+                    </dd>
+                    <dd id="dLDocumtents2" class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview demand for medical report</span>
+                      </a>
+                    </dd>
+                  </div>
                 </dl>
               </section>
-              <!-- end stage and state section -->
+
+              <!-- <section id="medicalCondition">
+                <h2 id="medicalConditionTitle" class="d-inline-block h3">Medical Conditions</h2>
+                <dl class="ns-summary-list table">
+                  <div class="ns-summary-list__row">
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Name of medical condition
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      31/12/21
+                    </dd>
+                    <dd class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview name of medical condition</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="ns-summary-list__row">
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Another of medical condition
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      31/12/21
+                    </dd>
+                    <dd class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview name of another medical condition</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </section> -->
+
+              <section id="decisions">
+                <h2 id="decisionsTitle" class="d-inline-block h3">Decisions</h2>
+                <dl class="ns-summary-list table">
+                  <div class="ns-summary-list__row">
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Suspend: 278C(1)(a)
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      31/12/21
+                    </dd>
+                    <dd scope="row" class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview suspend</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="ns-summary-list__row">
+                    <dd scope="row" class="ns-summary-list__value py-0">
+                      Downgrade
+                    </dd>
+                    <dd class="ns-summary-list__value py-0">
+                      31/12/20
+                    </dd>
+                    <dd class="ns-summary-list__actions py-0">
+                      <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
+                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview remove class</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </section>
+
 
               <!-- start recent activity section -->
               <section id="recentActrivitySection">
-                <h2 class="h3">Recent activity</h2>
-                <dl class="ns-summary-list">
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-                    <dt class="ns-summary-list__key">
-                      Assessment package sent
-                    </dt>
+                  <h2 class="d-inline-block h3">Recent activity</h2>
+                  <div class="table-wrapper">
+                    <dl class="ns-summary-list">
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+                      <dt class="ns-summary-list__value">
+                        Decision: Needs approval
+                      </dt>
 
-                    <dd class="ns-summary-list__value">
-                      <span>02/02/2021</span>
-                    </dd>
+                      <dd class="ns-summary-list__value">
+                          <span>02/02/2021</span>
+                      </dd>
+
+                      <dd class="ns-summary-list__value">
+                          <span>Assigned to: sturner</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
+                      <!-- start row -->
+                      <div class="ns-summary-list__row">
+                        <dt class="ns-summary-list__value">
+                          Decision: In progress
+                        </dt>
+
+                        <dd class="ns-summary-list__value">
+                            <span>02/02/2021</span>
+                        </dd>
+
+                        <dd class="ns-summary-list__value">
+                            <span>Assigned to: bbbbbbb</span>
+                        </dd>
+                      </div>
+                      <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+
+                      <dt class="ns-summary-list__value">
+                        Investigation: In progress
+                      </dt>
+
+                      <dd class="ns-summary-list__value">
+                          <span>02/02/2021</span>
+                      </dd>
+
+                      <dd class="ns-summary-list__value">
+                          <span>Assigned to: bbbbbbb</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+
+                      <dt class="ns-summary-list__value">
+                        Investigation: Ready to start
+                      </dt>
+
+                      <dd class="ns-summary-list__value">
+                          <span>02/02/2021</span>
+                      </dd>
+
+                      <dd class="ns-summary-list__value">
+                          <span>Assigned to: unassigned</span>
+                      </dd>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+
+                      <dt class="ns-summary-list__value">
+                        Intake: In prgress
+                      </dt>
+
+                      <dd class="ns-summary-list__value">
+                          <span>02/02/2021</span>
+                      </dd>
+
+                      <dd class="ns-summary-list__value">
+                          <span>Assigned to: aaaaaaaaa</span>
+                      </dd>
+
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="ns-summary-list__row">
+
+                      <dt class="ns-summary-list__value">
+                        Intake: Ready to start
+                      </dt>
+
+                      <dd class="ns-summary-list__value">
+                          <span>02/02/2021</span>
+                      </dd>
+
+                      <dd class="ns-summary-list__value">
+                          <span>Assigned to: unassigned</span>
+                      </dd>
+
+                    </div>
+                    <!-- end row -->
+                  </dl>
                   </div>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Investigation: In progress
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      <span>02/02/2021</span>
-                    </dd>
-                  </div>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Intake: Complete
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      <span>02/02/2021</span>
-                    </dd>
-
-                  </div>
-                  <!-- end row -->
-                </dl>
               </section>
               <!-- end recent activity section -->
-
-              <!-- start document list section -->
-              <section id="documentListSection">
-                <h2 class="h3">Document list</h2>
-                <dl class="ns-summary-list">
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Medical report
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      Recieved: 02/02/2021
-                    </dd>
-
-                    <dd class="ns-summary-list__actions">
-                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                      </button>
-                    </dd>
-
-                  </div>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Assessment package
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      Sent: 02/02/2021
-                    </dd>
-
-                    <dd class="ns-summary-list__actions">
-                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                      </button>
-                    </dd>
-
-                  </div>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <div class="ns-summary-list__row">
-
-                    <dt class="ns-summary-list__key">
-                      Unsolisited law
-                    </dt>
-
-                    <dd class="ns-summary-list__value">
-                      Received: 02/02/2021
-                    </dd>
-
-                    <dd class="ns-summary-list__actions">
-                      <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
-                        <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
-                      </button>
-                    </dd>
-
-                  </div>
-                  <!-- end row -->
-
-                </dl>
-              </section>
-              <!-- end  document list section -->
 
             </section>
           </article>
