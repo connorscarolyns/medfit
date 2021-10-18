@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en" class="js no-touchevents details no-touchevents details">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Create correspondence - Processing - MedFit - Government of Nova Scotia</title>
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!-- Include in all head tags -->
+  <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!-- Include in all head tags -->
+  <link rel="stylesheet" media="all" href="css/saltire.css"><!-- Include in all head tags -->
+  <link rel="stylesheet" media="all" href="css/supplimentary-page-styles.css"><!-- Include only if forms are used-->
+  <link rel="stylesheet" media="all" href="css/phase-banner.css"><!-- Include only if forms are used-->
+  <link rel="stylesheet" media="all" href="css/global-form-styles.css"><!-- Include only if forms are used-->
+  <link rel="stylesheet" media="all" href="css/radio-button.css"><!-- Include only if radios are used-->
+  <link rel="stylesheet" media="all" href="css/checkboxes.css"><!-- Include only if checkboxes are used-->
+  <link rel="stylesheet" media="all" href="css/input-field-group.css"><!-- Include only if inputs are used-->
+  <link rel="stylesheet" media="all" href="css/select.css"><!-- Include only if selects are used-->
+  <link rel="stylesheet" media="all" href="css/buttons.css"><!-- Include only if buttons are used-->
+  <link rel="stylesheet" media="all" href="css/date-picker.css"><!-- Include this only if needed -->
+  <link rel="stylesheet" media="all" href="css/data-list.css"><!-- Include this only if needed -->
+  <link rel="stylesheet" media="all" href="css/service-specific.css"><!-- Include the the end of all stylesheets -->
+  <link rel="stylesheet" media="all" href="https://beta.novascotia.ca/themes/ignition/css/aria.accordion.css">
+
+  <link href="styles/multiselect.css" rel="stylesheet"/>
+  <script src="multiselect.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body id="site" class="Site">
+
+  <nav id="navBar-main" title="main navigation" class="medFit-navbar-main navbar navbar-expand-lg navbar-dark">
+    <nav class="skip-links" aria-label="Skip to main content">
+      <a href="#mainContent" class="skip-to-link">Skip to main content</a>
+    </nav>
+
+    <!-- start brand -->
+    <a id="navbarBrand" class="medFit-navbar-brand navbar-brand col-sm-2 mr-0" href="#"><span class="sr-only">MedFit</span><img src="img/medfit-logo.svg" aria-hidden="true" class="pr-2" width="140" height="40" alt="MedFit Logo"></a>
+    <!-- end brand -->
+
+    <!-- start mobile icon -->
+    <button id="navbarToggler" class="medFit-navbar-toggler navbar-toggler my-2 mx-3 " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="navbarToggler-icon" class="medFit-navbar-toggler-icon navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbarCollapse" class="medfit-navbar-collapse collapse navbar-collapse px-3" >
+      <!-- start main navigation -->
+      <ul  id="navbarNav" class="navbar-nav mt-0">
+        <li class="nav-item medFit-nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            Assigments
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Intake</a></li>
+            <li><a class="dropdown-item" href="#">Assigments</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Search</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="v-line-right mx-2 d-sm-none d-md-none d-md-block"></div>
+      <ul  id="navbarNav-process" class="navbar-nav mr-auto mt-0">
+        <li id="navbarItem-intake" class="medFit-nav-item nav-item">
+          <a id="navbarLink-intake" class="nav-link px-3" href="#">Investigate</a>
+        </li>
+        <li id="navbarItem-assignments" class="medFit-nav-item nav-item">
+          <a id="navbarLink-assignments" class="nav-link px-3" href="#">Decision</a>
+        </li>
+        <li id="navbarItem-assignments" class="medFit-nav-item nav-item active">
+          <a id="navbarLink-assignments" class="nav-link px-3" href="#">Processing <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <!-- end main namvigation-->
+
+      <!-- start toolbar nav-->
+      <ul  id="navbarNav-tools" class="navbar-nav-tools navbar-nav ml-auto mt-0">
+        <!-- start profile nav-item -->
+        <li class="nav-item dropdown dropdown-profile">
+          <a class="nav-link" href="#" id="navbarDropdown-profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+            <i class="far fa-user-circle"><span class="ns-visually-hidden">Profile</span></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-profile">
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+        <!-- end profile nav-item -->
+        <li class="nav-item dropdown dropdown-profile">
+          <a class="nav-link" href="#" id="navbarDropdown-feedback" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+            <i class="fas fa-comments"><span class="ns-visually-hidden">Send feedback</span></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-profile">
+            <p class="ns-phase-banner__content mx-2" >
+              <strong class="ns-tag ns-phase-banner__content__tag">
+                Alpha
+              </strong>
+              <span class="ns-phase-banner__text">
+                This is a new service that we're still developing. Try the service and <a href="#">send us your comments and suggestions</a>. Your feedback will help make the service easier to use for everyone.
+              </span>
+            </p>
+          </div>
+        </li>
+        <!-- end feedback nav-item -->
+      </ul>
+      <!-- end toolbar nav-->
+    </div> <!--  end navbarCollapse -->
+  </nav>
+
+  <!-- start main content -->
+  <main id="main" class="medFit-main pb-0">
+    <div id="siteContent" class="medFit-site-copntent container-fluid Site-content">
+      <div id="mainContent" class="medFit-main-content main-content row">
+
+        <!-- start left column -->
+        <div id="columnScrollleft" class="col-md-2 px-0 column-scroll">
+
+          <!-- start left col header -->
+          <header id="columnHeader-left"  class="medfit-column-header d-flex align-items-center px-3">
+
+            <a href="medfit-intake-queue.html" class="ns-back-link pr-2">Back to queue</a>
+
+          </header>
+          <!-- end left col header -->
+
+          <div id="stickyWrapper-left" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-left">
+            <div id="columnContent-left" class="medFit-column-content column-content column-content-left">
+
+              <!-- start left column content -->
+              <div class="px-3">
+
+                <!-- end priority section -->
+                <section class="medfit-grey-box__wrapper mt-3">
+
+                  <header id="driverInfoHeader">
+                    <div class="ns-form-group mb-0">
+                      <h2 id="driverInfoTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                        Joe Blake
+                      </h2>
+                      <div id="driverInfoTitleEditButtonWrapper" class="d-inline-block driverInfoTitleEditButtonWrapper">
+                        <button id="driverInfoTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit notes about the driver</span>
+                        </button> <!-- edit saveButton -->
+                      </div> <!-- end EditButtonWrapper -->
+                      <div id="driverInfoTitleSaveButtonWrapper" class="driverInfoTitleSaveButtonWrapper" style="display:inline-block">
+                        <button id="driverInfoTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes about the driver</span>
+                        </button> <!-- end saveButton -->
+                        <button id="driverInfoTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes about the driver</span>
+                        </button>  <!-- end cancelButton -->
+                      </div> <!-- end SaveButtonWrapper -->
+                    </div> <!-- form group -->
+                  </header>
+
+                  <form id="medfitLicenceInfoForm">
+                    <div class="ns-form-group mb-3">
+                      <label class="ns-label" for="masterNumberEdit">
+                        Master Number
+                      </label>
+                      <input class="ns-input fw-20" id="masterNumberEdit" name="master-number" type="text" value="ABCDE 123456 123" style="display:none;">
+                      <span id="masterNumberSaved">ABCDE 123456 123</span>
+                    </div>
+
+                    <div class="ns-form-group mb-2">
+                      <label class="ns-label" for="licenceInformationEdit">
+                        License Information
+                      </label>
+                      <textarea class="ns-input fw-20" id="licenceInformationEdit" name="licence-information" style="display:none;" rows="4" oninput="auto_grow(this)">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</textarea>
+                      <span id="licenceInformationSaved">Enter information about license status, class, expiry, age of driver, and conditions that may be needed during the review process</span>
+                    </div>
+
+                  </form>
+
+                </section>
+                <!-- end licence info section -->
+                <section class="medfit-grey-box__wrapper">
+
+                  <header id="workflowHeader">
+                    <div class="ns-form-group mb-0">
+                      <h2 id="workflowTitle" class="d-inline-block h3 ns-label-wrapper mb-4">
+                        Workflow
+                      </h2>
+                      <div id="workflowTitleEditButtonWrapper" class="d-inline-block workflowTitleEditButtonWrapper">
+                        <button id="workflowTitleEditButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit workflow</span>
+                        </button> <!-- edit saveButton -->
+                      </div> <!-- end EditButtonWrapper -->
+                      <div id="workflowTitleSaveButtonWrapper" class="workflowTitleSaveButtonWrapper" style="display:inline-block">
+                        <button style="display:none" id="workflowTitleSaveButton" role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                          <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save workflow</span>
+                        </button> <!-- end saveButton -->
+                        <button style="display:none" id="workflowTitleCancelButton"  role="button" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger">
+                          <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on workflow</span>
+                        </button>  <!-- end cancelButton -->
+                      </div> <!-- end SaveButtonWrapper -->
+                    </div> <!-- form group -->
+                  </header>
+
+                  <form id="WorkflowForm">
+
+                    <div class="ns-form-group mb-3">
+                      <label class="ns-label" for="assigneeEditSelect">
+                        Assignee
+                      </label>
+                      <div style="display:none;" id="assigneeEdit" class="select fw-20">
+                        <select id="assigneeEditSelect" name="select1">
+                          <option selected>connorsc</option>
+                          <option>turners</option>
+                        </select>
+                      </div>
+                      <span id="assigneeSaved">connorsc</span>
+                    </div>
+
+                    <div class="ns-form-group mb-3">
+                      <label class="ns-label" for="stageEditSelect">
+                        Stage
+                      </label>
+                      <div style="display:none;" id="stageEdit" class="select fw-20">
+                        <select id="stageEditSelect" name="select1">
+                          <option selected>Intake</option>
+                          <option>Investigate</option>
+                          <option>Decision</option>
+                          <option>Processing</option>
+                          <option>MAC Review</option>
+                          <option>Complete</option>
+                        </select>
+                      </div>
+                      <span id="stageSaved">Intake</span>
+                    </div>
+
+                    <div class="ns-form-group mb-3 ns-checkboxes__conditional pl-3 ml-0">
+                      <label class="ns-label" for="stateEditSelect">
+                        State
+                      </label>
+                      <div style="display:none;" id="stateEdit" class="select fw-20">
+                        <select id="stateEditSelect" name="select1">
+                          <option>Ready to Intake</option>
+                          <option selected>Intaking</option>
+                          <option>Missing Information</option>
+                        </select>
+                      </div>
+                      <span id="stateSaved">Intaking</span>
+                    </div>
+
+                    <div class="ns-form-group mb-2">
+                      <label class="ns-label" for="priorityEditSelect">
+                        Status
+                      </label>
+                      <div style="display:none;" id="priorityEdit" class="select fw-20">
+                        <select id="priorityEditSelect" name="priority-edit-select">
+                          <option>Priority</option>
+                          <option selected>Regular</option>
+                        </select>
+                      </div>
+                      <span id="prioritySaved">Regular</span>
+                    </div>
+
+                  </form>
+
+                </section>
+                <!-- end workflow section -->
+                <section class="medfit-comments__wrapper">
+                  <div class="comment-wrapper">
+                    <div class="panel panel-info">
+                      <div class="panel-body">
+
+                        <form>
+                          <div class="ns-form-group mb-2">
+                            <h3 class="ns-label-wrapper h4">
+                              <label class="ns-label" for="commentsWrite">
+                                Comments
+                              </label>
+                            </h3>
+
+                            <button id="commentsEditButton" role="button" draggable="false" class="medFit-btn btn-sm ns-btn-2nd">
+                              <i class="fas fa-comment ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a comment
+                            </button>
+                            <textarea id="commentsWrite" class="ns-input fw-20" placeholder="write a comment..." style="display:none;" oninput="auto_grow(this)"></textarea>
+                          </div>
+
+                          <button id="commentsPost" type="button" class="btn btn-default" style="display:none;">Post comment</button>
+
+                        </form>
+
+                        <hr>
+                        <ul class="media-list">
+                          <li class="media">
+                            <div class="media-body">
+                              <span class="text-muted pull-right">
+                                <small class="text-muted">31/12/2021</small>
+                              </span>
+                              <strong class="">@connorsc</strong>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Lorem ipsum dolor sit amet.
+                              </p>
+                            </div>
+                          </li>
+                          <li class="media">
+                            <div class="media-body">
+                              <span class="text-muted pull-right">
+                                <small class="text-muted">31/12/2021</small>
+                              </span>
+                              <strong class="">@turners</strong>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Lorem ipsum dolor adipiscing elit.
+                              </p>
+                            </div>
+                          </li>
+                          <li class="media">
+                            <div class="media-body">
+                              <span class="text-muted pull-right">
+                                <small class="text-muted">31/12/2021</small>
+                              </span>
+                              <strong class="">@connorsc</strong>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- end comments section -->
+              </div>
+              <!-- end left column content -->
+
+            </div> <!-- columnContent-left -->
+          </div> <!-- stickyWrapper-left -->
+        </div> <!-- columnScrollleft -->
+        <!-- end left column -->
+
+        <!-- start main column -->
+        <div id="columnScrollMain" class="col-md column-scroll px-0">
+
+          <!-- start main col header -->
+          <header id="columnHeader-main"  class="medfit-column-header d-flex align-items-center justify-content-between px-3">
+
+            <h1 id="h1-intake" class="medfit-ns-h2 ns-h2 h2 h1-intake-queue my-0">Processing</h1>
+            <button type="button" class="medFit-btn btn-sm btn-default my-0 mr-0">Save and continue</button>
+
+          </header>
+          <!-- end main col header -->
+
+          <div id="stickyWrapper-main" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-main">
+            <div id="columnContent-main" class="medFit-column-content column-content column-content-main">
+
+              <div class="px-3 mt-3">
+                <section class="medfit-step-navigation">
+                  <nav class="medfit-step-navigation-nav">
+                    <ol class="step-list medfit-step-navigation-list">
+                      <li class="medfit-step-navigation-list-item">
+                        <h2 id="createCorrespondence" class="h3 medfit-step-navigation-title">Create correspondence</h2>
+                      </li>
+
+                      <li class="medfit-step-list-step">
+                        <h2 id="updatesToRmv" class="h3 medfit-step-navigation-title active">Updates to <abbr title="Registry of Motor Vehicles">RMV</abbr> <span class="sr-only">(current)</span></h2>
+
+                          <fieldset class="ns-fieldset">
+                            <legend class="ns-fieldset__legend noBorder">
+          									  <h3 class="ns-fieldset__heading">
+                                <abbr title="Registry of Motor Vehicles">RMV</abbr> processing checklist
+          									  </h3>
+          									</legend>
+                            <div id="updateRMV-hint" class="ns-hint">
+          									  Check off items once you've done them in <abbr title="Registry of Motor Vehicles">RMV</abbr>.
+          									</div>
+          									<div class="ns-checkboxes ns-checkboxes--small">
+          									  <div class="ns-checkboxes__item">
+            										<input class="ns-checkboxes__input" id="postToRmv" name="update-rmv" type="checkbox" value="Post to RMV history">
+            										<label class="ns-label ns-checkboxes__label" for="postToRmv">
+            										  <span class="ns-label-span">Post to <abbr title="Registry of Motor Vehicles">RMV</abbr> history</span>
+            										</label>
+          									  </div>
+                              <div class="ns-checkboxes__item d-flex w-100">
+                                <div id="postToRmvText" class="ns-hint ns-checkboxes__hint pt-2 w-100">
+                                  <div  class="mr-2 card clickable-text" tabindex="0">
+                                    <div class="card-body ">
+                                      <p>REVIEWED BY MEDICAL LOREM IPSUM DOLAR KIPLING EM ARATA SI REMUS</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              <div id="postToRmvEdit" style="display:none;" class="ns-hint ns-checkboxes__hint pt-2 mr-2 w-100">
+                                <label class="ns-label sr-only" for="event-name">
+                                  Edit opening paragraph text
+                                </label>
+                                <textarea class="ns-input" name="event-name" type="text" rows="2" oninput="auto_grow(this)">REVIEWED BY MEDICAL LOREM IPSUM DOLAR KIPLING EM ARATA SI REMUS</textarea>
+                                  <section id="postToRmvDecisionSection" class="row">
+                                    <div class="col-auto">
+                                      <button id="postToRmvSave"  type="button" class="medFit-btn btn-sm btn-default my-0">Save</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button id="postToRmvCancel" class="medFit-btn btn-sm ns-btn-2nd my-0" type="button">Cancel</button>
+                                    </div>
+                                  </section>
+                                </div>
+
+
+                                <div class="d-inline">
+                                  <button id="showToast" role="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn mt-2" data-toggle="tooltip" data-placement="top" title="Copy">
+                                    <i class="fas fa-copy" aria-hidden="true"></i><span class="ns-visually-hidden">Copy <abbr title="Registry of Motor Vehicles">RMV</abbr> Post</span>
+                                  </button>
+                                </div>
+
+                                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000" style="position: absolute; top: .5rem; right: 3rem;">
+                                  <div class="toast-header">
+
+                                    <strong class="mr-auto text-success"><i class="fas fa-check mr-2" aria-hidden="true"></i>Copied to clipboard!</strong>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <!-- <div class="toast-body">
+                                    Post copied to clipboard
+                                 </div> -->
+                                </div>
+
+                              </div>
+
+          									  <div class="ns-checkboxes__item">
+            										<input class="ns-checkboxes__input" id="apply-suspention" name="update-rmv" type="checkbox" value="Apply suspention: 278C(1)(a)">
+            										<label class="ns-label ns-checkboxes__label" for="apply-suspention">
+            										  <span class="ns-label-span">Apply suspention: 278C(1)(a)</span>
+            										</label>
+          									  </div>
+          									</div>
+                          </fieldset>
+
+                          <section id="decisionSection" class="row ns-form-group">
+                            <div class="col-auto">
+                              <button type="submit" value="submit" id="submitButton" onclick="submit(this,options=[moreInfoNeeded,enoughInfo])"  class="medFit-btn btn-sm btn-default my-0">Save and continue</button>
+                            </div>
+                          </section>
+
+                      </li>
+
+                      <li class="medfit-step-list-step">
+                        <h2 id="completeAndPrint" class="h3 medfit-step-navigation-title">Complete processing and Print</h2>
+                      </li>
+
+                    </ol>
+                  </nav>
+                </section>
+              </div>
+
+
+            </div> <!-- columnContent-main -->
+          </div> <!-- stickyWrapper-main -->
+        </div> <!-- columnScrollMain -->
+        <!-- end main column -->
+
+        <!-- start right column -->
+        <div id="columnCollapse-right" class="col-md px-0 column-scroll column-collapse column-collapse-right">
+
+          <!-- start Document header -->
+          <header id="columnHeader-Document" class="medfit-column-header d-flex align-items-stretch px-3">
+
+            <!-- start Document nav -->
+            <a href="#" class="ns-back-link pr-2">Back</a>
+            <nav id="navbar-Document" aria-label="Intake details" class="navbar navbar-light pb-0 navbar-Document align-self-end">
+              <ul id="columnHeader-navTabs" class="medFit-column-header-nav-tabs nav nav-tabs column-header-nav-tabs mt-0">
+                <li id="navItem-details" class="medFit-nav-item nav-item nav-item-details">
+                  <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details active" href="#tabPane-decision">Decision</a>
+                </li>
+                <li id="navItem-Document" class="medFit-nav-item nav-item nav-item-Document">
+                  <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-Document" href="#tabPane-preview">Letter Preview</a>
+                </li>
+                <li id="navItem-driver" class="medFit-nav-item nav-item nav-item-details">
+                  <a data-toggle="tab" class="medFit-nav-link nav-link nav-link-details" href="#tabPane-driver"><span class="ns-visually-hidden">Information about the</span> Driver</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- end Document nav -->
+          </header>
+          <!-- end Document header -->
+
+          <div id="stickyWrapper-right" class="medFit-sticky-wrapper sticky-wrapper sticky-wrapper-right">
+            <div id="columnContent-right" class="medFit-column-content column-content column-content-right">
+              <!-- start all tabs content -->
+              <div id="tabContent-Document" class="medFit-tab-content tab-content tab-content-Document">
+
+
+                <!-- start preview tab content -->
+                <div id="tabPane-preview" class="medFit-tab-pane tab-pane tab-pane-attachements fade in">
+                  <section class="row mx-0">
+                    <!-- start preview -->
+                    <article class="col-sm-12 px-3" id="examplePreview">
+                      <h2 id="PreviewnTitle" class="h3">Preview</h2>
+                      <div class="mt-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <header class="d-flex align-items-end">
+                              <img alt="Province of Nova Scotia" style="width:150px;" class="d-inline-block mr-3 mb-1" src="img/NS-Gov-Logo-2016-English-Black-crop.jpg">
+                              <div>
+                                <h1 class="h4 my-1">Transportation and Infrastructure Renewal</h1>
+                                <h2 class="h5 my-0">Motor Vehicle Administration</h2>
+                              </div>
+                            </header>
+                            <hr>
+                            <div class="d-flex">
+                              <div id="address" class="mr-auto">
+                                <strong>Driver Licensing Section</strong><br>
+                                PO Box 1652<br>
+                                Halifax, Nova Scotia  B3J 2Z3<br>
+                                Canada
+                              </div>
+                              <div id="contact" class="ml-auto text-right">
+                                Phone (902) 424-5732<br>
+                                Fax (902) 424-0772<br>
+                                MedicalFitness@novascotia.ca
+                              </div>
+                            </div>
+                            <p class="mt-4"><strong>CONFIDENTIAL</strong></p>
+
+                            <p>21 September 2021</p>
+                            <p>RE: Driver License - ABCDE123456123</p>
+                            <p>Dear John Blake,<br>
+                              Your file has been reviewed and in accordance with applicable regulations and guidelines, your driver's licence has been downgraded to a Class 5.
+                            </p>
+                            <p>Please be advised that the Condition 25 has been added to your license. This means that you cannot upgrade past a Class 5 licence at this time.</p>
+                            <p>You must go to an Access Nova Scotia Centre or any full service Registry of Motor Vehicles office to exchange your commercial licence for a Class 5 driver's license. </p>
+                            <p>If you have questions or concerns, please do not hesitate to contact one of our Medical Representatives in the Medical Section at (902) 424-5732.</p>
+                            <p>Yours Truly,<br>
+                              Stephanie Turner<br>
+                              Deputy Registrar of Motor Vevhiles
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!-- end preview -->
+                  </section>
+                </div>
+                <!-- end preview tab content -->
+
+
+                <!-- start decision tab content -->
+                <div id="tabPane-decision" class="medFit-tab-pane tab-pane tab-pane-attachements fade in active show">
+                  <section class="row mx-0">
+                    <!-- start decision -->
+                    <article class="col-sm-12 px-3" id="exampleDecision">
+                      <h2 id="decisionTitle" class="h3">Decision</h2>
+                      <div class="mt-3">
+                        <!-- start demands section -->
+                        <section id="stageAndStateSection">
+                          <h3 class="h4">Demands</h2>
+                            <dl class="ns-summary-list">
+                              <!-- start row -->
+                              <div class="ns-summary-list__row">
+
+                                <dt class="ns-summary-list__key">
+                                  Medical Report
+                                </dt>
+
+                                <dd class="ns-summary-list__value">
+                                  <span>30 days</span>
+                                </dd>
+                              </div>
+                              <!-- end row -->
+
+                            </dl>
+                          </section>
+                          <!-- end demands section -->
+
+                          <!-- start suspention section -->
+                          <section id="stageAndStateSection">
+                            <h3 class="h4">Suspentions</h2>
+                              <dl class="ns-summary-list">
+                                <!-- start row -->
+                                <div class="ns-summary-list__row">
+
+                                  <dt class="ns-summary-list__key">
+                                    Suspend
+                                  </dt>
+
+                                  <dd class="ns-summary-list__value">
+                                    <span>278C(1)(a)</span>
+                                  </dd>
+                                </div>
+                                <!-- end row -->
+                                <!-- start row -->
+                                <div class="ns-summary-list__row">
+
+                                  <dt class="ns-summary-list__key">
+                                    Pending
+                                  </dt>
+
+                                  <dd class="ns-summary-list__value">
+                                    <span>Favourable medical report</span>
+                                  </dd>
+                                </div>
+                                <!-- end row -->
+                              </dl>
+                            </section>
+                            <!-- end suspention section -->
+
+                            <!-- start suspention section -->
+                            <section id="stageAndStateSection">
+                              <h3 class="h4">Follow-up</h2>
+                                <dl class="ns-summary-list">
+                                  <!-- start row -->
+                                  <div class="ns-summary-list__row">
+
+                                    <dt class="ns-summary-list__key">
+                                      Medical report
+                                    </dt>
+
+                                    <dd class="ns-summary-list__value">
+                                      <span>1 year</span>
+                                    </dd>
+                                  </div>
+                                  <!-- end row -->
+                                </dl>
+                              </section>
+                              <!-- end suspention section -->
+                            </div>
+                          </article>
+                          <!-- end decision -->
+                        </section>
+                      </div>
+                      <!-- end decision tab content -->
+
+
+                      <!-- start driver tab content -->
+                      <div id="tabPane-driver" class="medFit-tab-pane tab-pane tab-pane-attachements fade in">
+                        <section class="row mx-0">
+                          <!-- start decision -->
+                          <article class="col-sm-12 px-3" id="exampledriver">
+                            <h2 id="driverTitle" class="h3">Driver</h2>
+                            <div class="mt-3">
+                              <section id="driverDetails">
+
+                                <h3 id="driverDetailsTitleNotesOnDriver" class="h4 d-inline-block mt-3">Notes on driver</h3>
+
+                                <button id="driverDetailsNotesOnDriverEditButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                  <i class="fas fa-pen ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Edit Notes on driver</span>
+                                </button> <!-- edit saveButton -->
+
+                                <div id="notesOnDriverSaveButtonWrapper" style="display:inline-block">
+                                  <button id="notesOnDriverSaveButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon"  style="display:none">
+                                    <i class="fas fa-save ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Save notes on license</span>
+                                  </button> <!-- end saveButton -->
+                                  <button id="notesOnDriverCancelButton" draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon text-danger"  style="display:none">
+                                    <i class="fas fa-window-close ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Cancel edits on notes on license</span>
+                                  </button>  <!-- end cancelButton -->
+                                </div> <!-- end SaveButtonWrapper -->
+
+
+                                <div class="ns-summary-list">
+                                  <!-- start row -->
+                                  <div id="notesOnDriverRow" class="ns-summary-list__row">
+
+                                    <div class="ns-summary-list__value">
+                                      <span id="notesOnDriverText">Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV</span>
+                                      <textarea aria-labelledby="driverDetailsTitleNotesOnDriver" id="notesOnDriverTextarea" name="name" class="ns-input" style="display:none;" oninput="auto_grow(this)" placeholder="Any notes that have been previously recorded will appear here. They will need to be validated against what's in RMV"></textarea>
+                                    </div>
+                                  </div>
+                                  <!-- end row -->
+                                </div>
+
+                                <!-- start document list section -->
+                                <section id="documentListSection">
+                                  <h2 class="h3">Document list</h2>
+                                  <dl class="ns-summary-list">
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Medical report
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        Recieved: 02/02/2021
+                                      </dd>
+
+                                      <dd class="ns-summary-list__actions">
+                                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                                        </button>
+                                      </dd>
+
+                                    </div>
+                                    <!-- end row -->
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Assessment package
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        Sent: 02/02/2021
+                                      </dd>
+
+                                      <dd class="ns-summary-list__actions">
+                                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                                        </button>
+                                      </dd>
+
+                                    </div>
+                                    <!-- end row -->
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Unsolisited law
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        Received: 02/02/2021
+                                      </dd>
+
+                                      <dd class="ns-summary-list__actions">
+                                        <button draggable="false" class="btn-lg ns-btn-2nd medfit-btn-inline-icon">
+                                          <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview document</span>
+                                        </button>
+                                      </dd>
+
+                                    </div>
+                                    <!-- end row -->
+
+                                  </dl>
+                                </section>
+                                <!-- end  document list section -->
+                                <!-- start stage and state section -->
+                                <section id="stageAndStateSection">
+                                  <h2 class="h3">Where are they in the process?</h2>
+                                  <dl class="ns-summary-list">
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Decision
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        <span>In progress</span>
+                                      </dd>
+                                    </div>
+                                    <!-- end row -->
+
+                                  </dl>
+                                </section>
+                                <!-- end stage and state section -->
+
+                                <!-- start recent activity section -->
+                                <section id="recentActrivitySection">
+                                  <h2 class="h3">Recent activity</h2>
+                                  <dl class="ns-summary-list">
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+                                      <dt class="ns-summary-list__key">
+                                        Assessment package sent
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        <span>02/02/2021</span>
+                                      </dd>
+                                    </div>
+                                    <!-- end row -->
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Investigation: Complete
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        <span>02/02/2021</span>
+                                      </dd>
+                                    </div>
+                                    <!-- end row -->
+                                    <!-- start row -->
+                                    <div class="ns-summary-list__row">
+
+                                      <dt class="ns-summary-list__key">
+                                        Intake: Complete
+                                      </dt>
+
+                                      <dd class="ns-summary-list__value">
+                                        <span>02/02/2021</span>
+                                      </dd>
+
+                                    </div>
+                                    <!-- end row -->
+                                  </dl>
+                                </section>
+                                <!-- end recent activity section -->
+
+                              </section>
+                            </div>
+                          </article>
+                          <!-- end decision -->
+                        </section>
+                      </div>
+                      <!-- end driver tab content -->
+
+                    </div>
+
+                    <!-- end all tabs content -->
+                  </div> <!-- end columnContent-rightt -->
+                </div> <!-- end stickyWrapper-right -->
+
+              </div> <!-- end columnCollapse-right -->
+              <!-- end right column -->
+
+            </div> <!-- end #siteContent -->
+          </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="js/presentational.js"></script><!-- only needed to display interaction design-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+      </body>
+      </html>

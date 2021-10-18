@@ -100,10 +100,41 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").on("click", function(){
+    $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton").bind("click keypress", function(){
         $("#contactLogTitleEditButton, #contactLogTitleSaveButton, #contactLogTitleCancelButton, #contactLogTextArea, #contactLogparagraph").toggle("fast", function(){
             $("#contactLogTextArea").toggle("slow").focus()
         });
+    });
+});
+
+$(document).ready(function(){
+    $("#openingParagraphText, #openingParagraphSave, #openingParagraphCancel").bind("click keypress", function(){
+        $("#openingParagraphText, #openingParagraphEdit").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $("#bodyOfLetterText, #bodyOfLetterSave, #bodyOfLetterCancel").bind("click keypress", function(){
+        $("#bodyOfLetterText, #bodyOfLetterEdit").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $("#closingParagraphText, #closingParagraphSave, #closingParagraphCancel").bind("click keypress", function(){
+        $("#closingParagraphText, #closingParagraphEdit").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $("#signatureText, #signatureSave, #signatureCancel").bind("click keypress", function(){
+        $("#signatureText, #signatureEdit").toggle("fast");
+    });
+});
+
+
+$(document).ready(function(){
+    $("#postToRmvText, #postToRmvSave, #postToRmvCancel").bind("click keypress", function(){
+        $("#postToRmvText, #postToRmvEdit").toggle("fast");
     });
 });
 
@@ -257,6 +288,14 @@ documentFilter("#sendLetter", "#createLetter");
       default:
      }
   }
-
-
 // end radio button redirect
+
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+
+  $( "#showToast" ).click(function() {
+    $('.toast').toast('show');
+  });
+
+});
