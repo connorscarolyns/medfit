@@ -1,3 +1,5 @@
+
+
 html,body {
   height: 100%;
   font-size: 14px;
@@ -13,6 +15,12 @@ abbr[title], abbr[data-original-title] {
     height: 100vh;
     overflow: hidden;
   }
+}
+@media only screen and (min-device-width: 1300px) {
+    html,body {
+        min-width: 1200px;
+        overflow-x: auto;
+    }
 }
 
 .Site{
@@ -102,7 +110,7 @@ abbr[title], abbr[data-original-title] {
 }
 
 .medFit-column-header-nav-tabs{
-    border-bottom: none;
+    /* border-bottom: none; */
 }
 
 .medFit-column-header-nav-tabs .medFit-nav-item{

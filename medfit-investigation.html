@@ -413,7 +413,15 @@
                         <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
                           <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview medical report</span>
                         </a>
+                        <a class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h ns-btn__icon-left" aria-hidden="true"></i>
+                            <span class="ns-visually-hidden">More options</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Delete document</a>
+                        </div>
                       </dd>
+
                     </div>
                     <div class="ns-summary-list__row">
                       <dd scope="row" class="ns-summary-list__value py-0">
@@ -426,19 +434,26 @@
                         <a href="#" role="button" draggable="false" class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon ns-link-button ">
                           <i class="fas fa-eye ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Preview demand for medical report</span>
                         </a>
+                        <a class="btn-lg ns-btn-2nd d-inline-block medfit-btn-inline-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h ns-btn__icon-left" aria-hidden="true"></i>
+                            <span class="ns-visually-hidden">More options</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Delete document</a>
+                        </div>
                       </dd>
                     </div>
                   </dl>
                 </section>
 
                 <!-- start RSMS history section -->
-                <section id="recentActrivitySection">
+                <!-- <section id="recentActrivitySection">
                     <h2 class="d-inline-block h3">RSMS history</h2>
                     <div class="table-wrapper">
-                      <div class="ns-summary-list">
+                      <div class="ns-summary-list"> -->
 
                         <!-- start row -->
-                        <div class="ns-summary-list__row">
+                        <!-- <div class="ns-summary-list__row">
                           <div class="ns-summary-list__value w-100">
                               <div class="mb-2">
                                 <h4 class="mb-1">Case: 0002</h4>
@@ -458,11 +473,11 @@
                                 Date: 4 Dec 2002 / Decision Date: 6 May 2002 / Source: zzMedical Record Rep / Type: Follow up Report Required / Note: medical req'd by Dec 2003
                               </div>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- end row -->
 
                         <!-- start row -->
-                        <div class="ns-summary-list__row">
+                        <!-- <div class="ns-summary-list__row">
                           <div class="ns-summary-list__value w-100">
                               <div class="mb-2">
                                 <h4 class="mb-1">Case: 0001</h4>
@@ -482,11 +497,11 @@
                                 Date: 4 Dec 2002 / Decision Date: 6 May 2002 / Source: zzMedical Record Rep / Type: Follow up Report Required / Note: medical req'd by Dec 2003
                               </div>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- end row -->
-                      </div>
+                      <!-- </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- end RSMS history section -->
 
                 <!-- <section id="medicalCondition">
@@ -874,6 +889,36 @@
   </main>
 
 </body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h3 my-0" id="exampleModalLabel">Delete document</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="ns-form-group">
+					<label class="ns-label" for="select1">
+					  Select the reason for deleting this document
+					</label>
+					<div class="select fw-20">
+						<select id="select1" name="select1">
+						  <option>Duplicate</option>
+						  <option>Not for medical fitness</option>
+						</select>
+					 </div>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn medFit-btn btn-sm btn-warning ml-0 mr-4">Delete document</button>
+        <button type="button" class="btn medFit-btn btn-sm ns-btn-2nd ml-0" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="js\presentational.js"></script><!-- only needed to display interaction design-->

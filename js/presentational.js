@@ -82,6 +82,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $("#extentionAddButton, #extentionPost").on("click", function(){
+        $("#extentionAddButton, #extentionPost, #addextentionWrapper").toggle("fast");
+    });
+});
+
+$(document).ready(function(){
     $("#conditionAddButton, #conditionPost").on("click", function(){
         $("#conditionAddButton, #conditionPost, #addconditionWrapper").toggle("fast");
     });
@@ -237,6 +243,8 @@ documentFilter("#suspention", "#suspentionType");
 documentFilter("#condition", "#addConditionType");
 documentFilter("#downUpgrade", "#downUpgradeType");
 documentFilter("#followUp", "#followUpType");
+documentFilter("#extention", "#extentionType");
+documentFilter("#noFurtherAction", "#noFurtherActionType");
 documentFilter("#otherDecision", "#otherDecisionType");
 documentFilter("#sendLetter", "#createLetter");
 

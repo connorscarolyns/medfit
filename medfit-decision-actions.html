@@ -786,6 +786,71 @@
                               </div>
                             </div>
                             <div class="ns-checkboxes__item">
+                              <input class="ns-checkboxes__input" id="extention" name="actions" type="checkbox" value="Extention">
+                              <label class="ns-label ns-checkboxes__label h4 noBold" for="extention">
+                                Extentions
+                              </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" id="extentionType" style="display: none;">
+                              <div class="ns-form-group">
+                                <button style="display:none;" id="extentionAddButton" type="button" draggable="false" class="btn-sm ns-btn-2nd medFit-btn">
+                                  <i class="fas fa-plus-square ns-btn__icon-left mr-2" aria-hidden="true"></i>Add a Extention
+                                </button>
+                                <div id="addextentionWrapper" >
+                                  <div class="ns-form-group">
+                                    <label id="extentionLabel" class="ns-label" for="extentionWrite">
+                                      Select the demand to be extended
+                                    </label>
+                                    <div class="select fw-20">
+                											<select id="extentionWriteList" name="extention-write">
+                                        <option>Medical Report Due: 21 Jan 2021</option>
+                                        <option>Driver Re-exam Due: 21 Jan 2021</option>
+                											</select>
+                										 </div>
+                                  </div>
+                                  <div class="ns-form-group">
+                                    <fieldset class="ns-form-group" aria-describedby="fieldset-hint">
+                                      <legend class="ns-fieldset__legend noBorder label">
+                                        Add new due date
+                                      </legend>
+                                      <div id="fieldset-hint" class="ns-hint">
+                                        Enter a number in the number of field, then select if the number is days or months.
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-auto pr-0"><label class="ns-label" for="numberOf">Number of</label><input type="text" id="numberOf" name="number-of" class="ns-input fw-6" pattern="[0-9]*" inputmode="numeric"></div>
+                                        <div class="col-auto pr-0"><label class="ns-label" for="daysOrMonths">Days or months</label>
+                                          <div class="select fw-10">
+                                            <select id="daysOrMonths" name="days-or-months">
+                                              <option>Days</option>
+                                              <option>Months</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+                                  <button id="extentionPost" type="button" class="medFit-btn btn-sm btn-success">Add Extention</button>
+                                </div>
+                              </div>
+                              <h3 class="h4">List of Extentions</h3>
+                                <table id="extentionList-table" class="medFit-table table table-hover">
+                                  <thead>
+                                    <tr class="">
+                                      <th scope="col">Extention</th>
+                                      <th scope="col">Due-date</th>
+                                      <th scope="col"><span class="ns-visually-hidden">Actions</span></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class='clickable-row' data-toggle="collapse" href="#columnCollapse-right" role="button" aria-expanded="false" aria-controls="columnCollapse-right" tabindex="0" >
+                                      <td>Medical report</td>
+                                      <td>15 days</td>
+                                      <td><a href="#" class="medFit-btn btn-sm ns-btn-2nd my-0 float-right"><i class="fas fa-trash-alt ns-btn__icon-left" aria-hidden="true"></i><span class="ns-visually-hidden">Remove condition from list</span></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div class="ns-checkboxes__item">
                               <input class="ns-checkboxes__input" id="macReviewInput" name="actions" type="checkbox" value="MAC Review">
                               <label class="ns-label ns-checkboxes__label h4 noBold" for="macReviewInput">
                                 <abbr title="Medical Advisory Committee">MAC</abbr>&nbsp;review
@@ -796,6 +861,28 @@
                               <label class="ns-label ns-checkboxes__label h4 noBold" for="noFurtherAction">
                                 No further action
                               </label>
+                            </div>
+                            <div class="ns-checkboxes__conditional" id="noFurtherActionType" style="display: none;">
+                              <div class="ns-form-group">
+                                <div id="addnoFurtherActionWrapper" >
+                                  <div class="ns-form-group">
+                                    <label id="noFurtherActionLabel" class="ns-label" for="noFurtherActionWrite">
+                                      Select the demand to be extended
+                                    </label>
+                                    <div class="select fw-20">
+                                      <select id="noFurtherActionWriteList" name="noFurtherAction-write">
+                                        <option></option>
+                                        <option>Meets medical requirements</option>
+                                        <option>No longer a commercial driver</option>
+                                        <option>Other suspension</option>
+                                        <option>Surrendered license</option>
+                                        <option>Deceased</option>
+                                      </select>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                             <div class="ns-checkboxes__item">
                               <input  class="ns-checkboxes__input" id="otherDecision" name="actions" type="checkbox" value="Other Decision" data-aria-controls="otherDecisionTypeInput">
