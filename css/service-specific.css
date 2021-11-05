@@ -324,7 +324,7 @@ textarea {
     resize: none;
     overflow: auto;
     min-height: 31px;
-    max-height: 200px;
+    max-height: 400px;
 }
 
 /* start comments section */

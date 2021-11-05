@@ -152,10 +152,44 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#previewPaneBack1").on("click", function(){
+        $("#navItem-decision, #navItem-driver, #previewPaneBack1, #navItem-details, #navItem-Letter").toggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#previewPaneBack2").on("click", function(){
+        $("#navItem-Document, #navItem-driver, #previewPaneBack2, #navItem-details, #navItem-Letter").toggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#previewDecision1").on("click", function(){
+        $("#navItem-decision, #navItem-driver, #previewPaneBack1, #navItem-details, #navItem-Letter").toggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#dLDocumtents1").on("click", function(){
+        $("#navItem-Document, #navItem-driver, #previewPaneBack2, #navItem-details, #navItem-Letter").toggle("slow");
+    });
+});
+
 $('.medfit-btn-inline-icon').click(function(e) {
     e.preventDefault();
     $('.medfit-btn-inline-icon').closest('.ns-summary-list__row').removeClass('selected');
     $(this).closest('.ns-summary-list__row').addClass('selected');
+});
+
+
+$("#generateLetterPreviewButton").click(function(){
+  $('#nav-link-letter').addClass('active');
+  $('#tabPane-preview').addClass('show');
+  $('#tabPane-preview').addClass('active');
+  $('#nav-link-decision, #nav-link-driver').removeClass("active");
+  $('#tabPane-decision, #tabPane-driver').removeClass('show');
+  $('#tabPane-decision, #tabPane-driver').removeClass('active');
 });
 
 function auto_grow(element) {
